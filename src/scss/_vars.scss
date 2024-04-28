@@ -1,0 +1,30 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "DMSans", sans-serif;
+  --ff-second: "Poppins", sans-serif;
+  --content-width: 1170px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --light-color: hsl(0, 0%, 100%);
+  --light-color-weak: hsl(0, 0%, 85%);
+  --dark-color: hsl(240, 2%, 9%);
+  --dark-color-weak: hsl(240, 1%, 14%);
+  --accent-color: hsl(238, 79%, 64%);
+  --line-color: hsl(220, 7%, 16%);
+  --shadow-color: rgba(0, 0, 0, 0.25);
+
+  // light theme colors
+  --text-color-primary: var(--light-color);
+  --text-color-secondary: var(--light-color-weak);
+  --bg-color: var(--dark-color);
+
+  // font sizes
+  --fz-title: 3.75rem; // 60px
+  --fz-subtitle-big: 2.5rem; // 40px
+  --fz-subtitle: 1.5rem; // 24px
+  --fz-text: 1.125rem; // 18px
+}

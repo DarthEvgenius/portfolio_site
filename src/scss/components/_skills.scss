@@ -1,0 +1,16 @@
+.skills {
+  &__list {
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: var(--fz-text);
+  }
+
+  &__item {
+    padding: 1rem;
+    background-color: var(--light-color-weak);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem -0.25rem var(--shadow-color);
+    cursor: default;
+  }
+
+}

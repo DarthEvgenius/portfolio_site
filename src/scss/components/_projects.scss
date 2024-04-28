@@ -1,0 +1,87 @@
+.projects {
+
+  &__title {
+    margin-bottom: rem(60);
+  }
+
+  &__gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 30%));
+    gap: 30px;
+    justify-content: center;
+  }
+
+  // &__gallery:hover &__project {
+  //   opacity: 0.5;
+  // }
+
+  // &__gallery &__project:hover {
+  //   opacity: 1;
+  // }
+
+  // @media (any-hover: hover) {
+  //   &__gallery:has(&__project:hover) &__project:not(:hover) {
+  //     opacity: 0.65;
+  //   }
+  // }
+
+  &__project {
+    position: relative;
+    border-radius: rem(10);
+    overflow: hidden;
+    box-shadow: 0 5px 35px var(--shadow-color);
+    cursor: pointer;
+    transition:
+      opacity 0.3s ease-in-out,
+      scale 0.3s ease-in-out,
+      filter 0.3s linear;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      background-color: rgba(0,0,0, 0.1);
+      transition: opacity 0.3s linear;
+    }
+  }
+
+  @media (any-hover: hover) {
+    // if some gallery elem has hover effect,
+    // but we select all the other elems that don't hovered
+    &__gallery:has(&__project:hover) &__project:not(:hover) {
+      filter: blur(1px);
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__image {
+    width: 100%
+  }
+
+  &__name {
+    padding-inline: rem(20);
+    padding-top: rem(15);
+    padding-bottom: rem(25);
+
+  }
+
+  &__description {
+    position: absolute;
+    bottom: 100%;
+    background-color: var(--shadow-color);
+  }
+
+  @media (any-hover: hover) {
+    &__project:hover {
+      scale: 1.05;
+    }
+
+    // &__project:hover &__description {
+    //   bottom: 0;
+    // }
+  }
+}

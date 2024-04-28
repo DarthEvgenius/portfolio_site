@@ -1,0 +1,24 @@
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+
+  &__link {
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: var(--text-color-primary);
+    object-fit: cover;
+    transition: fill 0.2s linear;
+
+    @include hover {
+      fill: var(--accent-color);
+    }
+  }
+}

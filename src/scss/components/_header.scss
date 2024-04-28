@@ -1,0 +1,13 @@
+.header {
+  background-color: var(--bg-color);
+  border-bottom: 1px solid var(--line-color);
+
+  &__container {
+    padding-block: rem(20);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+

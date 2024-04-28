@@ -1,0 +1,15 @@
+.footer {
+  padding-block: rem(40);
+  color: var(--text-color-primary);
+  background-color: var(--bg-color);
+
+  &__social {
+    margin-bottom: rem(20);
+  }
+
+  &__copy {
+    text-align: center;
+    font-size: var(--fz-text);
+    letter-spacing: 0.2ch;
+  }
+}

@@ -1,0 +1,30 @@
+.contacts {
+  &__content {
+    display: grid;
+    justify-content: center;
+    gap: rem(40);
+
+    & > * {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 0.3em;
+    grid-column: 1/6;
+  }
+
+  &__info {
+    grid-column: 3/-1;
+    color: var(--accent-color);
+    font-family: var(--ff-second);
+    font-weight: 500;
+    font-size: var(--fz-subtitle);
+    text-align: right;
+
+    a {
+      color: inherit;
+    }
+  }
+}

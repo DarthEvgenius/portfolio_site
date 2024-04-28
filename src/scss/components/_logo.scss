@@ -1,0 +1,22 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  &__text {
+    color: var(--light-color);
+    font-family: var(--ff-second);
+    font-size: var(--fz-subtitle);
+    pointer-events: none;
+
+    &--bold {
+      font-weight: 700;
+      letter-spacing: 0.1rem;
+    }
+
+    &--regular {
+      font-weight: 400;
+      color: var(--grey-color);
+    }
+  }
+}
