@@ -23,9 +23,9 @@
   }
 
   &__title {
-    margin-bottom: rem(20);
+    margin-bottom: 1.25em;
     font-weight: 700;
-    font-size: rem(60);
+    font-size: var(--fz-title);
     line-height: 1.4;
   }
 
@@ -35,13 +35,13 @@
 
   &__subtitle {
     font-weight: 700;
-    font-size: rem(40);
+    font-size: var(--fz-subtitle-big);
   }
 
   &__text {
     margin-bottom: rem(40);
     font-weight: 500;
-    font-size: rem(18);
+    font-size: var(--fz-text);
     line-height: 1.4;
   }
 
@@ -49,7 +49,7 @@
     --shadow-color: var(--accent-color);
 
     position: relative;
-    padding-inline: rem(28);
+    padding-inline: 1.75em;
     font-weight: 500;
     background-color: var(--accent-color);
 

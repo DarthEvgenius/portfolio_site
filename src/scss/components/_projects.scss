@@ -1,12 +1,8 @@
 .projects {
 
-  &__title {
-    margin-bottom: rem(60);
-  }
-
   &__gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 30%));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 30%));
     gap: 30px;
     justify-content: center;
   }

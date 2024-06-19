@@ -3,7 +3,7 @@
   color: currentColor;
   font-family: var(--ff-second);
   font-weight: 500;
-  font-size: rem(18);
+  font-size: var(--fz-text);
   transition: color 0.3s ease-in;
 
   &::after {

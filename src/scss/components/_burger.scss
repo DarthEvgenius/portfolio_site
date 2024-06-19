@@ -1,0 +1,14 @@
+.burger {
+  @include burger;
+  display: none;
+
+  position: relative;
+  z-index: 20;
+  color: var(--text-color-primary);
+}
+
+@media (max-width: 678px) {
+  .burger {
+    display: inline-block;
+  }
+}

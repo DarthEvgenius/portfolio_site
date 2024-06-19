@@ -27,4 +27,13 @@
       color: inherit;
     }
   }
+
+  @media (max-width: 444px) {
+    &__subtitle,
+    &__info {
+      grid-column: 1/-1;
+      text-align: center;
+    }
+  }
 }
+

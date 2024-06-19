@@ -1,8 +1,34 @@
 .nav {
+  @media (max-width: 678px) {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 10;
+    background-color: var(--dark-color);
+    width: 100vw;
+
+    transition:
+      opacity 0.3s ease-in-out,
+      visibility 0.3s ease-in-out;
+
+    &.menu--active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .nav__list {
+      height: 30vh;
+    }
+  }
+
   &__list {
     display: flex;
     column-gap: 40px;
     align-items: center;
+
+    @media (max-width: 360px) {
+      column-gap: 20px;
+    }
   }
 
   &__link{
@@ -10,7 +36,7 @@
     color: var(--text-color-secondary);
     font-family: var(--ff-second);
     font-weight: 500;
-    font-size: rem(18);
+    font-size: var(--fz-text);
     transition: color 0.3s ease-in;
 
     &::after {
