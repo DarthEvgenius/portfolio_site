@@ -7,12 +7,15 @@
 
 // подключения компонентов страницы
 @import "./components/common";
+@import "./components/links";
 @import "./components/scroller";
 @import "./components/header";
 @import "./components/logo";
 @import "./components/nav";
 @import "./components/hero";
 @import "./components/projects";
+@import "./components/project-modal";
+@import "./components/project-roboto";
 @import "./components/skills";
 @import "./components/contacts";
 @import "./components/social";

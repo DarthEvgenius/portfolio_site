@@ -1,0 +1,43 @@
+.project-roboto {
+  .project-modal__features-item:nth-of-type(1) {
+    grid-template-columns: repeat(12, 1fr);
+
+    .project-modal__features-description {
+      grid-column: 1/-1;
+    }
+
+    .projects__image:nth-of-type(1) {
+      grid-column: 5/-1;
+    }
+
+    .projects__image:nth-of-type(2) {
+      grid-column: 1/5;
+      grid-row: 2/4;
+      align-self: center;
+    }
+
+    .projects__image:nth-of-type(3) {
+      grid-column: 7/-1;
+    }
+  }
+
+  .project-modal__features-item:nth-of-type(2) {
+    grid-template-columns: repeat(2, 1fr);
+
+    .project-modal__features-description {
+      display: grid;
+      width: 100%;
+      text-align: center;
+
+      a:first-child {
+        justify-self: end;
+        align-self: center;
+      }
+
+      a:last-child {
+        justify-self: center;
+        align-self: end;
+      }
+    }
+  }
+}
