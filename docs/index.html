@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>EZ Portfolio</title>
+
+  <link rel="preload" href="fonts/DMSans_18pt-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/DMSans_18pt-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/DMSans_18pt-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Poppins-Bold.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+  <div class="site-container">
+
+    <header class="header">
+  <div class="container header__container">
+
+    <div class="logo">
+      <a href="#" class="logo__image">
+        <img loading="lazy" src="./img/logo.svg" class="image" width="48" height="48" alt="Логотип инициалы">
+      </a>
+      <p class="logo__text">
+        <strong class="logo__text--bold">Eugene Zinin</strong>
+        <span class="logo__text--regular">portfolio</span>
+      </p>
+    </div>
+
+    <nav class="nav" data-menu>
+  <ul class="nav__list">
+    <li class="nav__item">
+      <a href="#projects" class="nav__link" data-menu-item>Projects</a>
+    </li>
+
+    <li class="nav__item">
+      <a href="#skills" class="nav__link" data-menu-item>Skills</a>
+    </li>
+
+    <li class="nav__item">
+      <a href="#contacts" class="nav__link" data-menu-item>Contacts</a>
+    </li>
+  </ul>
+</nav>
+
+<button class="btn-reset burger" aria-label="Open menu" aria-expanded="false" data-burger>
+  <span class="burger__line"></span>
+</button>
+
+  </div>
+</header>
+
+    <main class="main">
+
+      <section class="hero">
+  <div class="container hero__container">
+
+    <h1 class="hero__title">
+      <p>Hello!</p>
+       My name is <span class="hero__accent">Eugene</span>
+      <p class="hero__subtitle"></p>
+    </h1>
+
+    <p class="hero__text">
+      a frontend developer.
+    </p>
+
+    <a href="#!" class="hero__btn btn">Download CV</a>
+
+  </div>
+</section>
+
+      <section class="projects section-padding">
+  <div class="container">
+
+    <h2 class="projects__title section__title">Projects</h2>
+
+    <ul class="projects__gallery">
+
+      <li class="projects__project" data-graph-path="roboto_project" aria-label="View project details">
+
+        <div class="projects__image">
+          <picture class="projects__picture">
+            <source srcset="./img/roboto-cover.webp" type="image/webp">
+            <img loading="lazy" src="./img/roboto-cover.jpg" class="image" width="360" height="265" alt="">
+          </picture>
+        </div>
+        <h4 class="projects__name card__title">School site</h4>
+
+      </li>
+
+      <li class="projects__project">
+        <div class="projects__image">
+          <picture>
+            <source srcset="./img/project-2.webp" type="image/webp">
+            <img loading="lazy" src="./img/project-2.jpg" class="image" width="" height="" alt="">
+          </picture>
+        </div>
+        <h4 class="projects__name card__title">Project 2</h4>
+        <div class="projects__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio adipisci veritatis sequi minima eveniet alias excepturi inventore illo quaerat laudantium.</div>
+      </li>
+
+      <li class="projects__project">
+        <div class="projects__image">
+          <picture>
+            <source srcset="./img/project-3.webp" type="image/webp">
+            <img loading="lazy" src="./img/project-3.jpg" class="image" width="" height="" alt="">
+          </picture>
+        </div>
+        <h4 class="projects__name card__title">Project Project 3</h4>
+      </li>
+
+      <li class="projects__project">
+        <div class="projects__image">
+          <picture>
+            <source srcset="./img/project-4.webp" type="image/webp">
+            <img loading="lazy" src="./img/project-4.jpg" class="image" width="" height="" alt="">
+          </picture>
+        </div>
+        <h4 class="projects__name card__title">Project 4</h4>
+      </li>
+
+      <li class="projects__project">
+        <div class="projects__image">
+          <picture>
+            <source srcset="./img/project-5.webp" type="image/webp">
+            <img loading="lazy" src="./img/project-5.jpg" class="image" width="" height="" alt="">
+          </picture>
+        </div>
+        <h4 class="projects__name card__title">Project with some really long name Project Project 5</h4>
+      </li>
+
+      <li class="projects__project">
+        <div class="projects__image">
+          <picture>
+            <source srcset="./img/project-6.webp" type="image/webp">
+            <img loading="lazy" src="./img/project-6.jpg" class="image" width="" height="" alt="">
+          </picture>
+        </div>
+        <h4 class="projects__name card__title">Project 6</h4>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+      <section class="skills section-padding" id="skills">
+  <div class="container">
+
+    <h2 class="skills__title section__title">Skills</h2>
+
+    <div class="scroller">
+      <ul class="skills__list scroller__inner">
+        <li class="skills__item" data-tooltip="HTML">HTML</li>
+        <li class="skills__item" data-tooltip="CSS">CSS</li>
+        <li class="skills__item">JS</li>
+        <li class="skills__item">Sass</li>
+        <li class="skills__item" data-tooltip="BS">Bootstrap</li>
+        <li class="skills__item">Accessibility</li>
+        <li class="skills__item">Gulp</li>
+        <li class="skills__item">Git</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+      <section class="contacts section-padding" id="contacts">
+  <div class="container">
+
+    <h2 class="section__title">Contacts</h2>
+
+     <div class="contacts__content">
+
+      <div class="contacts__location">
+        <h3 class="contacts__subtitle subtitle-medium">Location:</h3>
+        <div class="contacts__info">Saint-Petersburg, Russia</div>
+      </div>
+
+      <div class="contacts__phone">
+        <h3 class="contacts__subtitle subtitle-medium">Telegram / WhatsApp:</h3>
+        <div class="contacts__info">
+          <a href="tel:+79817126579">+7 981 712-65-79</a>
+        </div>
+      </div>
+
+      <div class="contacts__email ">
+        <h3 class="contacts__subtitle subtitle-medium">Email:</h3>
+        <div class="contacts__info">
+          <a href="mailto:eugenezinin@gmail.com">eugenezinin@gmail.com</a>
+        </div>
+      </div>
+
+     </div>
+
+  </div>
+</section>
+
+    </main>
+    <footer class="footer">
+  <div class="container">
+
+      <ul class="footer__social social">
+        <li class="social__item">
+          <a href="https://vk.com/eugenezinin" class="social__link">
+            <svg class="social__image">
+              <use xlink:href="img/sprite.svg#vk"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="social__item">
+          <a href="https://github.com/DarthEvgenius" class="social__link">
+            <svg class="social__image">
+              <use xlink:href="img/sprite.svg#git"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <p class="footer__copy">
+        © 2024 Eugene Zinin
+      </p>
+
+  </div>
+</footer>
+
+  </div>
+
+  <div class="graph-modal">
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="roboto_project">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Close project details"></button>
+    <div class="graph-modal__content project-modal project-roboto">
+
+      <div class="project-modal__details">
+        <h4 class="projects__name card__title project-modal__title">School site</h4>
+
+        <ul class="project-modal__details-list">
+          <li class="project-modal__details-item">
+            <a href="https://darthevgenius.github.io/school_site/" class="project-modal__details-link link">Live demo</a>
+          </li>
+
+          <li class="project-modal__details-item">
+            <a href="https://github.com/DarthEvgenius/school_site?tab=readme-ov-file" class="project-modal__details-link link">Github page</a>
+          </li>
+        </ul>
+
+        <p class="project-modal__details-description">
+          Business-card site of programming and robotics school. Made after a figma design using vanilla Javascript, HTML, SCSS and Gulp toolkit with various modules.
+        </p>
+      </div>
+
+      <ul class="project-modal__features-list">
+        <p class="project-modal__features-title">Some features:</p>
+
+        <li class="project-modal__features-item">
+          <p class="project-modal__features-description">
+            Nice and simple hero section and adaptive menu, with smooth scrolling to the anchor tags on the page, transforming to burger-menu on small screen sizes and disabling hover effects.
+          </p>
+
+          <div class="project-modal__features-image projects__image">
+            <picture class="projects__picture">
+              <source srcset="img/roboto-hero.webp" type="image/webp">
+              <img loading="lazy" src="img/roboto-hero.jpg" class="image" width="800" height="600" alt="School site hero section">
+            </picture>
+          </div>
+
+          <div class="project-modal__features-image projects__image">
+            <picture class="projects__picture">
+              <source srcset="img/roboto-burger.webp" type="image/webp">
+              <img loading="lazy" src="img/roboto-burger.jpg" class="image" width="325" height="350" alt="School site hero section">
+            </picture>
+          </div>
+
+          <div class="project-modal__features-image projects__image">
+            <picture class="projects__picture">
+              <source srcset="img/roboto-mobile.webp" type="image/webp">
+              <img loading="lazy" src="img/roboto-mobile.jpg" class="image" width="325" height="350" alt="School site mobile adaptive">
+            </picture>
+          </div>
+        </li>
+
+        <li class="project-modal__features-item">
+          <p class="project-modal__features-description">
+            Integrated usefull JS libraries: <a href="https://swiperjs.com/" class="link">Swiper.js</a> <a href="https://floating-ui.com/?utm_source=popper.js.org" class="link">Popper.js</a>
+          </p>
+
+          <div class="project-modal__features-image projects__image">
+            <picture>
+              <source srcset="img/roboto-swiper.webp" type="image/webp">
+              <img loading="lazy" src="img/roboto-swiper.jpg" class="image" width="" height="" alt="">
+            </picture>
+          </div>
+
+          <div class="project-modal__features-image projects__image">
+            <picture>
+              <source srcset="img/roboto-popup.webp" type="image/webp">
+              <img loading="lazy" src="img/roboto-popup.jpg" class="image" width="" height="" alt="">
+            </picture>
+          </div>
+        </li>
+
+        <li class="project-modal__features-item">
+          <p class="project-modal__features-description">
+            Modals and shifting tabs inside modals. Also with custom scrollbar:
+          </p>
+
+          <div class="project-modal__features-image projects__image">
+            <picture>
+              <source srcset="img/roboto-modal.webp" type="image/webp">
+              <img loading="lazy" src="img/roboto-modal.jpg" class="image" width="" height="" alt="">
+            </picture>
+          </div>
+        </li>
+
+        <li class="project-modal__features-item">
+          <p class="project-modal__features-description">
+            And nice product cards with hover transition and transform effects
+          </p>
+
+          <div class="project-modal__features-image projects__image">
+            <picture>
+              <source srcset="img/roboto-offer.webp" type="image/webp">
+              <img loading="lazy" src="img/roboto-offer.jpg" class="image" width="" height="" alt="">
+            </picture>
+          </div>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>

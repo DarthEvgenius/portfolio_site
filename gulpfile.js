@@ -39,7 +39,7 @@ const ttf2woff2 = require('gulp-ttf2woff2');
 
 // paths
 const srcFolder = './src';
-const buildFolder = './app';
+const buildFolder = './docs';
 const paths = {
   fonts: `${srcFolder}/resources/fonts/`,
   srcSvg: `${srcFolder}/img/svg/**.svg`,
