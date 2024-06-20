@@ -12,7 +12,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_scroller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/scroller */ "./src/js/components/scroller.js");
 /* harmony import */ var _components_scroller__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_scroller__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/burger */ "./src/js/components/burger.js");
-/* harmony import */ var _components_projects_projects_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/projects/projects-modal */ "./src/js/components/projects/projects-modal.js");
+/* harmony import */ var _components_mainSectionMargin__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/mainSectionMargin */ "./src/js/components/mainSectionMargin.js");
+/* harmony import */ var _components_mainSectionMargin__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_mainSectionMargin__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_projects_projects_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/projects/projects-modal */ "./src/js/components/projects/projects-modal.js");
+/* harmony import */ var _components_projects_dialog__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/projects/dialog */ "./src/js/components/projects/dialog.js");
+/* harmony import */ var _components_projects_dialog__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_projects_dialog__WEBPACK_IMPORTED_MODULE_4__);
+
+
 
 
 
@@ -158,6 +164,40 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../functions/burger */ "./src/js/functions/burger.js");
 
+
+/***/ }),
+
+/***/ "./src/js/components/mainSectionMargin.js":
+/*!************************************************!*\
+  !*** ./src/js/components/mainSectionMargin.js ***!
+  \************************************************/
+/***/ (() => {
+
+const mainElem = document.querySelector('.main');
+const headerElem = document.querySelector('.header');
+const headerHeight = headerElem.offsetHeight;
+mainElem.style.marginTop = `${headerHeight}px`;
+
+/***/ }),
+
+/***/ "./src/js/components/projects/dialog.js":
+/*!**********************************************!*\
+  !*** ./src/js/components/projects/dialog.js ***!
+  \**********************************************/
+/***/ (() => {
+
+const dialogOpenButtons = document.querySelectorAll('.projects__image');
+dialogOpenButtons.forEach(btn => {
+  btn.addEventListener('click', e => {
+    const dialogID = e.target.closest('.projects__image').getAttribute('data-dialog-image');
+    const dialogElement = document.querySelector(`#${dialogID}`);
+    dialogElement.showModal();
+    const dialogCloseButton = dialogElement.querySelector('.dialog__close');
+    dialogCloseButton.addEventListener('click', () => {
+      dialogElement.close();
+    });
+  });
+});
 
 /***/ }),
 

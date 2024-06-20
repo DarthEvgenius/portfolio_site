@@ -1,6 +1,11 @@
 .header {
+  position: fixed;
+  width: 100%;
+  top: 0;
   background-color: var(--bg-color);
   border-bottom: 1px solid var(--line-color);
+  overflow: hidden;
+  z-index: 100;
 
   &__container {
     padding-block: rem(20);

@@ -2,7 +2,8 @@
   @media (max-width: 678px) {
     opacity: 0;
     visibility: hidden;
-    position: fixed;
+    // position: fixed;
+    position: absolute;
     z-index: 10;
     background-color: var(--dark-color);
     width: 100vw;

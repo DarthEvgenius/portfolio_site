@@ -87,7 +87,7 @@
   </div>
 </section>
 
-      <section class="projects section-padding">
+      <section class="projects section-padding" id="projects">
   <div class="container">
 
     <h2 class="projects__title section__title">Projects</h2>
@@ -102,8 +102,8 @@
             <img loading="lazy" src="./img/roboto-cover.jpg" class="image" width="360" height="265" alt="">
           </picture>
         </div>
-        <h4 class="projects__name card__title">School site</h4>
 
+        <h4 class="projects__name card__title">School site</h4>
       </li>
 
       <li class="projects__project">
@@ -159,6 +159,7 @@
 
     </ul>
   </div>
+
 </section>
 
       <section class="skills section-padding" id="skills">
@@ -245,9 +246,68 @@
   </div>
 
   <div class="graph-modal">
+
   <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="roboto_project">
+
     <button class="btn-reset js-modal-close graph-modal__close" aria-label="Close project details"></button>
+
     <div class="graph-modal__content project-modal project-roboto">
+
+      <dialog id="robotoHeroScreen" class="dialog project-dialog-image" aria-label="Roboto site hero section">
+  <picture class="projects__picture">
+    <source srcset="img/roboto-hero.webp" type="image/webp">
+    <img loading="lazy" src="img/roboto-hero.jpg" class="image" width="1024" height="768" alt="School site hero section">
+  </picture>
+  <button class="btn btn-reset dialog__close" type="button">Close image</button>
+</dialog>
+
+<dialog id="robotoBurger" class="dialog project-dialog-image" aria-label="Roboto site burger menu">
+  <picture class="projects__picture">
+    <source srcset="img/roboto-burger.webp" type="image/webp">
+    <img loading="lazy" src="img/roboto-burger.jpg" class="image" width="500" height="700" alt="School site burger menu">
+  </picture>
+  <button class="btn btn-reset dialog__close" type="button">Close image</button>
+</dialog>
+
+<dialog id="robotoMobileMenu" class="dialog project-dialog-image" aria-label="Roboto site mobile menu">
+  <picture class="projects__picture">
+    <source srcset="img/roboto-mobile.webp" type="image/webp">
+    <img loading="lazy" src="img/roboto-mobile.jpg" class="image" width="500" height="700" alt="School site mobile menu">
+  </picture>
+  <button class="btn btn-reset dialog__close" type="button">Close image</button>
+</dialog>
+
+<dialog id="robotoSwiper" class="dialog project-dialog-image" aria-label="Roboto site swiper">
+  <picture>
+    <source srcset="img/roboto-swiper.webp" type="image/webp">
+    <img loading="lazy" src="img/roboto-swiper.jpg" class="image" width="1259" height="832" alt="Roboto site swiper">
+  </picture>
+  <button class="btn btn-reset dialog__close" type="button">Close image</button>
+</dialog>
+
+<dialog id="robotoPopup" class="dialog project-dialog-image" aria-label="Roboto site popup">
+  <picture>
+    <source srcset="img/roboto-popup.webp" type="image/webp">
+    <img loading="lazy" src="img/roboto-popup.jpg" class="image" width="587" height="376" alt="Roboto site popup">
+  </picture>
+  <button class="btn btn-reset dialog__close" type="button">Close image</button>
+</dialog>
+
+<dialog id="robotoModal" class="dialog project-dialog-image" aria-label="Roboto site modal">
+  <picture>
+    <source srcset="img/roboto-modal.webp" type="image/webp">
+    <img loading="lazy" src="img/roboto-modal.jpg" class="image" width="1273" height="881" alt="Roboto site modal">
+  </picture>
+  <button class="btn btn-reset dialog__close" type="button">Close image</button>
+</dialog>
+
+<dialog id="robotoCards" class="dialog project-dialog-image" aria-label="Roboto site cards">
+  <picture>
+    <source srcset="img/roboto-offer.webp" type="image/webp">
+    <img loading="lazy" src="img/roboto-offer.jpg" class="image" width="993" height="458" alt="Roboto site cards">
+  </picture>
+  <button class="btn btn-reset dialog__close" type="button">Close image</button>
+</dialog>
 
       <div class="project-modal__details">
         <h4 class="projects__name card__title project-modal__title">School site</h4>
@@ -275,21 +335,21 @@
             Nice and simple hero section and adaptive menu, with smooth scrolling to the anchor tags on the page, transforming to burger-menu on small screen sizes and disabling hover effects.
           </p>
 
-          <div class="project-modal__features-image projects__image">
+          <div type="button" class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoHeroScreen">
             <picture class="projects__picture">
               <source srcset="img/roboto-hero.webp" type="image/webp">
               <img loading="lazy" src="img/roboto-hero.jpg" class="image" width="800" height="600" alt="School site hero section">
             </picture>
           </div>
 
-          <div class="project-modal__features-image projects__image">
+          <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoBurger">
             <picture class="projects__picture">
               <source srcset="img/roboto-burger.webp" type="image/webp">
               <img loading="lazy" src="img/roboto-burger.jpg" class="image" width="325" height="350" alt="School site hero section">
             </picture>
           </div>
 
-          <div class="project-modal__features-image projects__image">
+          <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoMobileMenu">
             <picture class="projects__picture">
               <source srcset="img/roboto-mobile.webp" type="image/webp">
               <img loading="lazy" src="img/roboto-mobile.jpg" class="image" width="325" height="350" alt="School site mobile adaptive">
@@ -302,17 +362,17 @@
             Integrated usefull JS libraries: <a href="https://swiperjs.com/" class="link">Swiper.js</a> <a href="https://floating-ui.com/?utm_source=popper.js.org" class="link">Popper.js</a>
           </p>
 
-          <div class="project-modal__features-image projects__image">
+          <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoSwiper">
             <picture>
               <source srcset="img/roboto-swiper.webp" type="image/webp">
-              <img loading="lazy" src="img/roboto-swiper.jpg" class="image" width="" height="" alt="">
+              <img loading="lazy" src="img/roboto-swiper.jpg" class="image" width="1024" height="768" alt="Roboto site swiper">
             </picture>
           </div>
 
-          <div class="project-modal__features-image projects__image">
+          <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoPopup">
             <picture>
               <source srcset="img/roboto-popup.webp" type="image/webp">
-              <img loading="lazy" src="img/roboto-popup.jpg" class="image" width="" height="" alt="">
+              <img loading="lazy" src="img/roboto-popup.jpg" class="image" width="587" height="376" alt="Roboto site popup">
             </picture>
           </div>
         </li>
@@ -322,10 +382,10 @@
             Modals and shifting tabs inside modals. Also with custom scrollbar:
           </p>
 
-          <div class="project-modal__features-image projects__image">
+          <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoModal">
             <picture>
               <source srcset="img/roboto-modal.webp" type="image/webp">
-              <img loading="lazy" src="img/roboto-modal.jpg" class="image" width="" height="" alt="">
+              <img loading="lazy" src="img/roboto-modal.jpg" class="image" width="1273" height="881" alt="Roboto site modal">
             </picture>
           </div>
         </li>
@@ -335,16 +395,14 @@
             And nice product cards with hover transition and transform effects
           </p>
 
-          <div class="project-modal__features-image projects__image">
+          <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoCards">
             <picture>
               <source srcset="img/roboto-offer.webp" type="image/webp">
-              <img loading="lazy" src="img/roboto-offer.jpg" class="image" width="" height="" alt="">
+              <img loading="lazy" src="img/roboto-offer.jpg" class="image" width="993" height="458" alt="Roboto site cards">
             </picture>
           </div>
         </li>
-
       </ul>
-
     </div>
   </div>
 </div>

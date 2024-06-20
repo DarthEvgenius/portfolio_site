@@ -454,8 +454,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 .header {
+  position: fixed;
+  width: 100%;
+  top: 0;
   background-color: var(--bg-color);
   border-bottom: 1px solid var(--line-color);
+  overflow: hidden;
+  z-index: 100;
 }
 .header__container {
   padding-block: 1.25rem;
@@ -503,7 +508,7 @@ body::-webkit-scrollbar-thumb {
   .nav {
     opacity: 0;
     visibility: hidden;
-    position: fixed;
+    position: absolute;
     z-index: 10;
     background-color: var(--dark-color);
     width: 100vw;
@@ -839,7 +844,6 @@ body::-webkit-scrollbar-thumb {
   font-size: var(--fz-subtitle-small);
 }
 .project-modal__features-list {
-  overflow-y: scroll;
   display: -ms-grid;
   display: grid;
   gap: calc(var(--gap) * 1.5);
@@ -862,6 +866,64 @@ body::-webkit-scrollbar-thumb {
   width: fit-content;
   background-color: var(--light-color-weak);
   border-radius: 0.625rem;
+}
+
+.dialog {
+  display: none;
+  background: transparent;
+  margin: auto auto;
+  padding: 5px;
+  width: 100%;
+  gap: var(--gap);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  opacity: 0;
+  translate: 0 25vh;
+  -webkit-transition-property: display opacity;
+  transition-property: display opacity;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  transition-behavior: allow-discrete;
+}
+.dialog[open] {
+  display: -ms-grid;
+  display: grid;
+  opacity: 1;
+  translate: 0 0;
+}
+@starting-style {
+  .dialog[open] {
+    opacity: 0;
+    translate: 0 -25vh;
+  }
+}
+.dialog::-webkit-backdrop {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+.dialog::backdrop {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+.dialog__close {
+  padding-inline: 1em;
+  -ms-grid-column-align: center;
+  justify-self: center;
+  background-color: var(--light-color);
+  background-image: linear-gradient(45deg, var(--accent-color), var(--dark-color));
+  color: var(--light-color);
+  font-family: var(--ff-second);
+  font-weight: 500;
+  font-size: var(--fz-subtitle-small);
+  -webkit-transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
+}
+@media (any-hover: hover) {
+  .dialog__close:hover {
+    background-color: var(--light-color-weak);
+    color: var(--light-color-weak);
+  }
 }
 
 .project-roboto .project-modal__features-item:nth-of-type(1) {

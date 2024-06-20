@@ -1,4 +1,5 @@
 import './components/scroller'
 import './components/burger'
-
+import './components/mainSectionMargin'
 import './components/projects/projects-modal'
+import './components/projects/dialog'
