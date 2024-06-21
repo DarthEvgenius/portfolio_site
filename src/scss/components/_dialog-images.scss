@@ -5,7 +5,7 @@
   padding: 5px;
   width: 100%;
   gap: var(--gap);
-  justify-content: center;
+
   opacity: 0;
   translate: 0 25vh;
   transition-property: display opacity;
@@ -13,7 +13,7 @@
   transition-behavior: allow-discrete;
 
   &[open] {
-    display: grid;
+    display: block;
     opacity: 1;
     translate: 0 0;
 
@@ -28,8 +28,11 @@
   }
 
   &__close {
+    display: block;
+    margin: 0 auto;
+    margin-top: var(--gap);
+    padding-block: 12px;
     padding-inline: 1em;
-    justify-self: center;
     background-color: var(--light-color);
     background-image: linear-gradient(
       45deg,
@@ -38,6 +41,7 @@
     );
 
     color: var(--light-color);
+    text-align: center;
     font-family: var(--ff-second);
     font-weight: 500;
     font-size: var(--fz-subtitle-small);

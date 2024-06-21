@@ -273,7 +273,7 @@ legend {
 .btn {
   --shadow-color: var(--dark-color);
   display: inline-block;
-  padding-block: 0.75rem;
+  padding-block: 0.75em;
   border-radius: 5px;
   color: inherit;
   font-size: var(--fz-text);
@@ -804,7 +804,7 @@ body::-webkit-scrollbar-thumb {
   padding: 1em;
   width: 100%;
 }
-.projects__image img {
+.projects__cover {
   aspect-ratio: 1/1;
 }
 .projects__picture {
@@ -908,9 +908,6 @@ body::-webkit-scrollbar-thumb {
   padding: 5px;
   width: 100%;
   gap: var(--gap);
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   opacity: 0;
   translate: 0 25vh;
   -webkit-transition-property: display opacity;
@@ -920,8 +917,7 @@ body::-webkit-scrollbar-thumb {
   transition-behavior: allow-discrete;
 }
 .dialog[open] {
-  display: -ms-grid;
-  display: grid;
+  display: block;
   opacity: 1;
   translate: 0 0;
 }
@@ -940,12 +936,15 @@ body::-webkit-scrollbar-thumb {
   backdrop-filter: blur(10px);
 }
 .dialog__close {
+  display: block;
+  margin: 0 auto;
+  margin-top: var(--gap);
+  padding-block: 12px;
   padding-inline: 1em;
-  -ms-grid-column-align: center;
-  justify-self: center;
   background-color: var(--light-color);
   background-image: linear-gradient(45deg, var(--accent-color), var(--dark-color));
   color: var(--light-color);
+  text-align: center;
   font-family: var(--ff-second);
   font-weight: 500;
   font-size: var(--fz-subtitle-small);
