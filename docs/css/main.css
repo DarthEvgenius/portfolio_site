@@ -804,6 +804,9 @@ body::-webkit-scrollbar-thumb {
   padding: 1em;
   width: 100%;
 }
+.projects__image img {
+  aspect-ratio: 1/1;
+}
 .projects__picture {
   width: 100%;
   border-radius: 0.625rem;
