@@ -28,6 +28,35 @@
     }
   }
 
+
+  &__description {
+    position: absolute;
+    top: 0;
+    padding: 1.5rem;
+    width: 100%;
+    transform: translateY(-120%);
+    transition: transform 0.3s;
+
+    background-color: var(--shadow-color);
+    box-shadow: 0px 0px 10px var(--shadow-color);
+    backdrop-filter: blur(10px);
+
+    color: var(--light-color);
+    font-family: var(--ff-second);
+    font-size: var(--fz-text);
+    font-weight: 500;
+    letter-spacing: 0.15em;
+
+    p {
+      margin-bottom: var(--gap);
+    }
+
+    ul {
+      padding-left: 1em;
+      list-style-type: disc;
+    }
+  }
+
   @media (any-hover: hover) {
     // if some gallery elem has hover effect,
     // but we select all the other elems that don't hovered
@@ -37,6 +66,10 @@
       &::after {
         opacity: 1;
       }
+    }
+
+    &__project:hover .projects__description{
+      transform: translateY(0);
     }
   }
 
@@ -58,11 +91,6 @@
 
   }
 
-  &__description {
-    position: absolute;
-    bottom: 100%;
-    background-color: var(--shadow-color);
-  }
 
   @media (any-hover: hover) {
     &__project:hover {
