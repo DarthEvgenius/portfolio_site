@@ -957,6 +957,9 @@ body::-webkit-scrollbar-thumb {
     color: var(--light-color-weak);
   }
 }
+.dialog .image {
+  margin: 0 auto;
+}
 
 .project-roboto .project-modal__features-item:nth-of-type(1) {
   -ms-grid-columns: (1fr)[12];
