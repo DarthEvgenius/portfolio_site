@@ -823,6 +823,7 @@ body::-webkit-scrollbar-thumb {
   overflow: hidden;
   -webkit-box-shadow: 0px 10px 10px var(--shadow-color);
   box-shadow: 0px 10px 10px var(--shadow-color);
+  cursor: pointer;
 }
 .projects__name {
   padding-inline: 1.25rem;
