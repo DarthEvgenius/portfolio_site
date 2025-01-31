@@ -603,7 +603,10 @@ body::-webkit-scrollbar-thumb {
   -webkit-transform-origin: center;
   -ms-transform-origin: center;
   transform-origin: center;
-  background-color: rebeccapurple;
+  background-color: var(--accent-color);
+  opacity: 0.5;
+  -webkit-box-shadow: 0 0 10px var(--accent-color);
+  box-shadow: 0 0 10px var(--accent-color);
   -webkit-animation: progress-animation linear;
   animation: progress-animation linear;
   animation-timeline: scroll();
@@ -810,10 +813,10 @@ body::-webkit-scrollbar-thumb {
   background-image: image-set("../img/hero_bg.webp" type("image/webp"), "../img/hero_bg.png" type("image/jpg"));
   background-position: center 27%;
   background-repeat: no-repeat;
-  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(65%, black), color-stop(95%, transparent), to(transparent));
-  -webkit-mask-image: linear-gradient(to bottom, black 65%, transparent 95%, transparent 100%);
-  mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(65%, black), color-stop(95%, transparent), to(transparent));
-  mask-image: linear-gradient(to bottom, black 65%, transparent 95%, transparent 100%);
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(85%, black), color-stop(99%, transparent), to(transparent));
+  -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 99%, transparent 100%);
+  mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(85%, black), color-stop(99%, transparent), to(transparent));
+  mask-image: linear-gradient(to bottom, black 85%, transparent 99%, transparent 100%);
   -webkit-box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.1);
   color: var(--text-color-primary);
@@ -823,6 +826,9 @@ body::-webkit-scrollbar-thumb {
   display: grid;
   place-items: center;
   text-align: center;
+  -webkit-transform: translateY(-30%);
+  -ms-transform: translateY(-30%);
+  transform: translateY(-30%);
 }
 .hero__title {
   margin-bottom: 1rem;
@@ -943,8 +949,8 @@ body::-webkit-scrollbar-thumb {
 }
 @media (any-hover: hover) {
   .projects__gallery:has(.projects__project:hover) .projects__project:not(:hover) {
-    -webkit-filter: blur(1px);
-    filter: blur(1px);
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
   }
   .projects__gallery:has(.projects__project:hover) .projects__project:not(:hover)::after {
     opacity: 1;

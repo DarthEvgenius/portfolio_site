@@ -65,7 +65,7 @@
     // if some gallery elem has hover effect,
     // but we select all the other elems that don't hovered
     &__gallery:has(&__project:hover) &__project:not(:hover) {
-      filter: blur(1px);
+      filter: blur(3px);
 
       &::after {
         opacity: 1;
