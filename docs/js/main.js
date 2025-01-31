@@ -176,7 +176,7 @@ __webpack_require__.r(__webpack_exports__);
 const mainElem = document.querySelector('.main');
 const headerElem = document.querySelector('.header');
 const headerHeight = headerElem.offsetHeight;
-mainElem.style.marginTop = `${headerHeight}px`;
+mainElem.style.setProperty('--header-height', `${headerHeight}px`);
 
 /***/ }),
 

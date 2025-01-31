@@ -1,0 +1,15 @@
+.main {
+  --header-height: 100px;
+
+  margin-top: var(--header-height);
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: 100%;
+    height: var(--header-height);
+    background-color: var(--bg-color);
+  }
+}
