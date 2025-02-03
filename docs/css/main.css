@@ -430,6 +430,7 @@ legend {
   font-size: var(--fz-text);
   -webkit-transition: color 0.3s ease-in;
   transition: color 0.3s ease-in;
+  z-index: 10;
 }
 .link::after {
   content: "";
@@ -649,6 +650,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .logo {
+  position: relative;
+  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -722,6 +725,7 @@ body::-webkit-scrollbar-thumb {
   font-size: var(--fz-text);
   -webkit-transition: color 0.3s ease-in;
   transition: color 0.3s ease-in;
+  z-index: 10;
 }
 .nav__link::after {
   content: "";
