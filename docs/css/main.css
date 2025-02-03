@@ -392,7 +392,34 @@ legend {
   -webkit-animation: fade-in-animation linear both;
   animation: fade-in-animation linear both;
   animation-timeline: view(block);
-  animation-range: cover 0% contain 20%;
+  animation-range: cover 15% contain 40%;
+}
+
+@-webkit-keyframes horizontal-scroll-animaiton {
+  0% {
+    -webkit-transform: translateX(-200%);
+    transform: translateX(-200%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes horizontal-scroll-animaiton {
+  0% {
+    -webkit-transform: translateX(-200%);
+    transform: translateX(-200%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+.horizontal-scroll {
+  -webkit-animation: horizontal-scroll-animaiton linear both;
+  animation: horizontal-scroll-animaiton linear both;
+  animation-timeline: scroll(root);
 }
 
 .link {
@@ -1207,13 +1234,6 @@ body::-webkit-scrollbar-thumb {
   font-weight: 500;
   font-size: var(--fz-subtitle);
 }
-.about__container {
-  overflow-x: hidden;
-  width: 300vw;
-}
-.about__container > * {
-  width: 100vw;
-}
 .about__description {
   margin: 0 auto;
   padding: 1em 2em;
@@ -1238,6 +1258,7 @@ body::-webkit-scrollbar-thumb {
   text-decoration-style: dotted;
 }
 .about__achievements {
+  padding-block: 1em;
   list-style-type: disc;
   list-style-position: inside;
 }

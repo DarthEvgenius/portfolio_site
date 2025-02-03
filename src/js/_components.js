@@ -1,5 +1,6 @@
 import './components/scroller'
 import './components/burger'
+import './components/horizontal-scroll'
 import './components/mainSectionMargin'
 import './components/projects/projects-modal'
 import './components/projects/dialog'

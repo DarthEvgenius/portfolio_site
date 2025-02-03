@@ -3,14 +3,15 @@
   font-weight: 500;
   font-size: var(--fz-subtitle);
 
-  &__container {
-    overflow-x: hidden;
-    width: 300vw;
+  // &__container {
+  //   position: relative;
+  //   display: flex;
+  //   width: 300vw;
 
-    > * {
-      width: 100vw;
-    }
-  }
+  //   > div {
+  //     width: 100vw;
+  //   }
+  // }
 
   &__description {
     margin: 0 auto;
@@ -36,6 +37,7 @@
   }
 
   &__achievements {
+    padding-block: 1em;
     list-style-type: disc;
     list-style-position: inside;
 

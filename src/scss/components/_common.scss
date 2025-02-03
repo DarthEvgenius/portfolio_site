@@ -90,5 +90,20 @@
 .fade-in {
   animation: fade-in-animation linear both;
 	animation-timeline: view(block);
-	animation-range: cover 0% contain 20%;
+	animation-range: cover 15% contain 40%;
+}
+
+@keyframes horizontal-scroll-animaiton {
+  0% {
+    transform: translateX(-200%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.horizontal-scroll {
+  animation: horizontal-scroll-animaiton linear both;
+  animation-timeline: scroll(root);
 }

@@ -12,11 +12,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_scroller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/scroller */ "./src/js/components/scroller.js");
 /* harmony import */ var _components_scroller__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_scroller__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/burger */ "./src/js/components/burger.js");
-/* harmony import */ var _components_mainSectionMargin__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/mainSectionMargin */ "./src/js/components/mainSectionMargin.js");
-/* harmony import */ var _components_mainSectionMargin__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_mainSectionMargin__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_projects_projects_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/projects/projects-modal */ "./src/js/components/projects/projects-modal.js");
-/* harmony import */ var _components_projects_dialog__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/projects/dialog */ "./src/js/components/projects/dialog.js");
-/* harmony import */ var _components_projects_dialog__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_projects_dialog__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_horizontal_scroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/horizontal-scroll */ "./src/js/components/horizontal-scroll.js");
+/* harmony import */ var _components_horizontal_scroll__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_horizontal_scroll__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_mainSectionMargin__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/mainSectionMargin */ "./src/js/components/mainSectionMargin.js");
+/* harmony import */ var _components_mainSectionMargin__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_mainSectionMargin__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_projects_projects_modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/projects/projects-modal */ "./src/js/components/projects/projects-modal.js");
+/* harmony import */ var _components_projects_dialog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/projects/dialog */ "./src/js/components/projects/dialog.js");
+/* harmony import */ var _components_projects_dialog__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_projects_dialog__WEBPACK_IMPORTED_MODULE_5__);
+
 
 
 
@@ -164,6 +167,58 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../functions/burger */ "./src/js/functions/burger.js");
 
+
+/***/ }),
+
+/***/ "./src/js/components/horizontal-scroll.js":
+/*!************************************************!*\
+  !*** ./src/js/components/horizontal-scroll.js ***!
+  \************************************************/
+/***/ (() => {
+
+// const horizontalContainer = document.querySelector('.about__container')
+
+// // const aboutListItems = horizontalContainer.querySelectorAll('li')
+// // aboutListItems.forEach(el => el.classList.add('anim'))
+// // console.log(aboutListItems);
+
+// const sections = gsap.utils.toArray('.about__container div')
+// const animatedTexts = gsap.utils.toArray('.anim')
+
+// // gsap.set('.about__container', {
+// //   width: 100 * sections.length + '%',
+// //   display: 'flex',
+// // })
+
+// let scrollTween = gsap.to(sections, {
+//   xPercent: -100 * (sections.length -1),
+//   ease: 'none',
+//   scrollTrigger: {
+//     trigger: '.about__container',
+//     start: 'top top',
+//     end: () =>
+//       "+=" + document.querySelector('.about__container').offsetWidth,
+//     scrub: 1,
+//     pin: true,
+//   }
+// })
+
+// // let scrollTween = gsap.timeline({
+// //   scrollTrigger: {
+// //     trigger: '.about__container',
+// //     start: 'top top',
+// //     end: 'bottom bottom',
+// //     scrub: true,
+// //   }
+// // });
+
+// // sections.forEach(section => {
+// //   scrollTween.fromTo(section, { x: -100 }, { x: 0, duration: 1 });
+// // });
+
+// // animatedTexts.forEach(text => {
+// //   scrollTween.fromTo(text, { opacity: 0 }, { opacity: 1, duration: 1 });
+// // });
 
 /***/ }),
 
