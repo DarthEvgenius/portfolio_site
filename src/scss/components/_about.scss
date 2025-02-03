@@ -1,0 +1,49 @@
+.about {
+  font-family: var(--ff-second);
+  font-weight: 500;
+  font-size: var(--fz-subtitle);
+
+  &__container {
+    overflow-x: hidden;
+    width: 300vw;
+
+    > * {
+      width: 100vw;
+    }
+  }
+
+  &__description {
+    margin: 0 auto;
+    padding: 1em 2em;
+    width: fit-content;
+    max-width: 60ch;
+    text-wrap: balance;
+
+    p {
+      margin-bottom: 1em;
+    }
+  }
+
+  &__experience {
+    padding: 1rem 2rem;
+
+    &_title {
+      text-align: left;
+      text-decoration-line: underline;
+      text-underline-offset: 0.5rem;
+      text-decoration-style: dotted;
+    }
+  }
+
+  &__achievements {
+    list-style-type: disc;
+    list-style-position: inside;
+
+    li {
+      padding: 0.5em 2em;
+      max-width: 60ch;
+      font-weight: 400;
+      font-size: var(--fz-text);
+    }
+  }
+}

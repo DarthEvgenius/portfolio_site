@@ -276,8 +276,8 @@ legend {
   line-height: 1.4;
   -webkit-box-shadow: 0px 0px 3px var(--shadow-color);
   box-shadow: 0px 0px 3px var(--shadow-color);
-  -webkit-filter: blur(10px);
-  filter: blur(10px);
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
   -webkit-transition: -webkit-filter 200ms;
   transition: -webkit-filter 200ms;
   transition: filter 200ms;
@@ -291,7 +291,7 @@ legend {
 }
 
 .section-padding {
-  padding-block: clamp(2rem, 5vw, 2.5rem);
+  padding-block: clamp(4rem, 7vw, 6rem);
 }
 
 .section__title {
@@ -462,6 +462,9 @@ legend {
   .scroller[data-animated=true] .scroller__inner:hover {
     -webkit-animation-play-state: paused;
     animation-play-state: paused;
+    overflow: visible;
+    -webkit-mask: none;
+    mask: none;
   }
 }
 .scroller[data-speed=slow] {
@@ -550,6 +553,11 @@ body::-webkit-scrollbar-thumb {
   -ms-flex-align: center;
   align-items: center;
 }
+@media (max-width: 1280px) {
+  .header__container {
+    padding-block: 0.625rem;
+  }
+}
 @-webkit-keyframes progress-animation {
   0% {
     -webkit-transform: scaleX(0);
@@ -576,7 +584,8 @@ body::-webkit-scrollbar-thumb {
   position: fixed;
   height: 10%;
   width: 100%;
-  background-color: var(--accent-color);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(70%, var(--accent-color)), to(transparent));
+  background-image: linear-gradient(to bottom, var(--accent-color) 70%, transparent 100%);
   top: 0;
   left: 0;
   opacity: 0.3;
@@ -879,7 +888,7 @@ body::-webkit-scrollbar-thumb {
 .projects__gallery {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 30%));
+  grid-template-columns: repeat(auto-fit, minmax(250px, min(25vw, 30%)));
   gap: 30px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -1171,6 +1180,72 @@ body::-webkit-scrollbar-thumb {
   -ms-flex-item-align: end;
   -ms-grid-row-align: end;
   align-self: end;
+}
+
+.project-portfolio p {
+  text-align: center;
+}
+
+.project-dating .project-modal__features-item {
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap) calc(var(--gap) * 2);
+}
+.project-dating .project-modal__features-item:nth-of-type(n + 2) .project-modal__features-description {
+  text-align: center;
+}
+.project-dating .project-modal__features-item:nth-of-type(n + 2) .project-modal__features-description:nth-of-type(1) {
+  grid-column: 1/-1;
+}
+
+.project-pairs p {
+  text-align: center;
+}
+
+.about {
+  font-family: var(--ff-second);
+  font-weight: 500;
+  font-size: var(--fz-subtitle);
+}
+.about__container {
+  overflow-x: hidden;
+  width: 300vw;
+}
+.about__container > * {
+  width: 100vw;
+}
+.about__description {
+  margin: 0 auto;
+  padding: 1em 2em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 60ch;
+  text-wrap: balance;
+}
+.about__description p {
+  margin-bottom: 1em;
+}
+.about__experience {
+  padding: 1rem 2rem;
+}
+.about__experience_title {
+  text-align: left;
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+  text-underline-offset: 0.5rem;
+  -webkit-text-decoration-style: dotted;
+  text-decoration-style: dotted;
+}
+.about__achievements {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+.about__achievements li {
+  padding: 0.5em 2em;
+  max-width: 60ch;
+  font-weight: 400;
+  font-size: var(--fz-text);
 }
 
 .skills__list {

@@ -2,7 +2,7 @@
 
   &__gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 30%));
+    grid-template-columns: repeat(auto-fit, minmax(250px, min(25vw, 30%)));
     gap: 30px;
     justify-content: center;
   }
