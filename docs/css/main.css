@@ -575,6 +575,11 @@ body::-webkit-scrollbar-thumb {
   z-index: 100;
   opacity: 0.9;
 }
+@media (max-width: 678px) {
+  .header {
+    overflow: visible;
+  }
+}
 .header__container {
   padding-block: 1.25rem;
   display: -webkit-box;
@@ -691,6 +696,8 @@ body::-webkit-scrollbar-thumb {
     opacity: 0;
     visibility: hidden;
     position: absolute;
+    top: 0;
+    height: 100vh;
     z-index: 10;
     background-color: var(--dark-color);
     width: 100vw;
@@ -698,11 +705,16 @@ body::-webkit-scrollbar-thumb {
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   }
   .nav.menu--active {
+    display: -ms-grid;
+    display: grid;
     opacity: 1;
     visibility: visible;
   }
   .nav .nav__list {
-    height: 30vh;
+    place-content: center;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
   }
 }
 .nav__list {
@@ -715,6 +727,14 @@ body::-webkit-scrollbar-thumb {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+@media (max-width: 678px) {
+  .nav__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
 }
 @media (max-width: 360px) {
   .nav__list {
@@ -844,6 +864,7 @@ body::-webkit-scrollbar-thumb {
 @media (max-width: 678px) {
   .burger {
     display: inline-block;
+    z-index: 100;
   }
 }
 .hero {
@@ -922,6 +943,9 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--bg-color);
 }
 
+.projects {
+  max-width: 100vw;
+}
 .projects__gallery {
   display: -ms-grid;
   display: grid;

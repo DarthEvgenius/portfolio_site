@@ -10,5 +10,6 @@
 @media (max-width: 678px) {
   .burger {
     display: inline-block;
+    z-index: 100;
   }
 }

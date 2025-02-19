@@ -2,8 +2,9 @@
   @media (max-width: 678px) {
     opacity: 0;
     visibility: hidden;
-    // position: fixed;
     position: absolute;
+    top: 0;
+    height: 100vh;
     z-index: 10;
     background-color: var(--dark-color);
     width: 100vw;
@@ -13,12 +14,14 @@
       visibility 0.3s ease-in-out;
 
     &.menu--active {
+      display: grid;
       opacity: 1;
       visibility: visible;
     }
 
     .nav__list {
-      height: 30vh;
+      place-content: center;
+      justify-content: space-evenly;
     }
   }
 
@@ -26,6 +29,10 @@
     display: flex;
     column-gap: 40px;
     align-items: center;
+
+    @media (max-width: 678px) {
+      flex-direction: column;
+    }
 
     @media (max-width: 360px) {
       column-gap: 20px;
