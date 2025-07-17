@@ -6,6 +6,10 @@
     grid-template-columns: repeat(auto-fit, minmax(250px, min(25vw, 30%)));
     gap: 30px;
     justify-content: center;
+
+    @media (max-width: 550px) {
+      grid-template-columns: 100%;
+    }
   }
 
   &__project {
@@ -84,6 +88,7 @@
   }
 
   &__cover {
+    width: 100%;
     aspect-ratio: 1/1;
   }
 

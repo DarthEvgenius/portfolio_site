@@ -26,7 +26,6 @@ const {
   readFileSync
 } = require('fs');
 const typograf = require('gulp-typograf');
-const webp = require('gulp-webp');
 const mainSass = gulpSass(sass);
 const webpackStream = require('webpack-stream');
 const plumber = require('gulp-plumber');
@@ -241,8 +240,8 @@ const images = () => {
 };
 
 const webpImages = () => {
-  return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`])
-    .pipe(webp())
+  return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,webp}`])
+    // .pipe(webp())
     .pipe(dest(paths.buildImgFolder))
 };
 

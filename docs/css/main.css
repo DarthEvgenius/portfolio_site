@@ -278,12 +278,16 @@ legend {
   line-height: 1.4;
   -webkit-box-shadow: 0px 0px 3px var(--shadow-color);
   box-shadow: 0px 0px 3px var(--shadow-color);
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
   -webkit-transition: -webkit-filter 200ms;
   transition: -webkit-filter 200ms;
   transition: filter 200ms;
   transition: filter 200ms, -webkit-filter 200ms;
+}
+@media (hover: hover) and (pointer: fine) {
+  .btn {
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+  }
 }
 @media (any-hover: hover) {
   .btn:hover {
@@ -569,13 +573,12 @@ body::-webkit-scrollbar-thumb {
   position: fixed;
   width: 100%;
   top: 0;
-  background-color: var(--bg-color);
   border-bottom: 1px solid var(--line-color);
   -webkit-box-shadow: 0px 0px 3px var(--accent-color);
   box-shadow: 0px 0px 3px var(--accent-color);
   overflow: hidden;
   z-index: 100;
-  opacity: 0.9;
+  backdrop-filter: blur(15px);
 }
 @media (max-width: 678px) {
   .header {
@@ -678,6 +681,7 @@ body::-webkit-scrollbar-thumb {
   font-family: var(--ff-second);
   font-size: var(--fz-subtitle);
   pointer-events: none;
+  text-shadow: 0px 0px 2px var(--bg-color);
 }
 .logo__text--bold {
   font-weight: 700;
@@ -957,6 +961,12 @@ body::-webkit-scrollbar-thumb {
   -ms-flex-pack: center;
   justify-content: center;
 }
+@media (max-width: 550px) {
+  .projects__gallery {
+    -ms-grid-columns: 100%;
+    grid-template-columns: 100%;
+  }
+}
 .projects__project {
   position: relative;
   display: -webkit-box;
@@ -1004,7 +1014,6 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--shadow-color);
   -webkit-box-shadow: 0px 0px 10px var(--shadow-color);
   box-shadow: 0px 0px 10px var(--shadow-color);
-  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   color: var(--light-color);
   font-family: var(--ff-second);
@@ -1038,6 +1047,7 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
 }
 .projects__cover {
+  width: 100%;
   aspect-ratio: 1/1;
 }
 .projects__picture {
@@ -1164,11 +1174,9 @@ body::-webkit-scrollbar-thumb {
   }
 }
 .dialog::-webkit-backdrop {
-  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 .dialog::backdrop {
-  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 .dialog__close {

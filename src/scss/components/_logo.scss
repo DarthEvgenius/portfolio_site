@@ -10,6 +10,8 @@
     font-family: var(--ff-second);
     font-size: var(--fz-subtitle);
     pointer-events: none;
+    text-shadow: 0px 0px 2px var(--bg-color);
+
 
     &--bold {
       font-weight: 700;
