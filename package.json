@@ -58,6 +58,7 @@
     "aos": "^2.3.4",
     "graph-modal": "^1.0.4",
     "graph-tabs": "^1.0.0",
+    "html2pdf.js": "^0.10.3",
     "inputmask": "^5.0.7",
     "just-validate": "^3.3.3",
     "rellax": "^1.12.1",

@@ -113,3 +113,22 @@
   animation: horizontal-scroll-animaiton linear both;
   animation-timeline: scroll(root);
 }
+
+@media print {
+  .fly-in {
+    animation: none;
+    transform: none;
+    opacity: 1;
+  }
+
+  .fade-in {
+    animation: none;
+    transform: none;
+  }
+}
+
+.print-none {
+  @media print {
+    display: none;
+  }
+}

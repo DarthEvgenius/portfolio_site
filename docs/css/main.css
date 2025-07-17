@@ -433,6 +433,29 @@ legend {
   animation-timeline: scroll(root);
 }
 
+@media print {
+  .fly-in {
+    -webkit-animation: none;
+    animation: none;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+  .fade-in {
+    -webkit-animation: none;
+    animation: none;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+@media print {
+  .print-none {
+    display: none;
+  }
+}
+
 .link {
   position: relative;
   color: currentColor;
@@ -755,6 +778,7 @@ body::-webkit-scrollbar-thumb {
   font-family: var(--ff-second);
   font-weight: 500;
   font-size: var(--fz-text);
+  text-shadow: 1px 1px 1px var(--dark-color);
   -webkit-transition: color 0.3s ease-in;
   transition: color 0.3s ease-in;
   z-index: 10;
