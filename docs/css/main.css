@@ -628,6 +628,7 @@ body::-webkit-scrollbar-thumb {
   opacity: 0.8;
   backdrop-filter: blur(100px);
   z-index: 10;
+  border-radius: 12px;
 }
 @-webkit-keyframes progress-animation {
   0% {
