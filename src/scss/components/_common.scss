@@ -114,20 +114,18 @@
   animation-timeline: scroll(root);
 }
 
-@media print {
-  .fly-in {
-    animation: none;
-    transform: none;
-    opacity: 1;
-  }
 
-  .fade-in {
-    animation: none;
-    transform: none;
+.print-only {
+  display: none;
+
+  @media print {
+    display: block;
   }
 }
 
 .print-none {
+  display: block;
+
   @media print {
     display: none;
   }

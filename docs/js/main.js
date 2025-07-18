@@ -18054,29 +18054,35 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+// Настройки pdf
+const opt = {
+  margin: 0.5,
+  filename: 'Eugene_Zinin.pdf',
+  image: {
+    type: 'jpeg',
+    quality: 0.98
+  },
+  html2canvas: {
+    scale: 2
+  },
+  jsPDF: {
+    unit: 'in',
+    format: 'a4',
+    orientation: 'portrait'
+  }
+};
 document.addEventListener('DOMContentLoaded', () => {
   const button = document.getElementById('download-pdf');
-  button.addEventListener('click', () => {
-    const element = document.body; // нужный контейнер
-
-    // Настройки pdf
-    const opt = {
-      margin: 0.5,
-      filename: 'page.pdf',
-      image: {
-        type: 'jpeg',
-        quality: 0.98
-      },
-      html2canvas: {
-        scale: 2
-      },
-      jsPDF: {
-        unit: 'in',
-        format: 'a4',
-        orientation: 'portrait'
-      }
-    };
-    html2pdf_js__WEBPACK_IMPORTED_MODULE_4___default()().set(opt).from(element).save();
+  button?.addEventListener('click', () => {
+    const element = document.body;
+    const forPrint = element.querySelector('.print-only');
+    if (forPrint) {
+      forPrint.style.display = 'block';
+      html2pdf_js__WEBPACK_IMPORTED_MODULE_4___default()().set(opt).from(forPrint).save().then(() => {
+        forPrint.style.display = 'none';
+      });
+    }
   });
 });
 })();

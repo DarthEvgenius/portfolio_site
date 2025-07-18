@@ -11,8 +11,9 @@
   --light-color: hsl(0, 0%, 100%);
   --light-color-weak: hsl(0, 0%, 85%);
   --dark-color: hsl(240, 2%, 9%);
-  --dark-color-weak: hsl(240, 1%, 14%);
+  --dark-color-weak: hsla(0, 0%, 45%, 0.7);
   --accent-color: hsl(238, 79%, 64%);
+  --accent-color-transparent: hsl(238, 79%, 64%, 0.3);
   --line-color: hsl(220, 7%, 16%);
   --shadow-color: rgba(0, 0, 0, 0.25);
 
