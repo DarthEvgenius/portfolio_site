@@ -10,8 +10,7 @@
     font-family: var(--ff-second);
     font-size: var(--fz-subtitle);
     pointer-events: none;
-    text-shadow: 1px 1px 2px var(--bg-color);
-
+    text-shadow: 1px 1px 2px var(--text-color-primary);
 
     &--bold {
       font-weight: 700;
@@ -23,7 +22,7 @@
       color: var(--grey-color);
       letter-spacing: 0.03em;
 
-      @media (max-width: 385px) {
+      @media (max-width: 550px) {
         display: none;
       }
     }

@@ -15,10 +15,11 @@ const opt = {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const button = document.getElementById('download-pdf');
+  const buttonPdf = document.getElementById('download-pdf')
+  const buttonThemeToggler = document.getElementById('theme-toggler')
 
 
-  button?.addEventListener('click', () => {
+  buttonPdf?.addEventListener('click', () => {
     const element = document.body
 
     const forPrint = element.querySelector('.print-only')
@@ -30,6 +31,40 @@ document.addEventListener('DOMContentLoaded', () => {
         forPrint.style.display = 'none'
       })
     }
-  });
-});
+  })
 
+  // theme preferences setting
+  const localStorageTheme = localStorage.getItem("theme");
+  const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+  let currentThemeSetting = calculateSettingAsThemeString({ localStorageTheme, systemSettingDark });
+
+  buttonThemeToggler?.addEventListener('click', () => {
+    const newTheme = currentThemeSetting === "dark" ? "light" : "dark"
+    console.log('newTheme:', newTheme)
+
+    const newText = newTheme === "dark" ? "Change to light theme" : "Change to dark theme"
+
+    // buttonThemeToggler.innerText = newText
+    buttonThemeToggler.setAttribute("aria-label", newText)
+
+    document.querySelector(".page").setAttribute("data-theme", newTheme)
+
+    localStorage.setItem("theme", newTheme)
+
+    currentThemeSetting = newTheme
+  })
+
+})
+
+function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {
+  if (localStorageTheme !== null) {
+    return localStorageTheme;
+  }
+
+  if (systemSettingDark.matches) {
+    return "dark";
+  }
+
+  return "light";
+}

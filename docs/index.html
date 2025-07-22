@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" class="page">
+<html lang="en" class="page" data-theme="light">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> -->
+  <!-- <link rel="manifest" href="/site.webmanifest"> -->
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+  <!-- <meta name="color-scheme" content="light dark"> -->
 
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>EZ Portfolio</title>
@@ -48,11 +49,11 @@
     <nav class="nav" data-menu>
   <ul class="nav__list">
     <li class="nav__item">
-      <a href="#projects" class="nav__link" data-menu-item>Projects</a>
+      <a href="#about" class="nav__link" data-menu-item>About Me</a>
     </li>
 
     <li class="nav__item">
-      <a href="#about" class="nav__link" data-menu-item>About Me</a>
+      <a href="#projects" class="nav__link" data-menu-item>Projects</a>
     </li>
 
     <li class="nav__item">
@@ -67,6 +68,33 @@
 
 <button class="btn-reset burger" aria-label="Open menu" aria-expanded="false" data-burger>
   <span class="burger__line"></span>
+</button>
+
+    <button
+  id="theme-toggler"
+  class="theme-toggle-btn"
+  data-theme-toggle
+  aria-label="Change to light theme"
+>
+  <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+    <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+
+    <g class="sun-beams" stroke="currentColor">
+      <line x1="12" y1="1" x2="12" y2="3" />
+      <line x1="12" y1="21" x2="12" y2="23" />
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+      <line x1="1" y1="12" x2="3" y2="12" />
+      <line x1="21" y1="12" x2="23" y2="12" />
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+    </g>
+
+    <mask class="moon" id="moon-mask">
+      <rect x="0" y="0" width="100%" height="100%" fill="white" />
+      <circle cx="24" cy="10" r="6" fill="black" />
+    </mask>
+  </svg>
 </button>
 
   </div>
@@ -739,6 +767,7 @@
     <button class="btn btn-reset dialog__close" type="button">Close image</button>
 </dialog>
 
+<!--
 <dialog
   id="dating_user_settings"
   class="dialog project-dialog-image"
@@ -748,7 +777,7 @@
       <img loading="lazy" src="img/dating-user_settings.png" class="image" width="1024" height="768" alt="Dating app user settings screen">
     </picture>
     <button class="btn btn-reset dialog__close" type="button">Close image</button>
-</dialog>
+</dialog> -->
 
 <dialog
   id="dating_user_subscription"
@@ -829,18 +858,6 @@
           <picture class="projects__picture">
             <source srcset="img/dating-register_panel.webp" type="image/webp">
             <img loading="lazy" src="img/dating-register_panel.png" class="image" width="600" height="450" alt="Dating app register page">
-          </picture>
-        </div>
-
-        <div
-          type="button"
-          class="project-modal__features-image projects__image"
-          aria-label="Open image"
-          data-dialog-image="dating_user_settings"
-        >
-          <picture class="projects__picture">
-            <source srcset="img/dating-user_settings.webp" type="image/webp">
-            <img loading="lazy" src="img/dating-user_settings.png" class="image" width="600" height="450" alt="Dating app user settings screen">
           </picture>
         </div>
       </li>

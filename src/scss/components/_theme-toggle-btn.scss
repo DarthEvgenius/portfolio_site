@@ -1,0 +1,83 @@
+.theme-toggle-btn {
+  --size: 1.5rem;
+  --icon-fill: var(--light-color);
+  --icon-fill-hover: var(--light-color-weak);
+
+  background: none;
+  border: none;
+  padding: 0;
+
+  inline-size: var(--size);
+  block-size: var(--size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  outline-offset: 5px;
+
+  position: relative;
+  z-index: 100;
+
+  @media (hover: none) {
+    --size: 2rem;
+  }
+
+  &:is(:hover, :focus-visible) {
+    & > .sun-and-moon > :is(.moon, .sun) {
+      fill: var(--icon-fill-hover);
+    }
+
+    & .sun-and-moon > .sun-beams {
+      stroke: var(--icon-fill-hover);
+    }
+  }
+
+  .sun-and-moon {
+    inline-size: 100%;
+    block-size: 100%;
+    stroke-linecap: round;
+    color: var(--text-color-primary);
+
+
+    & > :is(.moon, .sun, .sun-beams) {
+      transform-origin: center center;
+      transition: fill 300ms, stroke 300ms;
+    }
+
+    & > :is(.moon, .sun) {
+      fill: var(--icon-fill);
+    }
+
+    & > .sun-beams {
+      stroke: var(--icon-fill);
+      stroke-width: 2px;
+    }
+
+    .sun {
+      transition: transform .5s ease-in-out;
+    }
+  }
+
+}
+
+[data-theme="dark"] .sun-and-moon {
+  & > .sun {
+    transform: scale(1.75);
+  }
+
+  & > .sun-beams {
+    opacity: 0;
+    transform: rotateZ(-25deg);
+    transition-duration: .15s;
+  }
+
+  & > .moon > circle {
+    transform: translateX(-7px);
+
+    @supports (cx: 1px) {
+      transform: translateX(0);
+      cx: 17px;
+    }
+  }
+}

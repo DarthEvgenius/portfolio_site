@@ -1,0 +1,21 @@
+.main,
+.about,
+.projects,
+.skills,
+.contacts {
+  color: var(--text-color-primary);
+  background-color: var(--bg-color);
+}
+
+.main,
+.header,
+.hero,
+.about,
+.projects,
+.skills,
+.contacts,
+.footer {
+  transition:
+  background-color 300ms linear,
+  color 300ms linear;
+}

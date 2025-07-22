@@ -4,6 +4,7 @@
 @import "fonts";
 @import "reset";
 @import "settings";
+@import "_color_schemes";
 
 // подключения компонентов страницы
 @import "./components/common";
@@ -28,5 +29,6 @@
 @import "./components/skills";
 @import "./components/contacts";
 @import "./components/social";
+@import "./components/theme-toggle-btn";
 @import "./components/footer";
 
