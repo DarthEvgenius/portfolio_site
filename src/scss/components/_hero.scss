@@ -58,6 +58,7 @@
     --shadow-color: var(--accent-color);
 
     position: relative;
+    overflow: hidden;
     padding-inline: 1.75em;
     color: var(--light-color-weak);
     font-weight: 500;
@@ -72,6 +73,8 @@
     background-position: right;
 
     box-shadow:
+      7px 7px 20px 0px rgba(0,0,0,.1),
+      4px 4px 5px 0px rgba(0,0,0,.1),
       0px 0px 4px 0px var(--accent-color-dark),
       4px 4px 6px 0px var(--accent-color-light) inset,
       -4px -4px 8px 0px var(--accent-color-transparent) inset,
@@ -83,12 +86,32 @@
       color 300ms ease-in-out
     ;
 
+    &::after {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 100%;
+      top: 0;
+      left: 0;
+      direction: rtl;
+      background-color: rgba(0,0,0,0.1);
+      z-index: 1000;
+      box-shadow:
+        -7px -7px 20px 0px var(--light-color-dark),
+        -4px -4px 5px 0px var(--light-color-dark),
+        7px 7px 20px 0px #0002,
+        4px 4px 5px 0px #0001;
+      transition: all 0.3s ease;
+    }
+
     @include hover {
       background-position: left;
       color: var(--light-color);
 
       &::after {
-        opacity: 1;
+        left: auto;
+        right: 0;
+        width: 100%;
       }
     }
   }
