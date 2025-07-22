@@ -1,15 +1,15 @@
 .theme-toggle-btn {
-  --size: 1.5rem;
+  --size: 2rem;
   --icon-fill: var(--theme-icon-color);
   --icon-fill-hover: var(--theme-icon-hover-color);
 
-  background: none;
+  padding: 4px;
   border: none;
-  padding: 0;
 
   inline-size: var(--size);
   block-size: var(--size);
   aspect-ratio: 1;
+  background-color: var(--bg-color);
   border-radius: 50%;
 
   touch-action: manipulation;
@@ -20,16 +20,18 @@
   z-index: 100;
 
   @media (hover: none) {
-    --size: 2rem;
+    --size: 2.5rem;
   }
 
-  &:is(:hover, :focus-visible) {
-    & > .sun-and-moon > :is(.moon, .sun) {
-      fill: var(--icon-fill-hover);
-    }
+  @include hover {
+    &:is(:hover, :focus-visible) {
+      & > .sun-and-moon > :is(.moon, .sun) {
+        fill: var(--icon-fill-hover);
+      }
 
-    & .sun-and-moon > .sun-beams {
-      stroke: var(--icon-fill-hover);
+      & .sun-and-moon > .sun-beams {
+        stroke: var(--icon-fill-hover);
+      }
     }
   }
 

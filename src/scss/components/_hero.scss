@@ -59,10 +59,17 @@
 
     position: relative;
     padding-inline: 1.75em;
+    color: var(--light-color-weak);
     font-weight: 500;
     background-color: var(--accent-color);
+    transition:
+      background-color 300ms ease-in-out,
+      color 300ms ease-in-out
+    ;
 
     @include hover {
+      background-color: var(--accent-color-transparent);
+      color: var(--light-color);
 
       &::after {
         opacity: 1;

@@ -9,15 +9,15 @@
   line-height: 1.4;
   box-shadow: 0px 0px 3px var(--shadow-color);
 
-  @media (hover: hover) and (pointer: fine) {
-    filter: blur(1px);
-  }
+  // @media (hover: hover) and (pointer: fine) {
+  //   filter: blur(1px);
+  // }
 
   transition: filter 200ms;
 
-  @include hover {
-    filter: blur(0);
-  }
+  // @include hover {
+  //   filter: blur(0);
+  // }
 }
 
 .section-padding {

@@ -196,8 +196,8 @@ legend {
   --text-color-secondary: var(--dark-color-weak);
   --bg-color: var(--light-color);
   --bg-color-hero: var(--dark-color-weak);
-  --theme-icon-color: var(--light-color-weak);
-  --theme-icon-hover-color: var(--dark-color-weak);
+  --theme-icon-color: var(--dark-color-weak);
+  --theme-icon-hover-color: var(--light-color-weak);
 }
 .page[data-theme=dark] {
   --text-color-primary: var(--light-color);
@@ -205,8 +205,8 @@ legend {
   --bg-color: var(--dark-color);
   --bg-color-hero: var(--dark-color);
   --bg-color-hero: var(--dark-color-weak);
-  --theme-icon-color: var(--dark-color-weak);
-  --theme-icon-hover-color: var(--light-color-weak);
+  --theme-icon-color: var(--light-color-weak);
+  --theme-icon-hover-color: var(--dark-color-weak);
 }
 
 .page__body {
@@ -321,18 +321,6 @@ legend {
   transition: -webkit-filter 200ms;
   transition: filter 200ms;
   transition: filter 200ms, -webkit-filter 200ms;
-}
-@media (hover: hover) and (pointer: fine) {
-  .btn {
-    -webkit-filter: blur(1px);
-    filter: blur(1px);
-  }
-}
-@media (any-hover: hover) {
-  .btn:hover {
-    -webkit-filter: blur(0);
-    filter: blur(0);
-  }
 }
 
 .section-padding {
@@ -741,7 +729,7 @@ body::-webkit-scrollbar-thumb {
   font-family: var(--ff-second);
   font-size: var(--fz-subtitle);
   pointer-events: none;
-  text-shadow: 1px 1px 2px var(--text-color-primary);
+  text-shadow: 1px 1px 2px var(--dark-color);
 }
 .logo__text--bold {
   font-weight: 700;
@@ -991,10 +979,17 @@ body::-webkit-scrollbar-thumb {
   --shadow-color: var(--accent-color);
   position: relative;
   padding-inline: 1.75em;
+  color: var(--light-color-weak);
   font-weight: 500;
   background-color: var(--accent-color);
+  -webkit-transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
 }
 @media (any-hover: hover) {
+  .hero__btn:hover {
+    background-color: var(--accent-color-transparent);
+    color: var(--light-color);
+  }
   .hero__btn:hover::after {
     opacity: 1;
   }
@@ -1650,15 +1645,15 @@ body::-webkit-scrollbar-thumb {
 }
 
 .theme-toggle-btn {
-  --size: 1.5rem;
+  --size: 2rem;
   --icon-fill: var(--theme-icon-color);
   --icon-fill-hover: var(--theme-icon-hover-color);
-  background: none;
+  padding: 4px;
   border: none;
-  padding: 0;
   inline-size: var(--size);
   block-size: var(--size);
   aspect-ratio: 1;
+  background-color: var(--bg-color);
   border-radius: 50%;
   -ms-touch-action: manipulation;
   touch-action: manipulation;
@@ -1669,14 +1664,16 @@ body::-webkit-scrollbar-thumb {
 }
 @media (hover: none) {
   .theme-toggle-btn {
-    --size: 2rem;
+    --size: 2.5rem;
   }
 }
-.theme-toggle-btn:is(:hover, :focus-visible) > .sun-and-moon > :is(.moon, .sun) {
-  fill: var(--icon-fill-hover);
-}
-.theme-toggle-btn:is(:hover, :focus-visible) .sun-and-moon > .sun-beams {
-  stroke: var(--icon-fill-hover);
+@media (any-hover: hover) {
+  .theme-toggle-btn:hover:is(:hover, :focus-visible) > .sun-and-moon > :is(.moon, .sun) {
+    fill: var(--icon-fill-hover);
+  }
+  .theme-toggle-btn:hover:is(:hover, :focus-visible) .sun-and-moon > .sun-beams {
+    stroke: var(--icon-fill-hover);
+  }
 }
 .theme-toggle-btn .sun-and-moon {
   inline-size: 100%;
