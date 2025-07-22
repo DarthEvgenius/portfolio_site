@@ -11,10 +11,11 @@
   aspect-ratio: 1;
   background-color: var(--bg-color);
   border-radius: 50%;
+  box-shadow: 0 0 5px var(--bg-color);
 
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
-  outline-offset: 5px;
+  outline-offset: 7px;
 
   position: relative;
   z-index: 100;
