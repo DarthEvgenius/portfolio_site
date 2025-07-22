@@ -1,7 +1,7 @@
 .theme-toggle-btn {
   --size: 1.5rem;
-  --icon-fill: var(--light-color);
-  --icon-fill-hover: var(--light-color-weak);
+  --icon-fill: var(--theme-icon-color);
+  --icon-fill-hover: var(--theme-icon-hover-color);
 
   background: none;
   border: none;

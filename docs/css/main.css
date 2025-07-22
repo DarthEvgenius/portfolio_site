@@ -196,6 +196,8 @@ legend {
   --text-color-secondary: var(--dark-color-weak);
   --bg-color: var(--light-color);
   --bg-color-hero: var(--dark-color-weak);
+  --theme-icon-color: var(--light-color-weak);
+  --theme-icon-hover-color: var(--dark-color-weak);
 }
 .page[data-theme=dark] {
   --text-color-primary: var(--light-color);
@@ -203,6 +205,8 @@ legend {
   --bg-color: var(--dark-color);
   --bg-color-hero: var(--dark-color);
   --bg-color-hero: var(--dark-color-weak);
+  --theme-icon-color: var(--dark-color-weak);
+  --theme-icon-hover-color: var(--light-color-weak);
 }
 
 .page__body {
@@ -1647,8 +1651,8 @@ body::-webkit-scrollbar-thumb {
 
 .theme-toggle-btn {
   --size: 1.5rem;
-  --icon-fill: var(--light-color);
-  --icon-fill-hover: var(--light-color-weak);
+  --icon-fill: var(--theme-icon-color);
+  --icon-fill-hover: var(--theme-icon-hover-color);
   background: none;
   border: none;
   padding: 0;

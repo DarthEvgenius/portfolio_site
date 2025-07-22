@@ -12,6 +12,8 @@
     --text-color-secondary: var(--dark-color-weak);
     --bg-color: var(--light-color);
     --bg-color-hero: var(--dark-color-weak);
+    --theme-icon-color: var(--light-color-weak);
+    --theme-icon-hover-color: var(--dark-color-weak);
   }
 
   &[data-theme="dark"] {
@@ -20,6 +22,8 @@
     --bg-color: var(--dark-color);
     --bg-color-hero: var(--dark-color);
     --bg-color-hero: var(--dark-color-weak);
+    --theme-icon-color: var(--dark-color-weak);
+    --theme-icon-hover-color: var(--light-color-weak);
   }
 }
 
