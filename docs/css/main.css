@@ -1695,22 +1695,41 @@ body::-webkit-scrollbar-thumb {
   stroke-width: 2px;
 }
 .theme-toggle-btn .sun-and-moon .sun {
-  -webkit-transition: -webkit-transform 0.5s ease-in-out;
-  transition: -webkit-transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transition: fill 300ms, -webkit-transform 0.5s ease-in-out;
+  transition: fill 300ms, -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, fill 300ms;
+  transition: transform 0.5s ease-in-out, fill 300ms, -webkit-transform 0.5s ease-in-out;
+}
+.theme-toggle-btn .sun-and-moon .sun-beams {
+  -webkit-transition: opacity 0.5s ease-in-out, stroke 300ms, -webkit-transform 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out, stroke 300ms, -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, stroke 300ms;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, stroke 300ms, -webkit-transform 0.5s ease-in-out;
+}
+.theme-toggle-btn .sun-and-moon .moon > circle {
+  -webkit-transition: -webkit-transform 0.25s ease-in-out;
+  transition: -webkit-transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+}
+@supports (cx: 1px) {
+  .theme-toggle-btn .sun-and-moon .moon > circle {
+    -webkit-transition: cx 0.25s ease-in-out;
+    transition: cx 0.25s ease-in-out;
+  }
 }
 
 [data-theme=dark] .sun-and-moon > .sun {
   -webkit-transform: scale(1.75);
   -ms-transform: scale(1.75);
   transform: scale(1.75);
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
 }
 [data-theme=dark] .sun-and-moon > .sun-beams {
   opacity: 0;
-  -webkit-transform: rotateZ(-25deg);
-  -ms-transform: rotate(-25deg);
-  transform: rotateZ(-25deg);
   -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
 }
@@ -1718,6 +1737,10 @@ body::-webkit-scrollbar-thumb {
   -webkit-transform: translateX(-7px);
   -ms-transform: translateX(-7px);
   transform: translateX(-7px);
+  -webkit-transition-delay: 0.25s;
+  transition-delay: 0.25s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
 }
 @supports (cx: 1px) {
   [data-theme=dark] .sun-and-moon > .moon > circle {
