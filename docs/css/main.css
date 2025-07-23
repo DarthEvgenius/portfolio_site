@@ -935,6 +935,8 @@ body::-webkit-scrollbar-thumb {
   background-repeat: no-repeat;
   color: var(--text-color-primary);
   position: relative;
+  -webkit-filter: drop-shadow(1px 1px 10px var(--text-color-primary));
+  filter: drop-shadow(1px 1px 10px var(--text-color-primary));
 }
 .hero::after {
   content: "";
@@ -943,8 +945,7 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   top: 100%;
   left: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(var(--bg-color-hero)), color-stop(50%, transparent));
-  background: linear-gradient(to bottom, var(--bg-color-hero), transparent 50%);
+  background: var(--bg-color-hero);
   -webkit-mask-image: url("../img/wave.svg");
   mask-image: url("../img/wave.svg");
   -webkit-mask-size: 100%;
