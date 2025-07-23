@@ -10,7 +10,7 @@
   --dark-color-weak: hsla(0, 0%, 45%, 0.7);
   --accent-color: hsl(238, 79%, 64%);
   --accent-color-dark: hsl(238, 79%, 55%);
-  --accent-color-light: hsl(238, 79%, 70%);
+  --accent-color-light: hsl(238, 79%, 75%);
   --accent-color-transparent: hsl(238, 79%, 64%, 0.3);
   --line-color: hsl(220, 7%, 16%);
   --shadow-color: rgba(0, 0, 0, 0.25);
@@ -331,8 +331,8 @@ legend {
   font-size: var(--fz-title);
   line-height: 1.3;
   text-align: center;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(40%, var(--accent-color-transparent)), color-stop(55%, var(--accent-color)));
-  background-image: linear-gradient(to right, var(--accent-color-transparent) 40%, var(--accent-color) 55% 70%);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(40%, var(--accent-color-dark)), color-stop(55%, var(--accent-color-light)));
+  background-image: linear-gradient(to right, var(--accent-color-dark) 40%, var(--accent-color-light) 55% 70%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
