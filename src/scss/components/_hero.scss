@@ -18,7 +18,7 @@
   color: var(--text-color-primary);
   position: relative;
 
-  filter: drop-shadow(1px 1px 10px var(--text-color-primary));
+  filter: drop-shadow(0px -10px 5px var(--text-color-secondary));
 
   &::after {
     content: '';

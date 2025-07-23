@@ -18,7 +18,7 @@
   outline-offset: 7px;
 
   position: relative;
-  z-index: 100;
+  z-index: var(--z-header);
 
   @media (hover: none) {
     --size: 2.5rem;

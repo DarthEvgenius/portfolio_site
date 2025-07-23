@@ -15,9 +15,8 @@ const opt = {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  // pdf constructing
   const buttonPdf = document.getElementById('download-pdf')
-  const buttonThemeToggler = document.getElementById('theme-toggler')
-
 
   buttonPdf?.addEventListener('click', () => {
     const element = document.body
@@ -33,7 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   })
 
-  // theme preferences setting
+  // dark/light theme preferences setting
+  const buttonThemeToggler = document.getElementById('theme-toggler')
   const localStorageTheme = localStorage.getItem("theme");
   const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
 
@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const newText = newTheme === "dark" ? "Change to light theme" : "Change to dark theme"
 
-    // buttonThemeToggler.innerText = newText
     buttonThemeToggler.setAttribute("aria-label", newText)
 
     document.querySelector(".page").setAttribute("data-theme", newTheme)
@@ -55,6 +54,30 @@ document.addEventListener('DOMContentLoaded', () => {
     currentThemeSetting = newTheme
   })
 
+  // language handling
+  const languageBlock = document.querySelector('.language')
+  const currentLanguageButtons = document.querySelectorAll('.language__selected')
+  const langOptionButtons = Array.from(document.querySelectorAll('.language__select-option--btn'))
+  const validLanguages = ['en', 'ru']
+
+  currentLanguageButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      languageBlock.classList.add('is-active')
+  })
+  })
+
+  langOptionButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      languageBlock.classList.remove('is-active')
+      const targetData = e.currentTarget.dataset?.lang
+
+      if (targetData && validLanguages.includes(targetData)) {
+        document.documentElement.setAttribute('lang', targetData)
+      } else {
+        console.warn('Not valid language!')
+      }
+    })
+  })
 })
 
 function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {
