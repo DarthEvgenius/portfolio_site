@@ -1,4 +1,4 @@
-.hero {
+.hero, .hero-ru {
   min-height: 695px;
   height: calc(100vh - 100px);
 
@@ -125,5 +125,19 @@
         width: 100%;
       }
     }
+  }
+}
+
+.hero-ru {
+  display: none;
+}
+
+[lang="ru"] {
+  .hero-ru {
+    display: grid;
+  }
+
+  .hero {
+    display: none;
   }
 }

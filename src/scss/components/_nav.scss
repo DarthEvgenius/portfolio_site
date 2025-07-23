@@ -1,4 +1,4 @@
-.nav {
+.nav, .nav-ru {
   @media (max-width: 678px) {
     opacity: 0;
     visibility: hidden;
@@ -79,5 +79,19 @@
         }
       }
     }
+  }
+}
+
+.nav-ru {
+  display: none;
+}
+
+[lang="ru"] {
+  .nav-ru {
+    display: block;
+  }
+
+  .nav {
+    display: none;
   }
 }

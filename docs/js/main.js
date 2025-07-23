@@ -18096,7 +18096,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   buttonThemeToggler?.addEventListener('click', () => {
     const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
-    console.log('newTheme:', newTheme);
     const newText = newTheme === "dark" ? "Change to light theme" : "Change to dark theme";
     buttonThemeToggler.setAttribute("aria-label", newText);
     document.querySelector(".page").setAttribute("data-theme", newTheme);
