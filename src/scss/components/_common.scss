@@ -22,16 +22,16 @@
   text-align: center;
   background-image: linear-gradient(
     to right,
-    var(--dark-color-weak) 30%,
-    var(--accent-color) 80%);
+    var(--accent-color-transparent) 40%,
+    var(--accent-color) 55% 70%);
   background-clip: text;
   color: transparent;
 
-  @media (prefers-color-scheme: dark) {
+  [data-theme="dark"] & {
     background-image: linear-gradient(
       to right,
-      var(--light-color-weak) 30%,
-      var(--accent-color) 80%);
+      var(--light-color-weak) 40%,
+      var(--accent-color) 55% 70%);
   }
 }
 
