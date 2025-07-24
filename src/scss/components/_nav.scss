@@ -1,5 +1,6 @@
 .nav {
-  @media (max-width: 678px) {
+  // @media (max-width: 678px) {
+  @media (max-width: 940px) {
     opacity: 0;
     visibility: hidden;
     position: absolute;
@@ -29,7 +30,8 @@
     column-gap: 40px;
     align-items: center;
 
-    @media (max-width: 678px) {
+    // @media (max-width: 678px) {
+    @media (max-width: 940px) {
       flex-direction: column;
     }
 

@@ -1,5 +1,5 @@
 .theme-toggle-btn {
-  --size: 2rem;
+  --size: 1.5rem;
   --icon-fill: var(--theme-icon-color);
   --icon-fill-hover: var(--theme-icon-hover-color);
 
@@ -21,7 +21,7 @@
   z-index: var(--z-header);
 
   @media (hover: none) {
-    --size: 2.5rem;
+    --size: 1.5rem;
   }
 
   @include hover {
