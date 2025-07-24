@@ -17052,9 +17052,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_horizontal_scroll__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_horizontal_scroll__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components_mainSectionMargin__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/mainSectionMargin */ "./src/js/components/mainSectionMargin.js");
 /* harmony import */ var _components_mainSectionMargin__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_mainSectionMargin__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_projects_projects_modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/projects/projects-modal */ "./src/js/components/projects/projects-modal.js");
-/* harmony import */ var _components_projects_dialog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/projects/dialog */ "./src/js/components/projects/dialog.js");
-/* harmony import */ var _components_projects_dialog__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_projects_dialog__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_color_theme__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/color-theme */ "./src/js/components/color-theme.js");
+/* harmony import */ var _components_color_theme__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_color_theme__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_languages__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/languages */ "./src/js/components/languages.js");
+/* harmony import */ var _components_languages__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_languages__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_pdf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/pdf */ "./src/js/components/pdf.js");
+/* harmony import */ var _components_projects_projects_modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/projects/projects-modal */ "./src/js/components/projects/projects-modal.js");
+/* harmony import */ var _components_projects_dialog__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/projects/dialog */ "./src/js/components/projects/dialog.js");
+/* harmony import */ var _components_projects_dialog__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_components_projects_dialog__WEBPACK_IMPORTED_MODULE_8__);
+
+
+
 
 
 
@@ -17206,6 +17214,48 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/js/components/color-theme.js":
+/*!******************************************!*\
+  !*** ./src/js/components/color-theme.js ***!
+  \******************************************/
+/***/ (() => {
+
+document.addEventListener('DOMContentLoaded', () => {
+  // dark/light theme preferences setting
+  const buttonThemeToggler = document.getElementById('theme-toggler');
+  const localStorageTheme = localStorage.getItem("theme");
+  const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
+  if (localStorageTheme) {
+    document.querySelector(".page").setAttribute("data-theme", localStorageTheme);
+  }
+  let currentThemeSetting = calculateSettingAsThemeString({
+    localStorageTheme,
+    systemSettingDark
+  });
+  buttonThemeToggler?.addEventListener('click', () => {
+    const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
+    const newText = newTheme === "dark" ? "Change to light theme" : "Change to dark theme";
+    buttonThemeToggler.setAttribute("aria-label", newText);
+    document.querySelector(".page").setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+    currentThemeSetting = newTheme;
+  });
+});
+function calculateSettingAsThemeString({
+  localStorageTheme,
+  systemSettingDark
+}) {
+  if (localStorageTheme !== null) {
+    return localStorageTheme;
+  }
+  if (systemSettingDark.matches) {
+    return "dark";
+  }
+  return "light";
+}
+
+/***/ }),
+
 /***/ "./src/js/components/horizontal-scroll.js":
 /*!************************************************!*\
   !*** ./src/js/components/horizontal-scroll.js ***!
@@ -17258,6 +17308,42 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/js/components/languages.js":
+/*!****************************************!*\
+  !*** ./src/js/components/languages.js ***!
+  \****************************************/
+/***/ (() => {
+
+document.addEventListener('DOMContentLoaded', () => {
+  // language handling
+  const languageBlock = document.querySelector('.language');
+  const validLanguages = ['en', 'ru'];
+  const localStorageLanguage = localStorage.getItem('lang');
+  if (localStorageLanguage) {
+    document.documentElement.setAttribute('lang', localStorageLanguage);
+  }
+  document.addEventListener('click', e => {
+    const languageButton = e.target.closest('.language__select-option--btn');
+    const currentLanguageButton = e.target.closest('.language__selected');
+    if (languageButton) {
+      const nextLang = languageButton.dataset.lang;
+      if (validLanguages.includes(nextLang)) {
+        document.documentElement.setAttribute('lang', nextLang);
+        localStorage.setItem('lang', nextLang);
+      } else {
+        console.warn('Not valid language!');
+      }
+      languageBlock.classList.remove('is-active');
+    } else if (currentLanguageButton) {
+      languageBlock.classList.add('is-active');
+    } else {
+      languageBlock.classList.remove('is-active');
+    }
+  });
+});
+
+/***/ }),
+
 /***/ "./src/js/components/mainSectionMargin.js":
 /*!************************************************!*\
   !*** ./src/js/components/mainSectionMargin.js ***!
@@ -17268,6 +17354,52 @@ const mainElem = document.querySelector('.main');
 const headerElem = document.querySelector('.header');
 const headerHeight = headerElem.offsetHeight;
 mainElem.style.setProperty('--header-height', `${headerHeight}px`);
+
+/***/ }),
+
+/***/ "./src/js/components/pdf.js":
+/*!**********************************!*\
+  !*** ./src/js/components/pdf.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var html2pdf_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! html2pdf.js */ "./node_modules/html2pdf.js/dist/html2pdf.js");
+/* harmony import */ var html2pdf_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(html2pdf_js__WEBPACK_IMPORTED_MODULE_0__);
+
+
+// Настройки pdf
+const opt = {
+  margin: 0.5,
+  filename: 'Eugene_Zinin.pdf',
+  image: {
+    type: 'jpeg',
+    quality: 0.98
+  },
+  html2canvas: {
+    scale: 2
+  },
+  jsPDF: {
+    unit: 'in',
+    format: 'a4',
+    orientation: 'portrait'
+  }
+};
+document.addEventListener('DOMContentLoaded', () => {
+  // pdf constructing
+  const buttonPdf = document.getElementById('download-pdf');
+  buttonPdf?.addEventListener('click', () => {
+    const element = document.body;
+    const forPrint = element.querySelector('.print-only');
+    if (forPrint) {
+      forPrint.style.display = 'block';
+      html2pdf_js__WEBPACK_IMPORTED_MODULE_0___default()().set(opt).from(forPrint).save().then(() => {
+        forPrint.style.display = 'none';
+      });
+    }
+  });
+});
 
 /***/ }),
 
@@ -18047,103 +18179,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_functions */ "./src/js/_functions.js");
 /* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_functions__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_components */ "./src/js/_components.js");
-/* harmony import */ var html2pdf_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! html2pdf.js */ "./node_modules/html2pdf.js/dist/html2pdf.js");
-/* harmony import */ var html2pdf_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(html2pdf_js__WEBPACK_IMPORTED_MODULE_4__);
 
 
 
 
-
-
-// Настройки pdf
-const opt = {
-  margin: 0.5,
-  filename: 'Eugene_Zinin.pdf',
-  image: {
-    type: 'jpeg',
-    quality: 0.98
-  },
-  html2canvas: {
-    scale: 2
-  },
-  jsPDF: {
-    unit: 'in',
-    format: 'a4',
-    orientation: 'portrait'
-  }
-};
-document.addEventListener('DOMContentLoaded', () => {
-  // pdf constructing
-  const buttonPdf = document.getElementById('download-pdf');
-  buttonPdf?.addEventListener('click', () => {
-    const element = document.body;
-    const forPrint = element.querySelector('.print-only');
-    if (forPrint) {
-      forPrint.style.display = 'block';
-      html2pdf_js__WEBPACK_IMPORTED_MODULE_4___default()().set(opt).from(forPrint).save().then(() => {
-        forPrint.style.display = 'none';
-      });
-    }
-  });
-
-  // dark/light theme preferences setting
-  const buttonThemeToggler = document.getElementById('theme-toggler');
-  const localStorageTheme = localStorage.getItem("theme");
-  const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
-  if (localStorageTheme) {
-    document.querySelector(".page").setAttribute("data-theme", localStorageTheme);
-  }
-  let currentThemeSetting = calculateSettingAsThemeString({
-    localStorageTheme,
-    systemSettingDark
-  });
-  buttonThemeToggler?.addEventListener('click', () => {
-    const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
-    const newText = newTheme === "dark" ? "Change to light theme" : "Change to dark theme";
-    buttonThemeToggler.setAttribute("aria-label", newText);
-    document.querySelector(".page").setAttribute("data-theme", newTheme);
-    localStorage.setItem("theme", newTheme);
-    currentThemeSetting = newTheme;
-  });
-
-  // language handling
-  const languageBlock = document.querySelector('.language');
-  const validLanguages = ['en', 'ru'];
-  const localStorageLanguage = localStorage.getItem('lang');
-  if (localStorageLanguage) {
-    document.documentElement.setAttribute('lang', localStorageLanguage);
-  }
-  document.addEventListener('click', e => {
-    const languageButton = e.target.closest('.language__select-option--btn');
-    const currentLanguageButton = e.target.closest('.language__selected');
-    if (languageButton) {
-      const nextLang = languageButton.dataset.lang;
-      if (validLanguages.includes(nextLang)) {
-        document.documentElement.setAttribute('lang', nextLang);
-        localStorage.setItem('lang', nextLang);
-      } else {
-        console.warn('Not valid language!');
-      }
-      languageBlock.classList.remove('is-active');
-    } else if (currentLanguageButton) {
-      languageBlock.classList.add('is-active');
-    } else {
-      languageBlock.classList.remove('is-active');
-    }
-  });
-});
-function calculateSettingAsThemeString({
-  localStorageTheme,
-  systemSettingDark
-}) {
-  if (localStorageTheme !== null) {
-    return localStorageTheme;
-  }
-  if (systemSettingDark.matches) {
-    return "dark";
-  }
-  return "light";
-}
 })();
 
 /******/ })()
