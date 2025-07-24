@@ -1,12 +1,11 @@
-.nav, .nav-ru {
+.nav {
   @media (max-width: 678px) {
     opacity: 0;
     visibility: hidden;
     position: absolute;
     top: 0;
     height: 100vh;
-    z-index: 10;
-    background-color: var(--text-color-primary);
+    background-color: var(--bg-color);
     width: 100vw;
 
     transition:
@@ -88,10 +87,10 @@
 
 [lang="ru"] {
   .nav-ru {
-    display: block;
+    display: flex;
   }
 
-  .nav {
+  .nav-en {
     display: none;
   }
 }

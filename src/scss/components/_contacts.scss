@@ -1,4 +1,5 @@
-.contacts {
+.contacts,
+.contacts-ru {
   &__content {
     display: grid;
     justify-content: center;
@@ -37,3 +38,16 @@
   }
 }
 
+.contacts-ru {
+  display: none;
+}
+
+[lang="ru"] {
+  .contacts-ru {
+    display: block;
+  }
+
+  .contacts {
+    display: none;
+  }
+}

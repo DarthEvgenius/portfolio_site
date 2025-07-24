@@ -1,13 +1,21 @@
-  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="this_project">
+<div
+  class="graph-modal__container"
+  role="dialog"
+  aria-modal="true"
+  data-graph-target="this_project"
+>
 
-    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Close project details"></button>
+  <button class="btn-reset js-modal-close graph-modal__close" aria-label="Close project details"></button>
 
-    <div class="graph-modal__content project-modal project-portfolio">
+  <div class="graph-modal__content project-modal project-portfolio">
 
-      @include('./dialog-images/portfolio-images.html')
+    @include('./dialog-images/portfolio-images.html')
 
-      <div class="project-modal__details">
-        <h4 class="projects__name card__title project-modal__title">This portfolio site</h4>
+    <div class="project-modal__details">
+      <div class="projects-dialog-en">
+        <h4 class="projects__name card__title project-modal__title">
+          This portfolio site
+        </h4>
 
         <ul class="project-modal__details-list">
           <li class="project-modal__details-item">
@@ -21,5 +29,24 @@
         <p>Poke around!</p>
       </div>
 
+      <div class="projects-dialog-ru">
+        <h4 class="projects__name card__title project-modal__title">
+          Этот сайт-портфолио
+        </h4>
+
+        <ul class="project-modal__details-list">
+          <li class="project-modal__details-item">
+            <a href="https://github.com/DarthEvgenius/portfolio_site" class="project-modal__details-link link">Github</a>
+          </li>
+        </ul>
+
+        <p class="project-modal__details-description">
+          Добро пожаловать на мой сайт-портфолио, созданный с использованием Vanilla JavaScript, HTML, SCSS и сборщика Gulp с различными модулями.
+        </p>
+        <p>Исследуйте!</p>
+      </div>
+
     </div>
+
   </div>
+</div>

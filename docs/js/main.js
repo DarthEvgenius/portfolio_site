@@ -17282,10 +17282,10 @@ dialogOpenButtons.forEach(btn => {
   btn.addEventListener('click', e => {
     const dialogID = e.target.closest('.projects__image').getAttribute('data-dialog-image');
     const dialogElement = document.querySelector(`#${dialogID}`);
-    dialogElement.showModal();
-    const dialogCloseButton = dialogElement.querySelector('.dialog__close');
-    dialogCloseButton.addEventListener('click', () => {
-      dialogElement.close();
+    dialogElement?.showModal();
+    const dialogCloseButton = dialogElement?.querySelector('.dialog__close');
+    dialogCloseButton?.addEventListener('click', () => {
+      dialogElement?.close();
     });
   });
 });
@@ -18090,6 +18090,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const buttonThemeToggler = document.getElementById('theme-toggler');
   const localStorageTheme = localStorage.getItem("theme");
   const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
+  if (localStorageTheme) {
+    document.querySelector(".page").setAttribute("data-theme", localStorageTheme);
+  }
   let currentThemeSetting = calculateSettingAsThemeString({
     localStorageTheme,
     systemSettingDark
@@ -18105,24 +18108,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // language handling
   const languageBlock = document.querySelector('.language');
-  const currentLanguageButtons = document.querySelectorAll('.language__selected');
-  const langOptionButtons = Array.from(document.querySelectorAll('.language__select-option--btn'));
   const validLanguages = ['en', 'ru'];
-  currentLanguageButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      languageBlock.classList.add('is-active');
-    });
-  });
-  langOptionButtons.forEach(btn => {
-    btn.addEventListener('click', e => {
-      languageBlock.classList.remove('is-active');
-      const targetData = e.currentTarget.dataset?.lang;
-      if (targetData && validLanguages.includes(targetData)) {
-        document.documentElement.setAttribute('lang', targetData);
+  const localStorageLanguage = localStorage.getItem('lang');
+  if (localStorageLanguage) {
+    document.documentElement.setAttribute('lang', localStorageLanguage);
+  }
+  document.addEventListener('click', e => {
+    const languageButton = e.target.closest('.language__select-option--btn');
+    const currentLanguageButton = e.target.closest('.language__selected');
+    if (languageButton) {
+      const nextLang = languageButton.dataset.lang;
+      if (validLanguages.includes(nextLang)) {
+        document.documentElement.setAttribute('lang', nextLang);
+        localStorage.setItem('lang', nextLang);
       } else {
         console.warn('Not valid language!');
       }
-    });
+      languageBlock.classList.remove('is-active');
+    } else if (currentLanguageButton) {
+      languageBlock.classList.add('is-active');
+    } else {
+      languageBlock.classList.remove('is-active');
+    }
   });
 });
 function calculateSettingAsThemeString({

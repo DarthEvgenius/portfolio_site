@@ -1,4 +1,5 @@
-.projects {
+.projects,
+.projects-ru {
   max-width: 100vw;
 
   &__gallery {
@@ -25,15 +26,6 @@
       opacity 0.3s ease-in-out,
       scale 0.3s ease-in-out,
       filter 0.3s linear;
-
-    &::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      background-color: rgba(0,0,0, 0.1);
-      transition: opacity 0.3s linear;
-    }
   }
 
 
@@ -90,6 +82,7 @@
   &__cover {
     width: 100%;
     aspect-ratio: 1/1;
+    object-position: top;
   }
 
   &__picture {
@@ -107,10 +100,26 @@
 
   }
 
-
   @media (any-hover: hover) {
     &__project:hover {
       scale: 1.05;
     }
+  }
+}
+
+.projects-ru,
+.projects-dialog-ru {
+  display: none;
+}
+
+[lang="ru"] {
+  .projects-ru,
+  .projects-dialog-ru {
+    display: block;
+  }
+
+  .projects,
+  .projects-dialog-en {
+    display: none;
   }
 }

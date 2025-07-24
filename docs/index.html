@@ -47,7 +47,7 @@
     </div>
 
     <nav class="nav" data-menu>
-  <ul class="nav__list">
+  <ul class="nav__list nav-en">
     <li class="nav__item">
       <a href="#about" class="nav__link" data-menu-item>About Me</a>
     </li>
@@ -64,24 +64,22 @@
       <a href="#contacts" class="nav__link" data-menu-item>Contacts</a>
     </li>
   </ul>
-</nav>
 
-<nav class="nav-ru" data-menu>
-  <ul class="nav__list">
+  <ul class="nav__list nav-ru">
     <li class="nav__item">
-      <a href="#about" class="nav__link" data-menu-item>Обо мне</a>
+      <a href="#about-ru" class="nav__link" data-menu-item>Обо мне</a>
     </li>
 
     <li class="nav__item">
-      <a href="#projects" class="nav__link" data-menu-item>Проекты</a>
+      <a href="#projects-ru" class="nav__link" data-menu-item>Проекты</a>
     </li>
 
     <li class="nav__item">
-      <a href="#skills" class="nav__link" data-menu-item>Скиллы</a>
+      <a href="#skills-ru" class="nav__link" data-menu-item>Стек</a>
     </li>
 
     <li class="nav__item">
-      <a href="#contacts" class="nav__link" data-menu-item>Контакты</a>
+      <a href="#contacts-ru" class="nav__link" data-menu-item>Контакты</a>
     </li>
   </ul>
 </nav>
@@ -220,16 +218,16 @@
 
       <ul class="about__achievements fade-in">
         <li>
-          Tech stack: Nuxt JS 3, Vue JS 3, Pinia, Gsap, SCSS modules
+          Tech stack: TypeScript, Nuxt JS 3, Vue JS 3, Pinia, Gsap, SCSS modules
         </li>
         <li>
-          Built the most of the website with engaging design and complex logic, creating over 10 new pages from scratch and updating existing ones with new design and features while maintaining existing functionality.
+          Complete website redesign and scaling: developed 10+ interactive pages with dynamic content and complex UI/business logic (booking/payment systems); modernized existing sections: implemented updated design and new features while maintaining full backward compatibility.
         </li>
         <li>
-          Significantly optimized page load speed, increasing Lighthouse and Core Web Vitals scores from a poor 20/45 points on mobile/desktop versions to strong 90+/55.
+          Significantly optimized page load speed, increasing Lighthouse and Core Web Vitals scores from a poor 20/45 points on mobile/desktop versions to strong 90+/55. Implemented: resource compression, lazy loading, advanced caching strategies, code splitting.
         </li>
         <li>
-          Comprehensive code refactoring by leveraging modern Nuxt and Vue features, code splitting and maintainability improving.
+          Comprehensive code refactoring leveraging modern Nuxt and Vue features: code splitting for efficient resource loading, enhanced code readability and maintainability, optimized project structure for scalability.
         </li>
       </ul>
     </div>
@@ -252,45 +250,68 @@
          <li>
           Extensive debugging and code improving within a really vast enterprise codebase, identifying and resolving critical issues efficiently.
         </li>
-         <li>
-          Engaged in intense cross-level communication to collaboratively solve issues and enhance overall project outcomes.
-        </li>
         <li>
           Implemented project-level style improvements, injecting up-to-date technologies, ensuring a consistent and polished user interface across the application.
         </li>
-         <li>
-          Organized and optimized stylesheets, improving maintainability and reducing load times, resulting in a smoother user experience.
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="about-ru section-padding" id="about-ru">
+  <h2 class="skills__title section__title fly-in">Обо мне</h2>
+
+  <div class="container about__container">
+
+    <div class="about__description fade-in">
+      <p>
+        Привет! Меня зовут Евгений, я фронтенд-разработчик с полутора годами коммерческого опыта. Мой путь в веб-разработке был одновременно увлекательным и сложным, что позволило мне расти и оттачивать свои навыки в различных технологиях и фреймворках.
+      </p>
+
+      <p>Мой опыт работы:</p>
+    </div>
+
+    <div class="about__experience">
+      <h3 class="about__experience_title fade-in">
+        'Joki-Joya' — Семейные парки развлечений с развитой IT-инфраструктурой:
+      </h3>
+
+      <ul class="about__achievements fade-in">
+        <li>
+          Стек: TypeScript, Nuxt JS 3, Vue JS 3, Pinia, Gsap, SCSS модули
         </li>
-         <li>
-          Contributed to improving website performance by optimizing code and assets, resulting in a smoother user experience.
+        <li>
+          Полный редизайн и масштабирование веб-сайта: разработка интерактивных страниц (10+) с динамическим контентом и сложной логикой взаимодействий и бизнес-логикой (форм бронирования/оплаты); модернизация существующих разделов — обновилённый дизайн и новый функционал с сохранением работоспособности.
+        </li>
+        <li>
+          Значительно оптимизировал скорость загрузки страниц, улучшил показатели Lighthouse и Core Web Vitals со скромных 20/45 пунктов (мобильная/десктопная версии) до 90+/55. Методы: сжатие ресурсов, ленивая загрузка, кэширование, code splitting.
+        </li>
+        <li>
+          Провел комплексный рефакторинг кода, используя современные возможности Nuxt и Vue: внедрил code splitting для эффективной загрузки ресурсов, улучшил читаемость и поддерживаемость кода, оптимизировал структуру проекта для масштабируемости.
         </li>
       </ul>
     </div>
 
     <div class="about__experience">
-      <h3 class="about__experience_title fade-in">International Dating App Startup</h3>
+      <h3 class="about__experience_title fade-in">
+        'Sigma' — корпоративные решения для госсектора, разработка высоконагруженных биллинг-продуктов уровня «1С»:
+      </h3>
 
       <ul class="about__achievements fade-in">
         <li>
-          Led the development of the entire front-end base for an international dating app focused on love and business connections.
+          Стек: ExtJS, Javascript, SCSS, git
         </li>
         <li>
-          Utilized vanilla JavaScript to build a robust and performant user interface. No frameworks used, so it was an intense usage of different web-API’s
+          Разрабатывал и поддерживал сложные веб-приложения на ExtJS с огромным количеством легаси-кода.
         </li>
         <li>
-          Implemented real-time communication features using WebSockets for instant messaging and notifications.
+          Реализовывал сложные решения, основанные на ООП, построение иерархий классов для бизнес-логики, рефакторинг legacy-кода.
+        </li>
+         <li>
+          Глубокая отладка и оптимизация кода в рамках крупномасштабной enterprise-кодовой базы, работа с кодом возрастом 10+ лет, удаление неиспользуемого и дублирующегося кода, написание документации.
         </li>
         <li>
-          Integrated REST APIs to handle data fetching and user interactions seamlessly.
-        </li>
-        <li>
-          Designed and styled the application using SCSS and Bootstrap, ensuring a responsive and visually appealing design.
-        </li>
-        <li>
-          Optimized the build process and improved development workflow using Gulp, enhancing efficiency and productivity.
-        </li>
-        <li>
-          Collaborated closely with the backend team to ensure smooth integration and optimal performance.
+          Провел глобальный рефакторинг стилей: модернизация UI/UX на уровне всего продукта, внедрение актуальных технологий CSS, создание библиотеки UI-компонентов и SCSS-миксинов.
         </li>
       </ul>
     </div>
@@ -368,7 +389,7 @@
         <div class="projects__image">
           <picture class="projects__picture">
             <source srcset="./img/assembley.webp" type="image/webp">
-            <img loading="lazy" src="./img/assembley.png" class="projects__cover image" width="320" height="320" alt="">
+            <img loading="lazy" src="./img/assembley.png" class="projects__cover image" width="320" height="320" alt="Assembley endgame">
           </picture>
         </div>
         <h3 class="projects__name card__title">Assembley endgame</h3>
@@ -392,10 +413,130 @@
   </div>
 </section>
 
+<section class="projects-ru section-padding" id="projects-ru">
+  <div class="container">
+
+    <h2 class="projects__title section__title fly-in">Мои проекты</h2>
+
+    <ul class="projects__gallery">
+
+      <li
+        class="projects__project fade-in"
+        data-graph-path="jj_project"
+        aria-label="View Joki Joya project details"
+      >
+        <div class="projects__image">
+          <picture class="projects__picture">
+            <source srcset="./img/jj.webp" type="image/webp">
+            <img loading="lazy" src="./img/jj.webp" class="projects__cover image" width="320" height="320" alt="Joki Joya сайт">
+          </picture>
+        </div>
+        <h3 class="projects__name card__title">Сайт парков развлечений Joki Joya</h3>
+      </li>
+
+      <li
+        class="projects__project fade-in"
+        data-graph-path="roboto_project"
+        aria-label="View roboto project details"
+      >
+        <div class="projects__image">
+          <picture class="projects__picture">
+            <source srcset="./img/roboto-cover.webp" type="image/webp">
+            <img loading="lazy" src="./img/roboto-cover.jpg" class="projects__cover image" width="320" height="320" alt="Сайт школы робототехники">
+          </picture>
+        </div>
+        <h3 class="projects__name card__title">Сайт школы робототехники</h3>
+      </li>
+
+      <li
+        class="projects__project fade-in"
+        data-graph-path="dating-app_project"
+        aria-label="View dating app project details">
+
+        <div class="projects__image">
+          <picture class="projects__picture">
+            <source srcset="./img/dating-cover.webp" type="image/webp">
+            <img loading="lazy" src="./img/dating-cover.png" class="projects__cover image" width="320" height="320" alt="Стартап Приложение знакомств">
+          </picture>
+        </div>
+        <h3 class="projects__name card__title">Стартап Приложение знакомств</h3>
+      </li>
+
+      <li
+        class="projects__project fade-in"
+        data-graph-path="this_project"
+        aria-label="View this portfolio project details">
+
+        <div class="projects__image">
+          <picture class="projects__picture">
+            <source srcset="./img/portfolio-cover.webp" type="image/webp">
+            <img loading="lazy" src="./img/portfolio-cover.jpg" class="projects__cover image" width="320" height="320" alt="This portfolio site">
+          </picture>
+        </div>
+
+        <h3 class="projects__name card__title">this.portfolio</h3>
+      </li>
+
+      <li
+        class="projects__project fade-in"
+        data-graph-path="assembley-game"
+        aria-label="View assembley game project details">
+        <div class="projects__image">
+          <picture class="projects__picture">
+            <source srcset="./img/assembley.webp" type="image/webp">
+            <img loading="lazy" src="./img/assembley.png" class="projects__cover image" width="320" height="320" alt="Игра Ассемблер Навсегда">
+          </picture>
+        </div>
+        <h3 class="projects__name card__title">Игра Ассемблер Навсегда</h3>
+      </li>
+
+      <li
+        class="projects__project fade-in"
+        data-graph-path="pairs-game"
+        aria-label="View pairs memory game project details">
+
+        <div class="projects__image">
+          <picture class="projects__picture">
+            <source srcset="./img/pairs.webp" type="image/webp">
+            <img loading="lazy" src="./img/pairs.jpg" class="projects__cover image" width="320" height="320" alt="Игра угадай пару">
+          </picture>
+        </div>
+        <h3 class="projects__name card__title">Игра Угадай Пару</h3>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
       <section class="skills section-padding" id="skills">
   <div class="container">
 
     <h2 class="skills__title section__title fly-in">My Skills</h2>
+
+    <div class="scroller">
+      <ul class="skills__list scroller__inner">
+        <li class="skills__item">JavaScript</li>
+        <li class="skills__item">Sass</li>
+        <li class="skills__item">Nuxt</li>
+        <li class="skills__item">React</li>
+        <li class="skills__item">Vue</li>
+        <li class="skills__item">Pinia</li>
+        <li class="skills__item">Typescript</li>
+        <li class="skills__item">Web Sockets</li>
+        <li class="skills__item" data-tooltip="BS">Bootstrap</li>
+        <li class="skills__item">Accessibility</li>
+        <li class="skills__item">Gulp</li>
+        <li class="skills__item">Tailwind</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section class="skills-ru section-padding" id="skills-ru">
+  <div class="container">
+
+    <h2 class="skills__title section__title fly-in">Мой стек</h2>
 
     <div class="scroller">
       <ul class="skills__list scroller__inner">
@@ -431,6 +572,37 @@
 
       <div class="contacts__phone">
         <h3 class="contacts__subtitle subtitle-medium">Telegram:</h3>
+        <div class="contacts__info">
+          <p>@eugene_zinin</p>
+        </div>
+      </div>
+
+      <div class="contacts__email ">
+        <h3 class="contacts__subtitle subtitle-medium">Email:</h3>
+        <div class="contacts__info">
+          <a href="mailto:eugenezinin@gmail.com">eugenezinin@gmail.com</a>
+        </div>
+      </div>
+
+     </div>
+
+  </div>
+</section>
+
+<section class="contacts-ru section-padding" id="contacts-ru">
+  <div class="container">
+
+    <h2 class="section__title fly-in">Контакты</h2>
+
+     <div class="contacts__content">
+
+      <div class="contacts__location">
+        <h3 class="contacts__subtitle subtitle-medium">Город:</h3>
+        <p class="contacts__info">Санкт-Петербург, Россия</p>
+      </div>
+
+      <div class="contacts__phone">
+        <h3 class="contacts__subtitle subtitle-medium">Телеграм:</h3>
         <div class="contacts__info">
           <p>@eugene_zinin</p>
         </div>
@@ -646,34 +818,66 @@
 
   <div class="graph-modal">
 
-    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="jj_project">
+  <div
+  class="graph-modal__container projects-dialog"
+  role="dialog"
+  aria-modal="true"
+  data-graph-target="jj_project"
+>
 
-    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Close project details"></button>
+  <button class="btn-reset js-modal-close graph-modal__close" aria-label="Close project details"></button>
 
-    <div class="graph-modal__content project-modal project-portfolio">
+  <div class="graph-modal__content project-modal project-portfolio">
 
-      <div class="project-modal__details">
-        <h4 class="projects__name card__title project-modal__title">Joki Joya web site</h4>
+    <div class="project-modal__details">
+      <div class="projects-dialog-en">
+        <h4 class="projects__name card__title project-modal__title">
+          Joki Joya web site
+        </h4>
 
         <ul class="project-modal__details-list">
           <li class="project-modal__details-item">
-            <a href="https://joki-joya.ru/" class="project-modal__details-link link">joki-joya.ru</a>
+            <a href="https://joki-joya.ru/" class="project-modal__details-link link">
+              https://joki-joya.ru/
+            </a>
           </li>
         </ul>
 
         <p class="project-modal__details-description">
           Tech stack: Nuxt 3, Vue JS, Typescript, Pinia, Vue Router, Element Plus, SCSS
         </p>
-        <p>Explore!</p>
+        <p>Welcome!</p>
       </div>
 
+      <div class="projects-dialog-ru">
+        <h4 class="projects__name card__title project-modal__title">
+          Сайт парков развлечений Joki Joya
+        </h4>
+
+        <ul class="project-modal__details-list">
+          <li class="project-modal__details-item">
+            <a href="https://joki-joya.ru/" class="project-modal__details-link link">
+              https://joki-joya.ru/
+            </a>
+          </li>
+        </ul>
+
+        <p class="project-modal__details-description">
+          Стек: Nuxt 3, Vue JS, Typescript, Pinia, Vue Router, Element Plus, SCSS
+        </p>
+        <p>Добро пожаловать!</p>
+      </div>
     </div>
+
   </div>
+</div>
 
   <div
-  class="graph-modal__container"
+  class="graph-modal__container projects-dialog"
   role="dialog"
-  aria-modal="true" data-graph-target="roboto_project">
+  aria-modal="true"
+  data-graph-target="roboto_project"
+>
 
   <button class="btn-reset js-modal-close graph-modal__close" aria-label="Close project details"></button>
 
@@ -736,115 +940,231 @@
 </dialog>
 
     <div class="project-modal__details">
-      <h4 class="projects__name card__title project-modal__title">School site</h4>
+      <div class="projects-dialog-en">
+        <h4 class="projects__name card__title project-modal__title">
+          School site
+        </h4>
 
-      <ul class="project-modal__details-list">
-        <li class="project-modal__details-item">
-          <a href="https://darthevgenius.github.io/school_site/" class="project-modal__details-link link">Live demo</a>
-        </li>
+        <ul class="project-modal__details-list">
+          <li class="project-modal__details-item">
+            <a href="https://darthevgenius.github.io/school_site/" class="project-modal__details-link link">Live demo</a>
+          </li>
 
-        <li class="project-modal__details-item">
-          <a href="https://github.com/DarthEvgenius/school_site?tab=readme-ov-file" class="project-modal__details-link link">Github page</a>
-        </li>
-      </ul>
+          <li class="project-modal__details-item">
+            <a href="https://github.com/DarthEvgenius/school_site?tab=readme-ov-file" class="project-modal__details-link link">Github page</a>
+          </li>
+        </ul>
 
-      <p class="project-modal__details-description">
-        Business-card site of programming and robotics school. Made after a figma design using vanilla Javascript, HTML, SCSS and Gulp toolkit with various modules.
-      </p>
+        <p class="project-modal__details-description">
+          Business-card site of programming and robotics school. Made after a figma design using vanilla Javascript, HTML, SCSS and Gulp toolkit with various modules.
+        </p>
+
+        <ul class="project-modal__features-list">
+          <p class="project-modal__features-title">Some features:</p>
+
+          <li class="project-modal__features-item">
+            <p class="project-modal__features-description">
+              Nice and simple hero section and adaptive menu, with smooth scrolling to the anchor tags on the page, transforming to burger-menu on small screen sizes and disabling hover effects.
+            </p>
+
+            <div
+              type="button"
+              class="project-modal__features-image projects__image"
+              aria-label="Open image"
+              data-dialog-image="robotoHeroScreen"
+            >
+              <picture class="projects__picture">
+                <source srcset="img/roboto-hero.webp" type="image/webp">
+                <img loading="lazy" src="img/roboto-hero.jpg" class="image" width="800" height="600" alt="School site hero section">
+              </picture>
+            </div>
+
+            <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoBurger">
+              <picture class="projects__picture">
+                <source srcset="img/roboto-burger.webp" type="image/webp">
+                <img loading="lazy" src="img/roboto-burger.jpg" class="image" width="325" height="350" alt="School site hero section">
+              </picture>
+            </div>
+
+            <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoMobileMenu">
+              <picture class="projects__picture">
+                <source srcset="img/roboto-mobile.webp" type="image/webp">
+                <img loading="lazy" src="img/roboto-mobile.jpg" class="image" width="325" height="350" alt="School site mobile adaptive">
+              </picture>
+            </div>
+          </li>
+
+          <li class="project-modal__features-item">
+            <p class="project-modal__features-description">
+              Integrated usefull JS libraries: <a href="https://swiperjs.com/" class="link">Swiper.js</a> <a href="https://floating-ui.com/?utm_source=popper.js.org" class="link">Popper.js</a>
+            </p>
+
+            <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoSwiper">
+              <picture class="projects__picture">
+                <source srcset="img/roboto-swiper.webp" type="image/webp">
+                <img loading="lazy" src="img/roboto-swiper.jpg" class="image" width="1024" height="768" alt="Roboto site swiper">
+              </picture>
+            </div>
+
+            <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoPopup">
+              <picture class="projects__picture">
+                <source srcset="img/roboto-popup.webp" type="image/webp">
+                <img loading="lazy" src="img/roboto-popup.jpg" class="image" width="587" height="376" alt="Roboto site popup">
+              </picture>
+            </div>
+          </li>
+
+          <li class="project-modal__features-item">
+            <p class="project-modal__features-description">
+              Modals and shifting tabs inside modals. Also with custom scrollbar:
+            </p>
+
+            <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoModal">
+              <picture class="projects__picture">
+                <source srcset="img/roboto-modal.webp" type="image/webp">
+                <img loading="lazy" src="img/roboto-modal.jpg" class="image" width="1273" height="881" alt="Roboto site modal">
+              </picture>
+            </div>
+          </li>
+
+          <li class="project-modal__features-item">
+            <p class="project-modal__features-description">
+              And nice product cards with hover transition and transform effects
+            </p>
+
+            <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoCards">
+              <picture class="projects__picture">
+                <source srcset="img/roboto-offer.webp" type="image/webp">
+                <img loading="lazy" src="img/roboto-offer.jpg" class="image" width="993" height="458" alt="Roboto site cards">
+              </picture>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="projects-dialog-ru">
+        <h4 class="projects__name card__title project-modal__title">
+          Сайт школы робототехники
+        </h4>
+
+        <ul class="project-modal__details-list">
+          <li class="project-modal__details-item">
+            <a href="https://darthevgenius.github.io/school_site/" class="project-modal__details-link link">Демо</a>
+          </li>
+
+          <li class="project-modal__details-item">
+            <a href="https://github.com/DarthEvgenius/school_site?tab=readme-ov-file" class="project-modal__details-link link">Github</a>
+          </li>
+        </ul>
+
+        <p class="project-modal__details-description">
+          Одностраничный лендинг для образовательного центра, выполненный по готовому дизайну в Figma. Техническая реализация: чистый JavaScript без фреймворков, семантическая HTML-разметка, SCSS-препроцессор для стилей и автоматизированная сборка на Gulp (с минификацией, автопрефиксером)
+        </p>
+
+        <ul class="project-modal__features-list">
+          <p class="project-modal__features-title">
+            Описание:
+          </p>
+
+          <li class="project-modal__features-item">
+            <p class="project-modal__features-description">
+              Красивая и лаконичная Hero-секция: адаптивное бургер-меню, smooth-scroll, обработка hover-only для десктопа.
+            </p>
+
+            <div
+              type="button"
+              class="project-modal__features-image projects__image"
+              aria-label="Open image"
+              data-dialog-image="robotoHeroScreen"
+            >
+              <picture class="projects__picture">
+                <source srcset="img/roboto-hero.webp" type="image/webp">
+                <img loading="lazy" src="img/roboto-hero.jpg" class="image" width="800" height="600" alt="School site hero section">
+              </picture>
+            </div>
+
+            <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoBurger">
+              <picture class="projects__picture">
+                <source srcset="img/roboto-burger.webp" type="image/webp">
+                <img loading="lazy" src="img/roboto-burger.jpg" class="image" width="325" height="350" alt="School site hero section">
+              </picture>
+            </div>
+
+            <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoMobileMenu">
+              <picture class="projects__picture">
+                <source srcset="img/roboto-mobile.webp" type="image/webp">
+                <img loading="lazy" src="img/roboto-mobile.jpg" class="image" width="325" height="350" alt="School site mobile adaptive">
+              </picture>
+            </div>
+          </li>
+
+          <li class="project-modal__features-item">
+            <p class="project-modal__features-description">
+              Используемые JS-библиотеки: <a href="https://swiperjs.com/" class="link">Swiper.js</a> <a href="https://floating-ui.com/?utm_source=popper.js.org" class="link">Popper.js</a>
+            </p>
+
+            <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoSwiper">
+              <picture class="projects__picture">
+                <source srcset="img/roboto-swiper.webp" type="image/webp">
+                <img loading="lazy" src="img/roboto-swiper.jpg" class="image" width="1024" height="768" alt="Roboto site swiper">
+              </picture>
+            </div>
+
+            <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoPopup">
+              <picture class="projects__picture">
+                <source srcset="img/roboto-popup.webp" type="image/webp">
+                <img loading="lazy" src="img/roboto-popup.jpg" class="image" width="587" height="376" alt="Roboto site popup">
+              </picture>
+            </div>
+          </li>
+
+          <li class="project-modal__features-item">
+            <p class="project-modal__features-description">
+              Модальные окна с переключаемыми вкладками и кастомным скроллбаром:
+            </p>
+
+            <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoModal">
+              <picture class="projects__picture">
+                <source srcset="img/roboto-modal.webp" type="image/webp">
+                <img loading="lazy" src="img/roboto-modal.jpg" class="image" width="1273" height="881" alt="Roboto site modal">
+              </picture>
+            </div>
+          </li>
+
+          <li class="project-modal__features-item">
+            <p class="project-modal__features-description">
+              Карточки товаров с плавными hover-эффектами и трансформациями
+            </p>
+
+            <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoCards">
+              <picture class="projects__picture">
+                <source srcset="img/roboto-offer.webp" type="image/webp">
+                <img loading="lazy" src="img/roboto-offer.jpg" class="image" width="993" height="458" alt="Roboto site cards">
+              </picture>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
-
-    <ul class="project-modal__features-list">
-      <p class="project-modal__features-title">Some features:</p>
-
-      <li class="project-modal__features-item">
-        <p class="project-modal__features-description">
-          Nice and simple hero section and adaptive menu, with smooth scrolling to the anchor tags on the page, transforming to burger-menu on small screen sizes and disabling hover effects.
-        </p>
-
-        <div
-          type="button"
-          class="project-modal__features-image projects__image"
-          aria-label="Open image"
-          data-dialog-image="robotoHeroScreen"
-        >
-          <picture class="projects__picture">
-            <source srcset="img/roboto-hero.webp" type="image/webp">
-            <img loading="lazy" src="img/roboto-hero.jpg" class="image" width="800" height="600" alt="School site hero section">
-          </picture>
-        </div>
-
-        <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoBurger">
-          <picture class="projects__picture">
-            <source srcset="img/roboto-burger.webp" type="image/webp">
-            <img loading="lazy" src="img/roboto-burger.jpg" class="image" width="325" height="350" alt="School site hero section">
-          </picture>
-        </div>
-
-        <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoMobileMenu">
-          <picture class="projects__picture">
-            <source srcset="img/roboto-mobile.webp" type="image/webp">
-            <img loading="lazy" src="img/roboto-mobile.jpg" class="image" width="325" height="350" alt="School site mobile adaptive">
-          </picture>
-        </div>
-      </li>
-
-      <li class="project-modal__features-item">
-        <p class="project-modal__features-description">
-          Integrated usefull JS libraries: <a href="https://swiperjs.com/" class="link">Swiper.js</a> <a href="https://floating-ui.com/?utm_source=popper.js.org" class="link">Popper.js</a>
-        </p>
-
-        <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoSwiper">
-          <picture class="projects__picture">
-            <source srcset="img/roboto-swiper.webp" type="image/webp">
-            <img loading="lazy" src="img/roboto-swiper.jpg" class="image" width="1024" height="768" alt="Roboto site swiper">
-          </picture>
-        </div>
-
-        <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoPopup">
-          <picture class="projects__picture">
-            <source srcset="img/roboto-popup.webp" type="image/webp">
-            <img loading="lazy" src="img/roboto-popup.jpg" class="image" width="587" height="376" alt="Roboto site popup">
-          </picture>
-        </div>
-      </li>
-
-      <li class="project-modal__features-item">
-        <p class="project-modal__features-description">
-          Modals and shifting tabs inside modals. Also with custom scrollbar:
-        </p>
-
-        <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoModal">
-          <picture class="projects__picture">
-            <source srcset="img/roboto-modal.webp" type="image/webp">
-            <img loading="lazy" src="img/roboto-modal.jpg" class="image" width="1273" height="881" alt="Roboto site modal">
-          </picture>
-        </div>
-      </li>
-
-      <li class="project-modal__features-item">
-        <p class="project-modal__features-description">
-          And nice product cards with hover transition and transform effects
-        </p>
-
-        <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoCards">
-          <picture class="projects__picture">
-            <source srcset="img/roboto-offer.webp" type="image/webp">
-            <img loading="lazy" src="img/roboto-offer.jpg" class="image" width="993" height="458" alt="Roboto site cards">
-          </picture>
-        </div>
-      </li>
-    </ul>
   </div>
 </div>
 
-    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="this_project">
+  <div
+  class="graph-modal__container"
+  role="dialog"
+  aria-modal="true"
+  data-graph-target="this_project"
+>
 
-    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Close project details"></button>
+  <button class="btn-reset js-modal-close graph-modal__close" aria-label="Close project details"></button>
 
-    <div class="graph-modal__content project-modal project-portfolio">
+  <div class="graph-modal__content project-modal project-portfolio">
 
-      <div class="project-modal__details">
-        <h4 class="projects__name card__title project-modal__title">This portfolio site</h4>
+    <div class="project-modal__details">
+      <div class="projects-dialog-en">
+        <h4 class="projects__name card__title project-modal__title">
+          This portfolio site
+        </h4>
 
         <ul class="project-modal__details-list">
           <li class="project-modal__details-item">
@@ -858,15 +1178,34 @@
         <p>Poke around!</p>
       </div>
 
+      <div class="projects-dialog-ru">
+        <h4 class="projects__name card__title project-modal__title">
+          Этот сайт-портфолио
+        </h4>
+
+        <ul class="project-modal__details-list">
+          <li class="project-modal__details-item">
+            <a href="https://github.com/DarthEvgenius/portfolio_site" class="project-modal__details-link link">Github</a>
+          </li>
+        </ul>
+
+        <p class="project-modal__details-description">
+          Добро пожаловать на мой сайт-портфолио, созданный с использованием Vanilla JavaScript, HTML, SCSS и сборщика Gulp с различными модулями.
+        </p>
+        <p>Исследуйте!</p>
+      </div>
+
     </div>
+
   </div>
+</div>
 
   <div
   class="graph-modal__container"
   role="dialog"
   aria-modal="true"
-  data-graph-target="dating-app_project">
-
+  data-graph-target="dating-app_project"
+>
   <button class="btn-reset js-modal-close graph-modal__close" aria-label="Close project details"></button>
 
   <div class="graph-modal__content project-modal project-dating">
@@ -939,114 +1278,293 @@
 </dialog>
 
     <div class="project-modal__details">
-      <h4 class="projects__name card__title project-modal__title">Dating App</h4>
+      <div class="projects-dialog-en">
+        <h4 class="projects__name card__title project-modal__title">
+          Dating App
+        </h4>
 
-      <ul class="project-modal__details-list">
-        <li class="project-modal__details-item">
-          <a href="https://github.com/DarthEvgenius/dating_app" class="project-modal__details-link link">Github page</a>
-        </li>
-      </ul>
+        <ul class="project-modal__details-list">
+          <li class="project-modal__details-item">
+            <a href="https://github.com/DarthEvgenius/dating_app" class="project-modal__details-link link">Github page</a>
+          </li>
+        </ul>
 
-      <p class="project-modal__details-description">
-        Dating App is a startup project aimed at revolutionizing the way people connect and find meaningful relationships across every aspect of life: friendship, business, and love. I was responsible for the frontend part, building it from scratch firstly as demo-pages for live preview of design concepts, and then composing the entire logic of the application using React, JS, SCSS and Vite.
-      </p>
+        <p class="project-modal__details-description">
+          Dating App is a startup project aimed at revolutionizing the way people connect and find meaningful relationships across every aspect of life: friendship, business, and love. I was responsible for the frontend part, building it from scratch firstly as demo-pages for live preview of design concepts, and then composing the entire logic of the application using React, JS, SCSS and Vite.
+        </p>
+
+        <ul class="project-modal__features-list">
+          <p class="project-modal__features-title">Brief overview:</p>
+
+          <li class="project-modal__features-item">
+            <p class="project-modal__features-description">
+              Intro page offers a brief overview of the app’s features and guides new users through the initial setup process: log user in or register via email or phone number.
+            </p>
+
+            <p class="project-modal__features-description">
+              User’s profile settings page, where you can edit your personal information, preferences, avatar photos and chose one of three Application Subscription Plans for finding matches: Love, Friens or Business partners.
+            </p>
+
+            <div
+              type="button"
+              class="project-modal__features-image projects__image"
+              aria-label="Open image"
+              data-dialog-image="dating_register_page"
+            >
+              <picture class="projects__picture">
+                <source srcset="img/dating-register_panel.webp" type="image/webp">
+                <img loading="lazy" src="img/dating-register_panel.png" class="image" width="600" height="450" alt="Dating app register page">
+              </picture>
+            </div>
+          </li>
+
+          <li class="project-modal__features-item">
+            <p class="project-modal__features-description">
+              Once the user have a subscription plan, there are several settings and preferences to tune matches you want:
+            </p>
+
+            <p class="project-modal__features-description">The user’s subscription information:</p>
+            <p class="project-modal__features-description">User’s preferences:</p>
+
+            <div
+              type="button"
+              class="project-modal__features-image projects__image"
+              aria-label="Open image"
+              data-dialog-image="dating_user_subscription"
+            >
+              <picture class="projects__picture">
+                <source srcset="img/dating-profile.webp" type="image/webp">
+                <img loading="lazy" src="img/dating-profile.png" class="image" width="400" height="300" alt="Dating app user subscription screen">
+              </picture>
+            </div>
+
+            <div
+              type="button"
+              class="project-modal__features-image projects__image"
+              aria-label="Open image"
+              data-dialog-image="dating_user_preferences"
+            >
+              <picture class="projects__picture">
+                <source srcset="img/dating-profile_view.webp" type="image/webp">
+                <img loading="lazy" src="img/dating-profile_view.png" class="image" width="400" height="300" alt="Dating app user subscription preferences">
+              </picture>
+            </div>
+          </li>
+
+          <li class="project-modal__features-item">
+            <p class="project-modal__features-description">
+              After all required settings are up, welcome to the main app’s screens:
+            </p>
+
+            <p class="project-modal__features-description">
+              Look through the candidates and select which you like:
+            </p>
+            <p class="project-modal__features-description">
+              Have a chat with your matches:
+            </p>
+
+            <div
+              type="button"
+              class="project-modal__features-image projects__image"
+              aria-label="Open image"
+              data-dialog-image="dating_select_view"
+            >
+              <picture class="projects__picture">
+                <source srcset="img/dating-select_view.webp" type="image/webp">
+                <img loading="lazy" src="img/dating-select_view.png" class="image" width="600" height="450" alt="Dating app select page">
+              </picture>
+            </div>
+
+            <div
+              type="button"
+              class="project-modal__features-image projects__image"
+              aria-label="Open image"
+              data-dialog-image="dating_chat_view"
+            >
+              <picture class="projects__picture">
+                <source srcset="img/dating-chat_view.webp" type="image/webp">
+                <img loading="lazy" src="img/dating-chat_view.png" class="image" width="600" height="450" alt="Dating app chat page">
+              </picture>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="projects-dialog-ru">
+        <h4 class="projects__name card__title project-modal__title">
+          Приложение знакомств
+        </h4>
+
+        <ul class="project-modal__details-list">
+          <li class="project-modal__details-item">
+            <a href="https://github.com/DarthEvgenius/dating_app" class="project-modal__details-link link">Github</a>
+          </li>
+        </ul>
+
+        <p class="project-modal__details-description">
+          Это стартап-проект, нацеленный на революцию в способах установления контактов и поиска значимых отношений во всех сферах жизни: дружбе, бизнесе и любви. Я отвечал за фронтенд-часть: создавал её с нуля, сначала реализовав демо-страницы для живого просмотра дизайн-концепций, а затем полностью разрабатывал всю логику приложения с помощью React, JavaScript, SCSS и Vite.
+        </p>
+
+        <ul class="project-modal__features-list">
+          <p class="project-modal__features-title">
+            Обзор:
+          </p>
+
+          <li class="project-modal__features-item">
+            <p class="project-modal__features-description">
+              Экран приветствия знакомит пользователей с возможностями приложения и предлагает регистрацию через email или телефон.
+            </p>
+
+            <p class="project-modal__features-description">
+              Страница настроек профиля, где можно редактировать личную информацию, настраивать предпочтения, управлять аватарами и выбирать один из трёх тарифных планов для поиска: Love (романтические отношения), Friends (друзья) или Business (деловые партнёры).
+            </p>
+
+            <div
+              type="button"
+              class="project-modal__features-image projects__image"
+              aria-label="Open image"
+              data-dialog-image="dating_register_page"
+            >
+              <picture class="projects__picture">
+                <source srcset="img/dating-register_panel.webp" type="image/webp">
+                <img loading="lazy" src="img/dating-register_panel.png" class="image" width="600" height="450" alt="Dating app register page">
+              </picture>
+            </div>
+          </li>
+
+          <li class="project-modal__features-item">
+            <p class="project-modal__features-description">
+              После выбора тарифного плана пользователь может настроить параметры поиска и предпочтения для подбора совпадений:
+            </p>
+
+            <p class="project-modal__features-description">
+              Информация о подписке пользователя:
+            </p>
+            <p class="project-modal__features-description">
+              Настройки пользователя:
+            </p>
+
+            <div
+              type="button"
+              class="project-modal__features-image projects__image"
+              aria-label="Open image"
+              data-dialog-image="dating_user_subscription"
+            >
+              <picture class="projects__picture">
+                <source srcset="img/dating-profile.webp" type="image/webp">
+                <img loading="lazy" src="img/dating-profile.png" class="image" width="400" height="300" alt="Dating app user subscription screen">
+              </picture>
+            </div>
+
+            <div
+              type="button"
+              class="project-modal__features-image projects__image"
+              aria-label="Open image"
+              data-dialog-image="dating_user_preferences"
+            >
+              <picture class="projects__picture">
+                <source srcset="img/dating-profile_view.webp" type="image/webp">
+                <img loading="lazy" src="img/dating-profile_view.png" class="image" width="400" height="300" alt="Dating app user subscription preferences">
+              </picture>
+            </div>
+          </li>
+
+          <li class="project-modal__features-item">
+            <p class="project-modal__features-description">
+              После завершения всех необходимых настроек — добро пожаловать на главные экраны приложения:
+            </p>
+
+            <p class="project-modal__features-description">
+              Просматривайте кандидатов и выбирайте понравившихся:
+            </p>
+            <p class="project-modal__features-description">
+              Общайтесь в чатах:
+            </p>
+
+            <div
+              type="button"
+              class="project-modal__features-image projects__image"
+              aria-label="Open image"
+              data-dialog-image="dating_select_view"
+            >
+              <picture class="projects__picture">
+                <source srcset="img/dating-select_view.webp" type="image/webp">
+                <img loading="lazy" src="img/dating-select_view.png" class="image" width="600" height="450" alt="Dating app select page">
+              </picture>
+            </div>
+
+            <div
+              type="button"
+              class="project-modal__features-image projects__image"
+              aria-label="Open image"
+              data-dialog-image="dating_chat_view"
+            >
+              <picture class="projects__picture">
+                <source srcset="img/dating-chat_view.webp" type="image/webp">
+                <img loading="lazy" src="img/dating-chat_view.png" class="image" width="600" height="450" alt="Dating app chat page">
+              </picture>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
 
-    <ul class="project-modal__features-list">
-      <p class="project-modal__features-title">Brief overview:</p>
+  </div>
+</div>
 
-      <li class="project-modal__features-item">
-        <p class="project-modal__features-description">
-          Intro page offers a brief overview of the app’s features and guides new users through the initial setup process: log user in or register via email or phone number.
+  <div
+  class="graph-modal__container projects-dialog"
+  role="dialog"
+  aria-modal="true"
+  data-graph-target="pairs-game"
+>
+
+  <button class="btn-reset js-modal-close graph-modal__close" aria-label="Close project details"></button>
+
+  <div class="graph-modal__content project-modal project-pairs">
+    <div class="project-modal__details">
+      <div class="projects-dialog-en">
+        <h4 class="projects__name card__title project-modal__title">
+          Pairs Memory Game
+        </h4>
+
+        <ul class="project-modal__details-list">
+          <li class="project-modal__details-item">
+            <a href="https://darthevgenius.github.io/pairs_memory_game/" class="project-modal__details-link link">Live demo</a>
+          </li>
+
+          <li class="project-modal__details-item">
+            <a href="https://github.com/DarthEvgenius/pairs_memory_game" class="project-modal__details-link link">Github page</a>
+          </li>
+        </ul>
+
+        <p class="project-modal__details-description">
+          A pure-JS game with simple interface but some CSS animations and gradient tricks and a various game modes: you can select out of three difficulty levels and enable/disable a timer.
         </p>
+        <p>Give it a try!</p>
+      </div>
 
-        <p class="project-modal__features-description">
-          User’s profile settings page, where you can edit your personal information, preferences, avatar photos and chose one of three Application Subscription Plans for finding matches: Love, Friens or Business partners.
+      <div class="projects-dialog-ru">
+        <h4 class="projects__name card__title project-modal__title">
+          Игра Угадай Пару
+        </h4>
+
+        <ul class="project-modal__details-list">
+          <li class="project-modal__details-item">
+            <a href="https://darthevgenius.github.io/pairs_memory_game/" class="project-modal__details-link link">Демо</a>
+          </li>
+
+          <li class="project-modal__details-item">
+            <a href="https://github.com/DarthEvgenius/pairs_memory_game" class="project-modal__details-link link">Github</a>
+          </li>
+        </ul>
+
+        <p class="project-modal__details-description">
+          Игра на ванильном JS, есть несколько режимов: можно выбрать один из трёх уровней сложности и включить/отключить таймер.
         </p>
-
-        <div
-          type="button"
-          class="project-modal__features-image projects__image"
-          aria-label="Open image"
-          data-dialog-image="dating_register_page"
-        >
-          <picture class="projects__picture">
-            <source srcset="img/dating-register_panel.webp" type="image/webp">
-            <img loading="lazy" src="img/dating-register_panel.png" class="image" width="600" height="450" alt="Dating app register page">
-          </picture>
-        </div>
-      </li>
-
-      <li class="project-modal__features-item">
-        <p class="project-modal__features-description">
-          Once the user have a subscription plan, there are several settings and preferences to tune matches you want:
-        </p>
-
-        <p class="project-modal__features-description">The user’s subscription information:</p>
-        <p class="project-modal__features-description">User’s preferences:</p>
-
-        <div
-          type="button"
-          class="project-modal__features-image projects__image"
-          aria-label="Open image"
-          data-dialog-image="dating_user_subscription"
-        >
-          <picture class="projects__picture">
-            <source srcset="img/dating-profile.webp" type="image/webp">
-            <img loading="lazy" src="img/dating-profile.png" class="image" width="400" height="300" alt="Dating app user subscription screen">
-          </picture>
-        </div>
-
-        <div
-          type="button"
-          class="project-modal__features-image projects__image"
-          aria-label="Open image"
-          data-dialog-image="dating_user_preferences"
-        >
-          <picture class="projects__picture">
-            <source srcset="img/dating-profile_view.webp" type="image/webp">
-            <img loading="lazy" src="img/dating-profile_view.png" class="image" width="400" height="300" alt="Dating app user subscription preferences">
-          </picture>
-        </div>
-      </li>
-
-      <li class="project-modal__features-item">
-        <p class="project-modal__features-description">
-          After all required settings are up, welcome to the main app’s screens:
-        </p>
-
-        <p class="project-modal__features-description">
-          Look through the candidates and select which you like:
-        </p>
-        <p class="project-modal__features-description">
-          Have a chat with your matches:
-        </p>
-
-        <div
-          type="button"
-          class="project-modal__features-image projects__image"
-          aria-label="Open image"
-          data-dialog-image="dating_select_view"
-        >
-          <picture class="projects__picture">
-            <source srcset="img/dating-select_view.webp" type="image/webp">
-            <img loading="lazy" src="img/dating-select_view.png" class="image" width="600" height="450" alt="Dating app select page">
-          </picture>
-        </div>
-
-        <div
-          type="button"
-          class="project-modal__features-image projects__image"
-          aria-label="Open image"
-          data-dialog-image="dating_chat_view"
-        >
-          <picture class="projects__picture">
-            <source srcset="img/dating-chat_view.webp" type="image/webp">
-            <img loading="lazy" src="img/dating-chat_view.png" class="image" width="600" height="450" alt="Dating app chat page">
-          </picture>
-        </div>
-      </li>
-    </ul>
+        <p>Поробуйте!</p>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -1054,59 +1572,52 @@
   class="graph-modal__container"
   role="dialog"
   aria-modal="true"
-  data-graph-target="pairs-game">
+  data-graph-target="assembley-game"
+>
 
   <button class="btn-reset js-modal-close graph-modal__close" aria-label="Close project details"></button>
 
   <div class="graph-modal__content project-modal project-pairs">
     <div class="project-modal__details">
-      <h4 class="projects__name card__title project-modal__title">Pairs Memory Game</h4>
+      <div class="projects-dialog-en">
+        <h4 class="projects__name card__title project-modal__title">Assembley EndGame</h4>
 
-      <ul class="project-modal__details-list">
-        <li class="project-modal__details-item">
-          <a href="https://darthevgenius.github.io/pairs_memory_game/" class="project-modal__details-link link">Live demo</a>
-        </li>
+        <ul class="project-modal__details-list">
+          <li class="project-modal__details-item">
+            <a href="https://assembley-endgame.vercel.app/" class="project-modal__details-link link">Live demo</a>
+          </li>
 
-        <li class="project-modal__details-item">
-          <a href="https://github.com/DarthEvgenius/pairs_memory_game" class="project-modal__details-link link">Github page</a>
-        </li>
-      </ul>
+          <li class="project-modal__details-item">
+            <a href="https://github.com/DarthEvgenius/assembley_endgame" class="project-modal__details-link link">Github page</a>
+          </li>
+        </ul>
 
-      <p class="project-modal__details-description">
-        A pure-JS game with simple interface but some CSS animations and gradient tricks and a various game modes: you can select out of three difficulty levels and enable/disable a timer.
-      </p>
-      <p>Give it a try!</p>
+        <p class="project-modal__details-description">
+          A guess-word game on React, in which you have to reveal a secret word in 8 attempts, or all programming languages will go away. Except Assembley…
+        </p>
+        <p>It’s a fun!</p>
+      </div>
+
+      <div class="projects-dialog-ru">
+        <h4 class="projects__name card__title project-modal__title">Игра Ассемблер Навсегда</h4>
+
+        <ul class="project-modal__details-list">
+          <li class="project-modal__details-item">
+            <a href="https://assembley-endgame.vercel.app/" class="project-modal__details-link link">Демо</a>
+          </li>
+
+          <li class="project-modal__details-item">
+            <a href="https://github.com/DarthEvgenius/assembley_endgame" class="project-modal__details-link link">Github</a>
+          </li>
+        </ul>
+
+        <p class="project-modal__details-description">
+          Игра на угадывание слова на React, в которой нужно разгадать секретное слово за 8 попыток, иначе все языки программирования исчезнут. Кроме Ассемблера…
+        </p>
+        <p>Угадай слово!</p>
+      </div>
     </div>
-  </div>
-</div>
 
-  <div
-  class="graph-modal__container"
-  role="dialog"
-  aria-modal="true"
-  data-graph-target="assembley-game">
-
-  <button class="btn-reset js-modal-close graph-modal__close" aria-label="Close project details"></button>
-
-  <div class="graph-modal__content project-modal project-pairs">
-    <div class="project-modal__details">
-      <h4 class="projects__name card__title project-modal__title">Assembley EndGame</h4>
-
-      <ul class="project-modal__details-list">
-        <li class="project-modal__details-item">
-          <a href="https://assembley-endgame.vercel.app/" class="project-modal__details-link link">Live demo</a>
-        </li>
-
-        <li class="project-modal__details-item">
-          <a href="https://github.com/DarthEvgenius/assembley_endgame" class="project-modal__details-link link">Github page</a>
-        </li>
-      </ul>
-
-      <p class="project-modal__details-description">
-        A guess-word game on React, in which you have to reveal a secret word in 8 attempts, or all programming languages will go away. Except Assembley…
-      </p>
-      <p>It’s a fun!</p>
-    </div>
   </div>
 </div>
 

@@ -1,7 +1,9 @@
 <div
-  class="graph-modal__container"
+  class="graph-modal__container projects-dialog"
   role="dialog"
-  aria-modal="true" data-graph-target="roboto_project">
+  aria-modal="true"
+  data-graph-target="roboto_project"
+>
 
   <button class="btn-reset js-modal-close graph-modal__close" aria-label="Close project details"></button>
 
@@ -10,103 +12,211 @@
     @include('./dialog-images/roboto-images.html')
 
     <div class="project-modal__details">
-      <h4 class="projects__name card__title project-modal__title">School site</h4>
+      <div class="projects-dialog-en">
+        <h4 class="projects__name card__title project-modal__title">
+          School site
+        </h4>
 
-      <ul class="project-modal__details-list">
-        <li class="project-modal__details-item">
-          <a href="https://darthevgenius.github.io/school_site/" class="project-modal__details-link link">Live demo</a>
-        </li>
+        <ul class="project-modal__details-list">
+          <li class="project-modal__details-item">
+            <a href="https://darthevgenius.github.io/school_site/" class="project-modal__details-link link">Live demo</a>
+          </li>
 
-        <li class="project-modal__details-item">
-          <a href="https://github.com/DarthEvgenius/school_site?tab=readme-ov-file" class="project-modal__details-link link">Github page</a>
-        </li>
-      </ul>
+          <li class="project-modal__details-item">
+            <a href="https://github.com/DarthEvgenius/school_site?tab=readme-ov-file" class="project-modal__details-link link">Github page</a>
+          </li>
+        </ul>
 
-      <p class="project-modal__details-description">
-        Business-card site of programming and robotics school. Made after a figma design using vanilla Javascript, HTML, SCSS and Gulp toolkit with various modules.
-      </p>
+        <p class="project-modal__details-description">
+          Business-card site of programming and robotics school. Made after a figma design using vanilla Javascript, HTML, SCSS and Gulp toolkit with various modules.
+        </p>
+
+        <ul class="project-modal__features-list">
+          <p class="project-modal__features-title">Some features:</p>
+
+          <li class="project-modal__features-item">
+            <p class="project-modal__features-description">
+              Nice and simple hero section and adaptive menu, with smooth scrolling to the anchor tags on the page, transforming to burger-menu on small screen sizes and disabling hover effects.
+            </p>
+
+            <div
+              type="button"
+              class="project-modal__features-image projects__image"
+              aria-label="Open image"
+              data-dialog-image="robotoHeroScreen"
+            >
+              <picture class="projects__picture">
+                <source srcset="img/roboto-hero.webp" type="image/webp">
+                <img loading="lazy" src="img/roboto-hero.jpg" class="image" width="800" height="600" alt="School site hero section">
+              </picture>
+            </div>
+
+            <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoBurger">
+              <picture class="projects__picture">
+                <source srcset="img/roboto-burger.webp" type="image/webp">
+                <img loading="lazy" src="img/roboto-burger.jpg" class="image" width="325" height="350" alt="School site hero section">
+              </picture>
+            </div>
+
+            <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoMobileMenu">
+              <picture class="projects__picture">
+                <source srcset="img/roboto-mobile.webp" type="image/webp">
+                <img loading="lazy" src="img/roboto-mobile.jpg" class="image" width="325" height="350" alt="School site mobile adaptive">
+              </picture>
+            </div>
+          </li>
+
+          <li class="project-modal__features-item">
+            <p class="project-modal__features-description">
+              Integrated usefull JS libraries: <a href="https://swiperjs.com/" class="link">Swiper.js</a> <a href="https://floating-ui.com/?utm_source=popper.js.org" class="link">Popper.js</a>
+            </p>
+
+            <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoSwiper">
+              <picture class="projects__picture">
+                <source srcset="img/roboto-swiper.webp" type="image/webp">
+                <img loading="lazy" src="img/roboto-swiper.jpg" class="image" width="1024" height="768" alt="Roboto site swiper">
+              </picture>
+            </div>
+
+            <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoPopup">
+              <picture class="projects__picture">
+                <source srcset="img/roboto-popup.webp" type="image/webp">
+                <img loading="lazy" src="img/roboto-popup.jpg" class="image" width="587" height="376" alt="Roboto site popup">
+              </picture>
+            </div>
+          </li>
+
+          <li class="project-modal__features-item">
+            <p class="project-modal__features-description">
+              Modals and shifting tabs inside modals. Also with custom scrollbar:
+            </p>
+
+            <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoModal">
+              <picture class="projects__picture">
+                <source srcset="img/roboto-modal.webp" type="image/webp">
+                <img loading="lazy" src="img/roboto-modal.jpg" class="image" width="1273" height="881" alt="Roboto site modal">
+              </picture>
+            </div>
+          </li>
+
+          <li class="project-modal__features-item">
+            <p class="project-modal__features-description">
+              And nice product cards with hover transition and transform effects
+            </p>
+
+            <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoCards">
+              <picture class="projects__picture">
+                <source srcset="img/roboto-offer.webp" type="image/webp">
+                <img loading="lazy" src="img/roboto-offer.jpg" class="image" width="993" height="458" alt="Roboto site cards">
+              </picture>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="projects-dialog-ru">
+        <h4 class="projects__name card__title project-modal__title">
+          Сайт школы робототехники
+        </h4>
+
+        <ul class="project-modal__details-list">
+          <li class="project-modal__details-item">
+            <a href="https://darthevgenius.github.io/school_site/" class="project-modal__details-link link">Демо</a>
+          </li>
+
+          <li class="project-modal__details-item">
+            <a href="https://github.com/DarthEvgenius/school_site?tab=readme-ov-file" class="project-modal__details-link link">Github</a>
+          </li>
+        </ul>
+
+        <p class="project-modal__details-description">
+          Одностраничный лендинг для образовательного центра, выполненный по готовому дизайну в Figma. Техническая реализация: чистый JavaScript без фреймворков, семантическая HTML-разметка, SCSS-препроцессор для стилей и автоматизированная сборка на Gulp (с минификацией, автопрефиксером)
+        </p>
+
+        <ul class="project-modal__features-list">
+          <p class="project-modal__features-title">
+            Описание:
+          </p>
+
+          <li class="project-modal__features-item">
+            <p class="project-modal__features-description">
+              Красивая и лаконичная Hero-секция: адаптивное бургер-меню, smooth-scroll, обработка hover-only для десктопа.
+            </p>
+
+            <div
+              type="button"
+              class="project-modal__features-image projects__image"
+              aria-label="Open image"
+              data-dialog-image="robotoHeroScreen"
+            >
+              <picture class="projects__picture">
+                <source srcset="img/roboto-hero.webp" type="image/webp">
+                <img loading="lazy" src="img/roboto-hero.jpg" class="image" width="800" height="600" alt="School site hero section">
+              </picture>
+            </div>
+
+            <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoBurger">
+              <picture class="projects__picture">
+                <source srcset="img/roboto-burger.webp" type="image/webp">
+                <img loading="lazy" src="img/roboto-burger.jpg" class="image" width="325" height="350" alt="School site hero section">
+              </picture>
+            </div>
+
+            <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoMobileMenu">
+              <picture class="projects__picture">
+                <source srcset="img/roboto-mobile.webp" type="image/webp">
+                <img loading="lazy" src="img/roboto-mobile.jpg" class="image" width="325" height="350" alt="School site mobile adaptive">
+              </picture>
+            </div>
+          </li>
+
+          <li class="project-modal__features-item">
+            <p class="project-modal__features-description">
+              Используемые JS-библиотеки: <a href="https://swiperjs.com/" class="link">Swiper.js</a> <a href="https://floating-ui.com/?utm_source=popper.js.org" class="link">Popper.js</a>
+            </p>
+
+            <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoSwiper">
+              <picture class="projects__picture">
+                <source srcset="img/roboto-swiper.webp" type="image/webp">
+                <img loading="lazy" src="img/roboto-swiper.jpg" class="image" width="1024" height="768" alt="Roboto site swiper">
+              </picture>
+            </div>
+
+            <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoPopup">
+              <picture class="projects__picture">
+                <source srcset="img/roboto-popup.webp" type="image/webp">
+                <img loading="lazy" src="img/roboto-popup.jpg" class="image" width="587" height="376" alt="Roboto site popup">
+              </picture>
+            </div>
+          </li>
+
+          <li class="project-modal__features-item">
+            <p class="project-modal__features-description">
+              Модальные окна с переключаемыми вкладками и кастомным скроллбаром:
+            </p>
+
+            <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoModal">
+              <picture class="projects__picture">
+                <source srcset="img/roboto-modal.webp" type="image/webp">
+                <img loading="lazy" src="img/roboto-modal.jpg" class="image" width="1273" height="881" alt="Roboto site modal">
+              </picture>
+            </div>
+          </li>
+
+          <li class="project-modal__features-item">
+            <p class="project-modal__features-description">
+              Карточки товаров с плавными hover-эффектами и трансформациями
+            </p>
+
+            <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoCards">
+              <picture class="projects__picture">
+                <source srcset="img/roboto-offer.webp" type="image/webp">
+                <img loading="lazy" src="img/roboto-offer.jpg" class="image" width="993" height="458" alt="Roboto site cards">
+              </picture>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
-
-    <ul class="project-modal__features-list">
-      <p class="project-modal__features-title">Some features:</p>
-
-      <li class="project-modal__features-item">
-        <p class="project-modal__features-description">
-          Nice and simple hero section and adaptive menu, with smooth scrolling to the anchor tags on the page, transforming to burger-menu on small screen sizes and disabling hover effects.
-        </p>
-
-        <div
-          type="button"
-          class="project-modal__features-image projects__image"
-          aria-label="Open image"
-          data-dialog-image="robotoHeroScreen"
-        >
-          <picture class="projects__picture">
-            <source srcset="img/roboto-hero.webp" type="image/webp">
-            <img loading="lazy" src="img/roboto-hero.jpg" class="image" width="800" height="600" alt="School site hero section">
-          </picture>
-        </div>
-
-        <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoBurger">
-          <picture class="projects__picture">
-            <source srcset="img/roboto-burger.webp" type="image/webp">
-            <img loading="lazy" src="img/roboto-burger.jpg" class="image" width="325" height="350" alt="School site hero section">
-          </picture>
-        </div>
-
-        <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoMobileMenu">
-          <picture class="projects__picture">
-            <source srcset="img/roboto-mobile.webp" type="image/webp">
-            <img loading="lazy" src="img/roboto-mobile.jpg" class="image" width="325" height="350" alt="School site mobile adaptive">
-          </picture>
-        </div>
-      </li>
-
-      <li class="project-modal__features-item">
-        <p class="project-modal__features-description">
-          Integrated usefull JS libraries: <a href="https://swiperjs.com/" class="link">Swiper.js</a> <a href="https://floating-ui.com/?utm_source=popper.js.org" class="link">Popper.js</a>
-        </p>
-
-        <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoSwiper">
-          <picture class="projects__picture">
-            <source srcset="img/roboto-swiper.webp" type="image/webp">
-            <img loading="lazy" src="img/roboto-swiper.jpg" class="image" width="1024" height="768" alt="Roboto site swiper">
-          </picture>
-        </div>
-
-        <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoPopup">
-          <picture class="projects__picture">
-            <source srcset="img/roboto-popup.webp" type="image/webp">
-            <img loading="lazy" src="img/roboto-popup.jpg" class="image" width="587" height="376" alt="Roboto site popup">
-          </picture>
-        </div>
-      </li>
-
-      <li class="project-modal__features-item">
-        <p class="project-modal__features-description">
-          Modals and shifting tabs inside modals. Also with custom scrollbar:
-        </p>
-
-        <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoModal">
-          <picture class="projects__picture">
-            <source srcset="img/roboto-modal.webp" type="image/webp">
-            <img loading="lazy" src="img/roboto-modal.jpg" class="image" width="1273" height="881" alt="Roboto site modal">
-          </picture>
-        </div>
-      </li>
-
-      <li class="project-modal__features-item">
-        <p class="project-modal__features-description">
-          And nice product cards with hover transition and transform effects
-        </p>
-
-        <div class="project-modal__features-image projects__image" aria-label="Open image" data-dialog-image="robotoCards">
-          <picture class="projects__picture">
-            <source srcset="img/roboto-offer.webp" type="image/webp">
-            <img loading="lazy" src="img/roboto-offer.jpg" class="image" width="993" height="458" alt="Roboto site cards">
-          </picture>
-        </div>
-      </li>
-    </ul>
   </div>
 </div>

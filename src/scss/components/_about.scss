@@ -1,17 +1,8 @@
-.about {
+.about,
+.about-ru {
   font-family: var(--ff-second);
   font-weight: 500;
   font-size: var(--fz-subtitle);
-
-  // &__container {
-  //   position: relative;
-  //   display: flex;
-  //   width: 300vw;
-
-  //   > div {
-  //     width: 100vw;
-  //   }
-  // }
 
   &__description {
     margin: 0 auto;
@@ -47,5 +38,19 @@
       font-weight: 400;
       font-size: var(--fz-text);
     }
+  }
+}
+
+.about-ru {
+  display: none;
+}
+
+[lang="ru"] {
+  .about-ru {
+    display: block;
+  }
+
+  .about {
+    display: none;
   }
 }

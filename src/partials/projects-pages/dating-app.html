@@ -2,8 +2,8 @@
   class="graph-modal__container"
   role="dialog"
   aria-modal="true"
-  data-graph-target="dating-app_project">
-
+  data-graph-target="dating-app_project"
+>
   <button class="btn-reset js-modal-close graph-modal__close" aria-label="Close project details"></button>
 
   <div class="graph-modal__content project-modal project-dating">
@@ -11,113 +11,239 @@
     @include('./dialog-images/dating-app-images.html')
 
     <div class="project-modal__details">
-      <h4 class="projects__name card__title project-modal__title">Dating App</h4>
+      <div class="projects-dialog-en">
+        <h4 class="projects__name card__title project-modal__title">
+          Dating App
+        </h4>
 
-      <ul class="project-modal__details-list">
-        <li class="project-modal__details-item">
-          <a href="https://github.com/DarthEvgenius/dating_app" class="project-modal__details-link link">Github page</a>
-        </li>
-      </ul>
+        <ul class="project-modal__details-list">
+          <li class="project-modal__details-item">
+            <a href="https://github.com/DarthEvgenius/dating_app" class="project-modal__details-link link">Github page</a>
+          </li>
+        </ul>
 
-      <p class="project-modal__details-description">
-        Dating App is a startup project aimed at revolutionizing the way people connect and find meaningful relationships across every aspect of life: friendship, business, and love. I was responsible for the frontend part, building it from scratch firstly as demo-pages for live preview of design concepts, and then composing the entire logic of the application using React, JS, SCSS and Vite.
-      </p>
+        <p class="project-modal__details-description">
+          Dating App is a startup project aimed at revolutionizing the way people connect and find meaningful relationships across every aspect of life: friendship, business, and love. I was responsible for the frontend part, building it from scratch firstly as demo-pages for live preview of design concepts, and then composing the entire logic of the application using React, JS, SCSS and Vite.
+        </p>
+
+
+        <ul class="project-modal__features-list">
+          <p class="project-modal__features-title">Brief overview:</p>
+
+          <li class="project-modal__features-item">
+            <p class="project-modal__features-description">
+              Intro page offers a brief overview of the app's features and guides new users through the initial setup process: log user in or  register via email or phone number.
+            </p>
+
+            <p class="project-modal__features-description">
+              User's profile settings page, where you can edit your personal information, preferences, avatar photos and chose one of three Application Subscription Plans for finding matches: Love, Friens or Business partners.
+            </p>
+
+            <div
+              type="button"
+              class="project-modal__features-image projects__image"
+              aria-label="Open image"
+              data-dialog-image="dating_register_page"
+            >
+              <picture class="projects__picture">
+                <source srcset="img/dating-register_panel.webp" type="image/webp">
+                <img loading="lazy" src="img/dating-register_panel.png" class="image" width="600" height="450" alt="Dating app register page">
+              </picture>
+            </div>
+          </li>
+
+          <li class="project-modal__features-item">
+            <p class="project-modal__features-description">
+              Once the user have a subscription plan, there are several settings and preferences to tune matches you want:
+            </p>
+
+            <p class="project-modal__features-description">The user's subscription information:</p>
+            <p class="project-modal__features-description">User's preferences:</p>
+
+            <div
+              type="button"
+              class="project-modal__features-image projects__image"
+              aria-label="Open image"
+              data-dialog-image="dating_user_subscription"
+            >
+              <picture class="projects__picture">
+                <source srcset="img/dating-profile.webp" type="image/webp">
+                <img loading="lazy" src="img/dating-profile.png" class="image" width="400" height="300" alt="Dating app user subscription screen">
+              </picture>
+            </div>
+
+            <div
+              type="button"
+              class="project-modal__features-image projects__image"
+              aria-label="Open image"
+              data-dialog-image="dating_user_preferences"
+            >
+              <picture class="projects__picture">
+                <source srcset="img/dating-profile_view.webp" type="image/webp">
+                <img loading="lazy" src="img/dating-profile_view.png" class="image" width="400" height="300" alt="Dating app user subscription preferences">
+              </picture>
+            </div>
+          </li>
+
+          <li class="project-modal__features-item">
+            <p class="project-modal__features-description">
+              After all required settings are up, welcome to the main app's screens:
+            </p>
+
+            <p class="project-modal__features-description">
+              Look through the candidates and select which you like:
+            </p>
+            <p class="project-modal__features-description">
+              Have a chat with your matches:
+            </p>
+
+            <div
+              type="button"
+              class="project-modal__features-image projects__image"
+              aria-label="Open image"
+              data-dialog-image="dating_select_view"
+            >
+              <picture class="projects__picture">
+                <source srcset="img/dating-select_view.webp" type="image/webp">
+                <img loading="lazy" src="img/dating-select_view.png" class="image" width="600" height="450" alt="Dating app select page">
+              </picture>
+            </div>
+
+            <div
+              type="button"
+              class="project-modal__features-image projects__image"
+              aria-label="Open image"
+              data-dialog-image="dating_chat_view"
+            >
+              <picture class="projects__picture">
+                <source srcset="img/dating-chat_view.webp" type="image/webp">
+                <img loading="lazy" src="img/dating-chat_view.png" class="image" width="600" height="450" alt="Dating app chat page">
+              </picture>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="projects-dialog-ru">
+        <h4 class="projects__name card__title project-modal__title">
+          Приложение знакомств
+        </h4>
+
+        <ul class="project-modal__details-list">
+          <li class="project-modal__details-item">
+            <a href="https://github.com/DarthEvgenius/dating_app" class="project-modal__details-link link">Github</a>
+          </li>
+        </ul>
+
+        <p class="project-modal__details-description">
+          Это стартап-проект, нацеленный на революцию в способах установления контактов и поиска значимых отношений во всех сферах жизни: дружбе, бизнесе и любви. Я отвечал за фронтенд-часть: создавал её с нуля, сначала реализовав демо-страницы для живого просмотра дизайн-концепций, а затем полностью разрабатывал всю логику приложения с помощью React, JavaScript, SCSS и Vite.
+        </p>
+
+        <ul class="project-modal__features-list">
+          <p class="project-modal__features-title">
+            Обзор:
+          </p>
+
+          <li class="project-modal__features-item">
+            <p class="project-modal__features-description">
+              Экран приветствия знакомит пользователей с возможностями приложения и предлагает регистрацию через email или телефон.
+            </p>
+
+            <p class="project-modal__features-description">
+              Страница настроек профиля, где можно редактировать личную информацию, настраивать предпочтения, управлять аватарами и выбирать один из трёх тарифных планов для поиска: Love (романтические отношения), Friends (друзья) или Business (деловые партнёры).
+            </p>
+
+            <div
+              type="button"
+              class="project-modal__features-image projects__image"
+              aria-label="Open image"
+              data-dialog-image="dating_register_page"
+            >
+              <picture class="projects__picture">
+                <source srcset="img/dating-register_panel.webp" type="image/webp">
+                <img loading="lazy" src="img/dating-register_panel.png" class="image" width="600" height="450" alt="Dating app register page">
+              </picture>
+            </div>
+          </li>
+
+          <li class="project-modal__features-item">
+            <p class="project-modal__features-description">
+              После выбора тарифного плана пользователь может настроить параметры поиска и предпочтения для подбора совпадений:
+            </p>
+
+            <p class="project-modal__features-description">
+              Информация о подписке пользователя:
+            </p>
+            <p class="project-modal__features-description">
+              Настройки пользователя:
+            </p>
+
+            <div
+              type="button"
+              class="project-modal__features-image projects__image"
+              aria-label="Open image"
+              data-dialog-image="dating_user_subscription"
+            >
+              <picture class="projects__picture">
+                <source srcset="img/dating-profile.webp" type="image/webp">
+                <img loading="lazy" src="img/dating-profile.png" class="image" width="400" height="300" alt="Dating app user subscription screen">
+              </picture>
+            </div>
+
+            <div
+              type="button"
+              class="project-modal__features-image projects__image"
+              aria-label="Open image"
+              data-dialog-image="dating_user_preferences"
+            >
+              <picture class="projects__picture">
+                <source srcset="img/dating-profile_view.webp" type="image/webp">
+                <img loading="lazy" src="img/dating-profile_view.png" class="image" width="400" height="300" alt="Dating app user subscription preferences">
+              </picture>
+            </div>
+          </li>
+
+          <li class="project-modal__features-item">
+            <p class="project-modal__features-description">
+              После завершения всех необходимых настроек — добро пожаловать на главные экраны приложения:
+            </p>
+
+            <p class="project-modal__features-description">
+              Просматривайте кандидатов и выбирайте понравившихся:
+            </p>
+            <p class="project-modal__features-description">
+              Общайтесь в чатах:
+            </p>
+
+            <div
+              type="button"
+              class="project-modal__features-image projects__image"
+              aria-label="Open image"
+              data-dialog-image="dating_select_view"
+            >
+              <picture class="projects__picture">
+                <source srcset="img/dating-select_view.webp" type="image/webp">
+                <img loading="lazy" src="img/dating-select_view.png" class="image" width="600" height="450" alt="Dating app select page">
+              </picture>
+            </div>
+
+            <div
+              type="button"
+              class="project-modal__features-image projects__image"
+              aria-label="Open image"
+              data-dialog-image="dating_chat_view"
+            >
+              <picture class="projects__picture">
+                <source srcset="img/dating-chat_view.webp" type="image/webp">
+                <img loading="lazy" src="img/dating-chat_view.png" class="image" width="600" height="450" alt="Dating app chat page">
+              </picture>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
 
-    <ul class="project-modal__features-list">
-      <p class="project-modal__features-title">Brief overview:</p>
 
-      <li class="project-modal__features-item">
-        <p class="project-modal__features-description">
-          Intro page offers a brief overview of the app's features and guides new users through the initial setup process: log user in or  register via email or phone number.
-        </p>
 
-        <p class="project-modal__features-description">
-          User's profile settings page, where you can edit your personal information, preferences, avatar photos and chose one of three Application Subscription Plans for finding matches: Love, Friens or Business partners.
-        </p>
-
-        <div
-          type="button"
-          class="project-modal__features-image projects__image"
-          aria-label="Open image"
-          data-dialog-image="dating_register_page"
-        >
-          <picture class="projects__picture">
-            <source srcset="img/dating-register_panel.webp" type="image/webp">
-            <img loading="lazy" src="img/dating-register_panel.png" class="image" width="600" height="450" alt="Dating app register page">
-          </picture>
-        </div>
-      </li>
-
-      <li class="project-modal__features-item">
-        <p class="project-modal__features-description">
-          Once the user have a subscription plan, there are several settings and preferences to tune matches you want:
-        </p>
-
-        <p class="project-modal__features-description">The user's subscription information:</p>
-        <p class="project-modal__features-description">User's preferences:</p>
-
-        <div
-          type="button"
-          class="project-modal__features-image projects__image"
-          aria-label="Open image"
-          data-dialog-image="dating_user_subscription"
-        >
-          <picture class="projects__picture">
-            <source srcset="img/dating-profile.webp" type="image/webp">
-            <img loading="lazy" src="img/dating-profile.png" class="image" width="400" height="300" alt="Dating app user subscription screen">
-          </picture>
-        </div>
-
-        <div
-          type="button"
-          class="project-modal__features-image projects__image"
-          aria-label="Open image"
-          data-dialog-image="dating_user_preferences"
-        >
-          <picture class="projects__picture">
-            <source srcset="img/dating-profile_view.webp" type="image/webp">
-            <img loading="lazy" src="img/dating-profile_view.png" class="image" width="400" height="300" alt="Dating app user subscription preferences">
-          </picture>
-        </div>
-      </li>
-
-      <li class="project-modal__features-item">
-        <p class="project-modal__features-description">
-          After all required settings are up, welcome to the main app's screens:
-        </p>
-
-        <p class="project-modal__features-description">
-          Look through the candidates and select which you like:
-        </p>
-        <p class="project-modal__features-description">
-          Have a chat with your matches:
-        </p>
-
-        <div
-          type="button"
-          class="project-modal__features-image projects__image"
-          aria-label="Open image"
-          data-dialog-image="dating_select_view"
-        >
-          <picture class="projects__picture">
-            <source srcset="img/dating-select_view.webp" type="image/webp">
-            <img loading="lazy" src="img/dating-select_view.png" class="image" width="600" height="450" alt="Dating app select page">
-          </picture>
-        </div>
-
-        <div
-          type="button"
-          class="project-modal__features-image projects__image"
-          aria-label="Open image"
-          data-dialog-image="dating_chat_view"
-        >
-          <picture class="projects__picture">
-            <source srcset="img/dating-chat_view.webp" type="image/webp">
-            <img loading="lazy" src="img/dating-chat_view.png" class="image" width="600" height="450" alt="Dating app chat page">
-          </picture>
-        </div>
-      </li>
-    </ul>
   </div>
 </div>

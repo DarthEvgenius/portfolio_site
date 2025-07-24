@@ -34,10 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // dark/light theme preferences setting
   const buttonThemeToggler = document.getElementById('theme-toggler')
-  const localStorageTheme = localStorage.getItem("theme");
-  const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
+  const localStorageTheme = localStorage.getItem("theme")
+  const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)")
 
-  let currentThemeSetting = calculateSettingAsThemeString({ localStorageTheme, systemSettingDark });
+  if (localStorageTheme) {
+    document.querySelector(".page").setAttribute("data-theme", localStorageTheme)
+  }
+
+  let currentThemeSetting = calculateSettingAsThemeString({ localStorageTheme, systemSettingDark })
 
   buttonThemeToggler?.addEventListener('click', () => {
     const newTheme = currentThemeSetting === "dark" ? "light" : "dark"
@@ -55,27 +59,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // language handling
   const languageBlock = document.querySelector('.language')
-  const currentLanguageButtons = document.querySelectorAll('.language__selected')
-  const langOptionButtons = Array.from(document.querySelectorAll('.language__select-option--btn'))
   const validLanguages = ['en', 'ru']
+  const localStorageLanguage = localStorage.getItem('lang')
 
-  currentLanguageButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      languageBlock.classList.add('is-active')
-  })
-  })
+  if (localStorageLanguage) {
+    document.documentElement.setAttribute('lang', localStorageLanguage)
+  }
 
-  langOptionButtons.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      languageBlock.classList.remove('is-active')
-      const targetData = e.currentTarget.dataset?.lang
+  document.addEventListener('click', (e) => {
+    const languageButton = e.target.closest('.language__select-option--btn')
+    const currentLanguageButton = e.target.closest('.language__selected')
 
-      if (targetData && validLanguages.includes(targetData)) {
-        document.documentElement.setAttribute('lang', targetData)
+    if (languageButton) {
+      const nextLang = languageButton.dataset.lang
+
+      if (validLanguages.includes(nextLang)) {
+        document.documentElement.setAttribute('lang', nextLang)
+        localStorage.setItem('lang', nextLang)
       } else {
         console.warn('Not valid language!')
       }
-    })
+
+      languageBlock.classList.remove('is-active')
+    } else if (currentLanguageButton) {
+      languageBlock.classList.add('is-active')
+    } else {
+      languageBlock.classList.remove('is-active')
+    }
   })
 })
 
