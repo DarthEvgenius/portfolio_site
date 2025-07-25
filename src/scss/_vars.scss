@@ -15,7 +15,7 @@
   --accent-color: hsl(238, 79%, 64%);
   --accent-color-dark: hsl(238, 79%, 55%);
   --accent-color-light: hsl(238, 79%, 75%);
-  --accent-color-transparent: hsl(238, 79%, 64%, 0.3);
+  --accent-color-transparent: hsl(238, 79%, 64%, 0.5);
   --line-color: hsl(220, 7%, 16%);
   --shadow-color: rgba(0, 0, 0, 0.25);
 
@@ -29,6 +29,7 @@
   --fz-subtitle: 1.5rem; // 24px
   --fz-subtitle-small: 1.25rem; // 20px
   --fz-text: 1.125rem; // 18px
+  --fz-text-xs: 0.8125rem; //13px
 
   // gap
   --gap: 1rem;

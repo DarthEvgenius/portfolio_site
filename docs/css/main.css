@@ -11,7 +11,7 @@
   --accent-color: hsl(238, 79%, 64%);
   --accent-color-dark: hsl(238, 79%, 55%);
   --accent-color-light: hsl(238, 79%, 75%);
-  --accent-color-transparent: hsl(238, 79%, 64%, 0.3);
+  --accent-color-transparent: hsl(238, 79%, 64%, 0.5);
   --line-color: hsl(220, 7%, 16%);
   --shadow-color: rgba(0, 0, 0, 0.25);
   --text-color-primary: var(--light-color);
@@ -22,6 +22,7 @@
   --fz-subtitle: 1.5rem;
   --fz-subtitle-small: 1.25rem;
   --fz-text: 1.125rem;
+  --fz-text-xs: 0.8125rem;
   --gap: 1rem;
 }
 
@@ -315,12 +316,10 @@ legend {
   --shadow-color: var(--dark-color);
   display: inline-block;
   padding-block: 0.75em;
-  border-radius: 5px;
+  border-radius: 0.75em;
   color: inherit;
   font-size: var(--fz-text);
   line-height: 1.4;
-  -webkit-box-shadow: 0px 0px 7px var(--shadow-color);
-  box-shadow: 0px 0px 7px var(--shadow-color);
 }
 
 .section-padding {
@@ -959,11 +958,11 @@ body::-webkit-scrollbar-thumb {
   background-image: image-set("../img/hero_bg.webp" type("image/webp"), "../img/hero_bg.png" type("image/jpg"));
   background-position: center 37%;
   background-repeat: no-repeat;
-  color: var(--text-color-primary);
-  position: relative;
   clip-path: url(#heroWave);
   -webkit-filter: drop-shadow(0px -10px -15px var(--text-color-primary));
   filter: drop-shadow(0px -10px -15px var(--text-color-primary));
+  color: var(--text-color-primary);
+  position: relative;
 }
 .hero__container, .hero-ru__container {
   display: -ms-grid;
@@ -997,14 +996,17 @@ body::-webkit-scrollbar-thumb {
   --shadow-color: var(--accent-color);
   position: relative;
   overflow: hidden;
-  padding-inline: 1.75em;
+  padding-left: 2em;
+  padding-right: 1.25em;
+  padding-top: 1.2em;
   color: var(--light-color-weak);
   font-weight: 500;
   background: linear-gradient(145deg, var(--accent-color), var(--accent-color-dark) 10%, var(--accent-color) 50% 60%, var(--accent-color-dark) 90%);
   background-size: 180%;
   background-position: right;
-  -webkit-box-shadow: 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1), 0px 0px 4px 0px var(--accent-color-dark), 4px 4px 6px 0px var(--accent-color-light) inset, -4px -4px 8px 0px var(--accent-color-transparent) inset, -2px -2px 3px 0px var(--dark-color) inset;
-  box-shadow: 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1), 0px 0px 4px 0px var(--accent-color-dark), 4px 4px 6px 0px var(--accent-color-light) inset, -4px -4px 8px 0px var(--accent-color-transparent) inset, -2px -2px 3px 0px var(--dark-color) inset;
+  -webkit-box-shadow: 4px 4px 6px 0px var(--accent-color-light) inset, -4px -4px 8px 0px var(--accent-color-transparent) inset, -2px -2px 3px 0px var(--dark-color) inset;
+  box-shadow: 4px 4px 6px 0px var(--accent-color-light) inset, -4px -4px 8px 0px var(--accent-color-transparent) inset, -2px -2px 3px 0px var(--dark-color) inset;
+  clip-path: url(#heroBtn);
   -webkit-transition: background-position 400ms ease-in-out, color 300ms ease-in-out;
   transition: background-position 400ms ease-in-out, color 300ms ease-in-out;
 }
@@ -1032,6 +1034,41 @@ body::-webkit-scrollbar-thumb {
     left: auto;
     right: 0;
     width: 100%;
+  }
+}
+.hero__btn--container, .hero-ru__btn--container {
+  padding-top: 10px;
+  position: relative;
+}
+.hero__btn--tip, .hero-ru__btn--tip {
+  width: 70px;
+  height: 20px;
+  padding-left: 1.4em;
+  padding-top: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  background-color: var(--accent-color-transparent);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  -webkit-box-shadow: inset 0 4px 10px var(--light-color-weak);
+  box-shadow: inset 0 4px 10px var(--light-color-weak);
+  font-family: sans-serif;
+  font-size: var(--fz-text-xs);
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip-path: path("M0 0 L70 0 A14 12 0 0 0 55 8 L55 12 A5 8 0 0 1 50 20 L0 20 L0 0 z");
+}
+@media (max-width: 768px) {
+  .hero__btn--tip, .hero-ru__btn--tip {
+    width: 60px;
+    clip-path: path("M0 0 L60 0 A14 12 0 0 0 49 8 L49 14 A8 7 0 0 1 40 20 L0 20 L0 0 z");
   }
 }
 
