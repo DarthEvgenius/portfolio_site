@@ -135,11 +135,11 @@
     >
   </button>
 
-  <ul
+  <div
     class="language__select"
   >
 
-    <div class="language__select-wrapper">
+    <ul class="language__select-wrapper">
       <li class="language__select-option">
         <button
           class="language__select-option--btn"
@@ -156,8 +156,8 @@
           <img src="./img/ru.svg" alt="русский">
         </button>
       </li>
-    </div>
-  </ul>
+    </ul>
+  </div>
 </div>
 
     </div>
@@ -202,7 +202,12 @@
       frontend разработчик из Санкт-Петербурга.
     </p>
 
-    <a href="./Eugene_Zinin.pdf" download class="hero-ru__btn btn">Загрузить CV</a>
+    <div class="hero__btn--container">
+      <a href="./Eugene_Zinin.pdf" download class="hero-ru__btn btn">
+        Загрузить CV
+      </a>
+      <span class="hero__btn--tip">pdf</span>
+    </div>
   </div>
 
 </section>
@@ -673,7 +678,7 @@
 
       <ul class="footer__social social">
         <li class="social__item">
-          <a href="https://vk.com/eugenezinin" class="social__link">
+          <a href="https://vk.com/eugenezinin" class="social__link" aria-label="vk profile link">
             <svg class="social__image">
               <use xlink:href="img/sprite.svg#vk"></use>
             </svg>
@@ -681,7 +686,7 @@
         </li>
 
         <li class="social__item">
-          <a href="https://github.com/DarthEvgenius" class="social__link">
+          <a href="https://github.com/DarthEvgenius" class="social__link" aria-label="github profile link">
             <svg class="social__image">
               <use xlink:href="img/sprite.svg#git"></use>
             </svg>
