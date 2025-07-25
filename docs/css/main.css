@@ -979,6 +979,9 @@ body::-webkit-scrollbar-thumb {
   font-size: var(--fz-title);
   line-height: 1.4;
 }
+.hero__title-greeting, .hero-ru__title-greeting {
+  display: block;
+}
 .hero__accent, .hero-ru__accent {
   color: var(--hero-color-accent);
 }
@@ -1593,6 +1596,7 @@ body::-webkit-scrollbar-thumb {
   font-size: var(--fz-subtitle-small);
 }
 .project-modal__features-list {
+  padding-top: 1rem;
   display: -ms-grid;
   display: grid;
   gap: calc(var(--gap) * 1.5);

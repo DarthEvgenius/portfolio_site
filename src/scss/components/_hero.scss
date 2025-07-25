@@ -35,6 +35,10 @@
     font-weight: 700;
     font-size: var(--fz-title);
     line-height: 1.4;
+
+    &-greeting {
+      display: block;
+    }
   }
 
   &__accent {
