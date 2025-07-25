@@ -10,6 +10,7 @@
   &[data-theme="light"] {
     --text-color-primary: var(--dark-color);
     --text-color-secondary: var(--dark-color-weak);
+    --hero-color-accent: var(--accent-color-dark);
     --bg-color: var(--light-color);
     --bg-color-hero: var(--dark-color-weak);
     --theme-icon-color: var(--dark-color-weak);
@@ -19,6 +20,7 @@
   &[data-theme="dark"] {
     --text-color-primary: var(--light-color);
     --text-color-secondary: var(--light-color-weak);
+    --hero-color-accent: var(--accent-color);
     --bg-color: var(--dark-color);
     --bg-color-hero: var(--dark-color);
     --bg-color-hero: var(--dark-color-weak);

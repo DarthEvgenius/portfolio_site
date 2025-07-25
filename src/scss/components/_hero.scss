@@ -1,5 +1,5 @@
 .hero, .hero-ru {
-  min-height: 695px;
+  min-height: 650px;
   height: calc(100vh - 100px);
 
   display: grid;
@@ -52,7 +52,7 @@
   }
 
   &__accent {
-    color: var(--accent-color);
+    color: var(--hero-color-accent);
   }
 
   &__subtitle {
@@ -93,6 +93,14 @@
       -4px -4px 8px 0px var(--accent-color-transparent) inset,
       -2px -2px 3px 0px var(--dark-color) inset
     ;
+
+    // clip-path: path(
+    //   "M0.1,0.1
+    //   L0.2,0.1
+    //   L0.22,0.9
+    //   L
+    //   Z"
+    // );
 
     transition:
       background-position 400ms ease-in-out,

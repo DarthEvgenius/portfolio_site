@@ -4,9 +4,9 @@
   --content-width: 1170px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
-  --light-color: hsl(0, 0%, 100%);
-  --light-color-weak: hsl(0, 0%, 85%);
-  --dark-color: hsl(240, 2%, 9%);
+  --light-color: hsl(238, 20%, 93%);
+  --light-color-weak: hsl(238, 20%, 85%);
+  --dark-color: hsl(240, 11%, 18%);
   --dark-color-weak: hsla(0, 0%, 45%, 0.7);
   --accent-color: hsl(238, 79%, 64%);
   --accent-color-dark: hsl(238, 79%, 55%);
@@ -196,6 +196,7 @@ legend {
 .page[data-theme=light] {
   --text-color-primary: var(--dark-color);
   --text-color-secondary: var(--dark-color-weak);
+  --hero-color-accent: var(--accent-color-dark);
   --bg-color: var(--light-color);
   --bg-color-hero: var(--dark-color-weak);
   --theme-icon-color: var(--dark-color-weak);
@@ -204,6 +205,7 @@ legend {
 .page[data-theme=dark] {
   --text-color-primary: var(--light-color);
   --text-color-secondary: var(--light-color-weak);
+  --hero-color-accent: var(--accent-color);
   --bg-color: var(--dark-color);
   --bg-color-hero: var(--dark-color);
   --bg-color-hero: var(--dark-color-weak);
@@ -946,7 +948,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 .hero, .hero-ru {
-  min-height: 695px;
+  min-height: 650px;
   height: calc(100vh - 100px);
   display: -ms-grid;
   display: grid;
@@ -979,7 +981,7 @@ body::-webkit-scrollbar-thumb {
   line-height: 1.4;
 }
 .hero__accent, .hero-ru__accent {
-  color: var(--accent-color);
+  color: var(--hero-color-accent);
 }
 .hero__subtitle, .hero-ru__subtitle {
   font-weight: 700;
