@@ -178,9 +178,13 @@
     <p class="hero__text">
       a frontend developer from St-Petersburg.
     </p>
+    <!-- <button id="download-pdf">LOAAAAADDDDD</button> -->
 
     <div class="hero__btn--container">
-      <a href="./Eugene_Zinin.pdf" download class="hero__btn btn">
+      <a
+        class="hero__btn btn"
+        id="download-pdf"
+      >
         Download CV
       </a>
       <span class="hero__btn--tip">pdf</span>
@@ -268,40 +272,52 @@
 
       <ul class="about__achievements fade-in">
         <li>
-          Tech stack: TypeScript, Nuxt JS 3, Vue JS 3, Pinia, Gsap, SCSS modules
+          Tech stack: TypeScript, Nuxt 3, Vue 3, Pinia, Vue Router, GSAP, SCSS, ESLint, Yandex Maps API, Chart.js, Vuetify.
         </li>
         <li>
-          Complete website redesign and scaling: developed 10+ interactive pages with dynamic content and complex UI/business logic (booking/payment systems); modernized existing sections: implemented updated design and new features while maintaining full backward compatibility.
+          Project Configuration: Set up ESLint for code quality maintenance, Nuxt.config for module management, sitemap generation for dynamic pages, and integration of SEO scripts.
         </li>
         <li>
-          Significantly optimized page load speed, increasing Lighthouse and Core Web Vitals scores from a poor 20/45 points on mobile/desktop versions to strong 90+/55. Implemented: resource compression, lazy loading, advanced caching strategies, code splitting.
+          Integration and configuration of Nuxt modules (Yandex Metrika, Yandex Maps, @nuxt/image, sitemap).
         </li>
         <li>
-          Comprehensive code refactoring leveraging modern Nuxt and Vue features: code splitting for efficient resource loading, enhanced code readability and maintainability, optimized project structure for scalability.
+          Developed an internal analytics dashboard using Chart.js and Vuetify for SEO data analysis, providing the marketing department with a user-friendly tool for visualizing key metrics.
+        </li>
+        <li>
+          Conducted comprehensive refactoring and optimized application performance, resulting in Lighthouse scores improving from 20/45 to 90+/55 and enhanced Core Web Vitals metrics.
+        </li>
+        <li>
+          Created an internal component library for payments, booking, regional SEO optimization tasks, and quick implementation of seasonal and trial promotions, as well as landing pages.
+        </li>
+        <li>
+          Implemented a routing system with middleware validation for dynamic regional pages, enabling flexible content management based on user geolocation.
         </li>
       </ul>
     </div>
 
     <div class="about__experience">
       <h3 class="about__experience_title fade-in">
-        'Sigma' — enterprise with government holdings consumers, huge billing product like «1C»:
+        'Sigma' — Corporate Solutions for the Public Sector, Development of High-Load Billing Products at the «1C» Level:
       </h3>
 
       <ul class="about__achievements fade-in">
         <li>
-          Tech stack: ExtJS, Javascript, SCSS, git
+          Tech stack: JavaScript, ExtJS, OOP, SCSS/Sass.
         </li>
         <li>
-          Developed and maintained complex web applications using ExtJS, focusing on enterprise-level solutions.
+          Development and maintenance of interfaces for high-load billing systems using JavaScript and the ExtJS framework.
         </li>
         <li>
-          Applied heavy practice of Object-Oriented Programming (OOP) principles to ensure scalable and maintainable code.
+          Participation in the project lifecycle within a large team: code reviews, task planning, deadline estimation, and collaborative architectural decision-making.
         </li>
          <li>
-          Extensive debugging and code improving within a really vast enterprise codebase, identifying and resolving critical issues efficiently.
+          Worked with a large legacy codebase built on OOP principles. Conducted refactoring to improve code readability and maintainability, and wrote documentation.
         </li>
         <li>
-          Implemented project-level style improvements, injecting up-to-date technologies, ensuring a consistent and polished user interface across the application.
+          Developed and implemented an Event Bus for decentralized interaction and synchronization of complex document objects across different nesting levels, simplifying the application architecture and reducing component coupling.
+        </li>
+        <li>
+          Reorganized the styling system at the project level: edited and created SCSS/Sass mixins and unified the code across multiple projects, increasing development speed and ensuring UI consistency.
         </li>
       </ul>
     </div>
@@ -328,16 +344,25 @@
 
       <ul class="about__achievements fade-in">
         <li>
-          Стек: TypeScript, Nuxt JS 3, Vue JS 3, Pinia, Gsap, SCSS модули
+          Стек: TypeScript, Nuxt 3, Vue 3, Pinia, Vue Router, GSAP, SCSS, ESLint, Yandex Maps API, Chart.js, Vuetify.
         </li>
         <li>
-          Полный редизайн и масштабирование веб-сайта: разработка интерактивных страниц (10+) с динамическим контентом и сложной логикой взаимодействий и бизнес-логикой (форм бронирования/оплаты); модернизация существующих разделов — обновилённый дизайн и новый функционал с сохранением работоспособности.
+          Настройка конфигурации проекта: ESLint для поддержания качества кода, Nuxt.config для управления модулями, генерации sitemap для динамических страниц и подключения SEO-скриптов.
         </li>
         <li>
-          Значительно оптимизировал скорость загрузки страниц, улучшил показатели Lighthouse и Core Web Vitals со скромных 20/45 пунктов (мобильная/десктопная версии) до 90+/55. Методы: сжатие ресурсов, ленивая загрузка, кэширование, code splitting.
+          Интеграция и настройка Nuxt-модулей (Yandex Metrika, Yandex Maps, @nuxt/image, sitemap).
         </li>
         <li>
-          Провел комплексный рефакторинг кода, используя современные возможности Nuxt и Vue: внедрил code splitting для эффективной загрузки ресурсов, улучшил читаемость и поддерживаемость кода, оптимизировал структуру проекта для масштабируемости.
+          Разработал внутренний аналитический дашборд с использованием Chart.js и Vuetify для анализа SEO-данных, что дало маркетинговому отделу удобный инструмент для визуализации ключевых метрик.
+        </li>
+        <li>
+          Провел комплексный рефакторинг и оптимизировал производительность приложения, в результате чего повысил показатели Lighthouse с 20/45 до 90+/55 и улучшил метрики Core Web Vitals.
+        </li>
+        <li>
+          Сформировал внутреннюю библиотеку компонентов для оплаты, бронирования, решения задач по региональным SEO-оптимизациям, быстрого и удобного внедрения сезонных и пробных акций, лендингов.
+        </li>
+        <li>
+          Создал систему роутинга с middleware-валидацией для динамических региональных страниц, что позволило гибко управлять контентом в зависимости от геолокации пользователя.
         </li>
       </ul>
     </div>
@@ -349,19 +374,22 @@
 
       <ul class="about__achievements fade-in">
         <li>
-          Стек: ExtJS, Javascript, SCSS, git
+          Стек: JavaScript, ExtJS, OOP, SCSS/Sass.
         </li>
         <li>
-          Разрабатывал и поддерживал сложные веб-приложения на ExtJS с огромным количеством легаси-кода.
+          Разработка и поддержка интерфейсов для высоконагруженных биллинговых систем на JavaScript и фреймворке ExtJS.
         </li>
         <li>
-          Реализовывал сложные решения, основанные на ООП, построение иерархий классов для бизнес-логики, рефакторинг legacy-кода.
+          Участие в жизненном цикле проекта в крупной команде: код-ревью, планирование задач, оценка сроков и совместное принятие архитектурных решений.
         </li>
          <li>
-          Глубокая отладка и оптимизация кода в рамках крупномасштабной enterprise-кодовой базы, работа с кодом возрастом 10+ лет, удаление неиспользуемого и дублирующегося кода, написание документации.
+          Работа с большой legacy-кодовой базой, построенной на принципах ООП. Проведение рефакторинга для улучшения читаемости и поддерживаемости кода, написание документации.
         </li>
         <li>
-          Провел глобальный рефакторинг стилей: модернизация UI/UX на уровне всего продукта, внедрение актуальных технологий CSS, создание библиотеки UI-компонентов и SCSS-миксинов.
+          Разработал и внедрил шину событий (Event Bus) для децентрализованного взаимодействия и синхронизации сложных объектов документов на разных уровнях вложенности, что упростило архитектуру приложения и снизило связанность компонентов.
+        </li>
+        <li>
+          Реорганизовал систему стилей на уровне проектов: редактирование и создание миксинов SCSS/Sass и унифицировал код нескольких проектов, что повысило скорость разработки и обеспечило единообразие UI.
         </li>
       </ul>
     </div>
@@ -702,7 +730,7 @@
   </div>
 
   <div class="print print-only">
-  <!-- <button id="download-pdf">load</button> -->
+  <!-- <button id="download-pdf">LOAAAAADDDDD</button> -->
 
   <div class="print__wrapper">
     <div class="print__info">
@@ -788,25 +816,6 @@
         <p class="job">frontend developer</p>
       </div>
 
-      <div class="print__descr--about descr-section">
-        <div class="descr-section__title">
-          Обо мне
-        </div>
-
-        <p class="descr-section__text">
-          Мой путь в веб-разработке был одновременно увлекательным и сложным, что позволило мне вырасти и отточить навыки в различных технологиях и фреймворках.
-        </p>
-        <p class="descr-section__text">
-          В работе стараюсь соблюдать принципы DRY и KISS. После плотной работы с ООП в крупной кодовой базе, на своей шкуре понял важность SOLID, а также преимущества TS перед чистым JS.
-        </p>
-        <p class="descr-section__text">
-          Люблю CSS, слежу за новейшими фичами и развитием CSS и HTML, а также развитием web API. Изучаю SQL курс от CS50.
-        </p>
-        <p>
-          Мой сайт-портфолио: <b>darthevgenius.github.io/portfolio_site/</b>
-        </p>
-      </div>
-
       <div class="print__descr--exp descr-section">
         <h2 class="descr-section__title">
           Опыт
@@ -819,19 +828,27 @@
                 Joki-Joya
               </h3>
 
-              <p>(Февраль 2025 — н. в.)</p>
             </div>
             <p class="descr-section__text">
-              Технический стек: Nuxt JS 3, Vue JS 3, Pinia, GSAP, SCSS-модули
+              Технический стек: TypeScript, Nuxt 3, Vue 3, Pinia, Vue Router, GSAP, SCSS, ESLint, Yandex Maps API, Chart.js, Vuetify.
             </p>
             <p class="descr-section__text">
-              Создали в команде из двух разработчиков по сути новый сайт целиком, с интересным дизайном и сложной логикой, разработал более 10 страниц с нуля и обновил существующие, внедрив новый дизайн и функции, при этом сохранив работоспособность ранее реализованного функционала.
+              Настройка конфигурации проекта: ESLint для поддержания качества кода, Nuxt.config для управления модулями, генерации sitemap для динамических страниц и подключения SEO-скриптов.
             </p>
             <p class="descr-section__text">
-              Существенно оптимизировал скорость загрузки страниц, повысив показатели Lighthouse и Core Web Vitals со скромных 20/45 (мобильная/десктопная версия) до крепких 90+/55.
+              Интеграция и настройка Nuxt-модулей (Yandex Metrika, Yandex Maps, @nuxt/image, sitemap).
             </p>
             <p class="descr-section__text">
-              Провёл комплексный рефакторинг кода с внедрением современных возможностей Nuxt и Vue, улучшая структуру кода и его поддерживаемость.
+              Разработал внутренний аналитический дашборд с использованием Chart.js и Vuetify для анализа SEO-данных, что дало маркетинговому отделу удобный инструмент для визуализации ключевых метрик.
+            </p>
+            <p class="descr-section__text">
+              Провел комплексный рефакторинг и оптимизировал производительность приложения, в результате чего повысил показатели Lighthouse с 20/45 до 90+/55 и улучшил метрики Core Web Vitals.
+            </p>
+            <p class="descr-section__text">
+              Сформировал внутреннюю библиотеку компонентов для оплаты, бронирования, решения задач по региональным SEO-оптимизациям, быстрого и удобного внедрения сезонных и пробных акций, лендингов.
+            </p>
+            <p class="descr-section__text">
+              Создал систему роутинга с middleware-валидацией для динамических региональных страниц, что позволило гибко управлять контентом в зависимости от геолокации пользователя.
             </p>
           </li>
           <li>
@@ -840,22 +857,24 @@
                 Сигма
               </h3>
 
-              <p>(Март 2024 — Февраль 2025)</p>
             </div>
             <p class="descr-section__text">
-              Технический стек: Nuxt JS 3, Vue JS 3, Pinia, GSAP, SCSS-модули
+              Технический стек: JavaScript, ExtJS, OOP, SCSS/Sass.
             </p>
             <p class="descr-section__text">
-              Разработка и дебаггинг веб-интерфейсов высоконагруженных биллинговых систем на языке Javascript (ExtJS, React).
+              Разработка и поддержка интерфейсов для высоконагруженных биллинговых систем на JavaScript и фреймворке ExtJS.
             </p>
             <p class="descr-section__text">
-              Работа с огромной кодовой базой, построенной на принципах ООП.
+              Участие в жизненном цикле проекта в крупной команде: код-ревью, планирование задач, оценка сроков и совместное принятие архитектурных решений.
             </p>
             <p class="descr-section__text">
-              Реорганизация и обновление системы стилей на уровне проектов. Внедрение современных технологий CSS, введение системы миксинов SCSS/Sass, унификация кода нескольких проектов.
+              Работа с большой legacy-кодовой базой, построенной на принципах ООП. Проведение рефакторинга для улучшения читаемости и поддерживаемости кода, написание документации.
             </p>
             <p class="descr-section__text">
-              Построение многоуровневых JS приложений для работы с документами в прямом взаимодействии с аналитиками и дизайнерами.
+              Разработал и внедрил шину событий (Event Bus) для децентрализованного взаимодействия и синхронизации сложных объектов документов на разных уровнях вложенности, что упростило архитектуру приложения и снизило связанность компонентов.
+            </p>
+            <p class="descr-section__text">
+              Реорганизовал систему стилей на уровне проектов: редактирование и создание миксинов SCSS/Sass и унифицировал код нескольких проектов, что повысило скорость разработки и обеспечило единообразие UI.
             </p>
           </li>
         </ul>
